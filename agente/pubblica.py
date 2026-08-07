@@ -173,8 +173,12 @@ def cmd_pubblica(args):
     from instagram import Instagram
     ig = Instagram()
     post_id = ig.pubblica_carosello(urls, caption)
-    ig.commenta(post_id, "Fonti verificate: " + " · ".join(m["fonti"]))
 
+    # LO STATO SI SALVA SUBITO, prima di qualunque altra cosa.
+    # Il 7 agosto la 005 e' stata pubblicata e poi la run e' fallita sul commento
+    # con le fonti: il post era online ma lo stato non lo sapeva, e la corsa
+    # successiva l'avrebbe ripubblicata identica. Una volta che un post e' uscito
+    # non si torna indietro, quindi registrarlo viene prima di tutto il resto.
     s = leggi_stato()
     s["pubblicate"].append(m["num"])
     s["storico"].append({"num": m["num"], "titolo": m["titolo"],
@@ -182,6 +186,14 @@ def cmd_pubblica(args):
                          "quando": dt.datetime.now(dt.timezone.utc).isoformat()})
     salva_stato(s)
     print(f"Pubblicata scheda {m['num']} — {m['titolo']} (post {post_id})")
+
+    # Il commento con le fonti e' un di piu': le fonti stanno gia' nella caption.
+    # Se fallisce (per esempio perche' al token manca il permesso sui commenti)
+    # lo diciamo e tiriamo dritto, senza far fallire una pubblicazione riuscita.
+    try:
+        ig.commenta(post_id, "Fonti verificate: " + " · ".join(m["fonti"]))
+    except Exception as e:
+        print(f"::warning::Commento con le fonti non pubblicato: {e}")
 
 
 def main():

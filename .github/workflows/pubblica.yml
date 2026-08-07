@@ -82,7 +82,10 @@ jobs:
           python pubblica.py pubblica $ARG
 
       - name: Salva lo stato
-        if: ${{ inputs.prova != true }}
+        # always(): se la pubblicazione e' riuscita ma un passaggio successivo
+        # e' fallito, lo stato DEVE comunque essere registrato, altrimenti la
+        # corsa dopo ripubblica lo stesso post.
+        if: ${{ always() && inputs.prova != true }}
         run: |
           if [ -n "$(git status --porcelain agente/stato.json)" ]; then
             git config user.name  "memeteca-bot"

@@ -1,10 +1,47 @@
 {
-  "pubblicate": ["001", "002", "003", "004"],
+  "pubblicate": [
+    "001",
+    "002",
+    "003",
+    "004",
+    "005"
+  ],
   "storico": [
-    {"num": "001", "titolo": "NONCICLOPEDIA", "canale": "instagram web", "quando": "2026-08-06"},
-    {"num": "002", "titolo": "NON CE N'È COVIDDI", "canale": "instagram web", "quando": "2026-08-06"},
-    {"num": "003", "titolo": "LA SUPERCAZZOLA", "canale": "instagram web", "quando": "2026-08-06"},
-    {"num": "fuori collana", "titolo": "FRANCESCO GUCCINI 1940-2026", "canale": "instagram web", "quando": "2026-08-06"},
-    {"num": "004", "titolo": "LE PIÙ BELLE FRASI DI OSHO", "canale": "instagram web", "quando": "2026-08-07"}
+    {
+      "num": "001",
+      "titolo": "NONCICLOPEDIA",
+      "canale": "instagram web",
+      "quando": "2026-08-06"
+    },
+    {
+      "num": "002",
+      "titolo": "NON CE N'È COVIDDI",
+      "canale": "instagram web",
+      "quando": "2026-08-06"
+    },
+    {
+      "num": "003",
+      "titolo": "LA SUPERCAZZOLA",
+      "canale": "instagram web",
+      "quando": "2026-08-06"
+    },
+    {
+      "num": "fuori collana",
+      "titolo": "FRANCESCO GUCCINI 1940-2026",
+      "canale": "instagram web",
+      "quando": "2026-08-06"
+    },
+    {
+      "num": "004",
+      "titolo": "LE PIÙ BELLE FRASI DI OSHO",
+      "canale": "instagram web",
+      "quando": "2026-08-07"
+    },
+    {
+      "num": "005",
+      "titolo": "IO SONO GIORGIA",
+      "canale": "github actions (run #1, stato non salvato)",
+      "quando": "2026-08-07T11:05:00+00:00"
+    }
   ]
 }
