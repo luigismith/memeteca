@@ -24,6 +24,10 @@ on:
         description: "Simula senza pubblicare"
         type: boolean
         default: false
+      forza:
+        description: "Pubblica anche oltre il tetto di 2 al giorno (usare a ragion veduta)"
+        type: boolean
+        default: false
 
 concurrency:
   group: memeteca-pubblicazione
@@ -71,11 +75,11 @@ jobs:
           MEMETECA_BASE_URL: ${{ secrets.MEMETECA_BASE_URL }}
           MEMETECA_API: ${{ vars.MEMETECA_API }}
         run: |
-          if [ "${{ inputs.prova }}" = "true" ]; then
-            python pubblica.py pubblica --prova
-          else
-            python pubblica.py pubblica
-          fi
+          ARG=""
+          [ "${{ inputs.prova }}" = "true" ] && ARG="$ARG --prova"
+          [ "${{ inputs.forza }}" = "true" ] && ARG="$ARG --forza"
+          echo "python pubblica.py pubblica$ARG"
+          python pubblica.py pubblica $ARG
 
       - name: Salva lo stato
         if: ${{ inputs.prova != true }}
