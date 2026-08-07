@@ -1,0 +1,10 @@
+{
+  "pubblicate": ["001", "002", "003", "004"],
+  "storico": [
+    {"num": "001", "titolo": "NONCICLOPEDIA", "canale": "instagram web", "quando": "2026-08-06"},
+    {"num": "002", "titolo": "NON CE N'È COVIDDI", "canale": "instagram web", "quando": "2026-08-06"},
+    {"num": "003", "titolo": "LA SUPERCAZZOLA", "canale": "instagram web", "quando": "2026-08-06"},
+    {"num": "fuori collana", "titolo": "FRANCESCO GUCCINI 1940-2026", "canale": "instagram web", "quando": "2026-08-06"},
+    {"num": "004", "titolo": "LE PIÙ BELLE FRASI DI OSHO", "canale": "instagram web", "quando": "2026-08-07"}
+  ]
+}

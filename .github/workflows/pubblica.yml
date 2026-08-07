@@ -1,0 +1,84 @@
+name: MEMETECA — pubblicazione automatica
+
+# Il cron automatico è SPENTO di proposito.
+#
+# La pubblicazione è passata ai task pianificati (12:30, 18:30, 21:00 italiane):
+# ogni sessione guarda prima le notizie, decide se esce un bonus o una scheda,
+# e prepara il post poco prima di pubblicarlo. Vedi docs/03_AGENTE_AUTONOMO.md.
+#
+# Questo workflow resta come rete di sicurezza da lanciare a mano: se i task
+# pianificati sono fermi, pubblica la prossima scheda già pronta in coda.
+# Per riaccendere il cron, togli il commento alle righe qui sotto.
+on:
+  # schedule:
+  #   - cron: "30 10 * * *"     # 12:30 italiane d'estate
+  #   - cron: "0 17 * * *"      # 19:00 italiane d'estate
+  workflow_dispatch:
+    inputs:
+      prova:
+        description: "Simula senza pubblicare"
+        type: boolean
+        default: false
+
+concurrency:
+  group: memeteca-pubblicazione
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  pubblica:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: agente/requirements.txt
+
+      - name: Installa le dipendenze
+        run: pip install -r agente/requirements.txt
+
+      - name: Controlla la scadenza del token
+        working-directory: agente
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          MEMETECA_API: ${{ vars.MEMETECA_API }}
+        run: |
+          python - <<'PY'
+          from instagram import Instagram
+          g = Instagram().giorni_alla_scadenza()
+          if g is None:
+              print("Scadenza del token non determinabile.")
+          else:
+              print(f"Il token scade fra {g} giorni.")
+              if g < 10:
+                  print(f"::warning::Token in scadenza fra {g} giorni: lancia rinnova.ps1")
+          PY
+
+      - name: Pubblica la prossima scheda
+        working-directory: agente
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          MEMETECA_BASE_URL: ${{ secrets.MEMETECA_BASE_URL }}
+          MEMETECA_API: ${{ vars.MEMETECA_API }}
+        run: |
+          if [ "${{ inputs.prova }}" = "true" ]; then
+            python pubblica.py pubblica --prova
+          else
+            python pubblica.py pubblica
+          fi
+
+      - name: Salva lo stato
+        if: ${{ inputs.prova != true }}
+        run: |
+          if [ -n "$(git status --porcelain agente/stato.json)" ]; then
+            git config user.name  "memeteca-bot"
+            git config user.email "memeteca-bot@users.noreply.github.com"
+            git add agente/stato.json
+            git commit -m "stato: pubblicata una scheda"
+            git push
+          fi
