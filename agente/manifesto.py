@@ -63,10 +63,7 @@ MANIFESTO = {
                      "affermazione regge su almeno due fonti indipendenti, e le "
                      "fonti sono scritte in fondo a ogni post. Due schede al "
                      "giorno. La domenica è monografica: TV e pubblicità, che in "
-                     "Italia sono la miniera da cui viene metà di tutto. Le schede le "
-                     "scriviamo con l'intelligenza artificiale, e lo "
-                     "dichiariamo: qui, e sull'etichetta del profilo. "
-                     "Quello che non deleghiamo è la verifica.",
+                     "Italia sono la miniera da cui viene metà di tutto.",
         },
         {
             "titolo": "Cosa non facciamo",
