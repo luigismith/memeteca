@@ -1,0 +1,6 @@
+﻿MEMETECA setup - 2026-08-07 09:58:26
+[1] Strumenti
+    ok: git, gh e python presenti
+[2] Accesso a GitHub
+    ok: collegato come luigismith
+[3] Repository
