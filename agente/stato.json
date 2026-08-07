@@ -42,14 +42,13 @@
       "titolo": "IO SONO GIORGIA",
       "canale": "github actions",
       "quando": "2026-08-07T11:05:00+00:00"
+    },
+    {
+      "num": "manifesto",
+      "titolo": "QUI NON C'ERA NIENTE",
+      "canale": "instagram web",
+      "quando": "2026-08-07T16:42:00+00:00"
     }
   ],
-  "reel": [
-    {
-      "num": "005",
-      "quando": "2026-08-07",
-      "canale": "instagram web",
-      "nota": "muto: il caricamento da web non offre la libreria audio"
-    }
-  ]
+  "reel": []
 }
