@@ -449,13 +449,32 @@ def lunghezza_instagram(testo):
     return sum(2 if ord(c) > 0xFFFF else 1 for c in testo)
 
 
+# ─────────────────────────────────────────────────────────────────────── tag
+# Il campo facoltativo "tag" mette la menzione dell'AUTORE nella caption, sotto
+# il blocco CREATORE. Tre regole, tutte imparate a caro prezzo:
+#
+#   1. Si tagga l'autore, mai il bersaglio. La 005 racconta un remix nato per
+#      sfottere Meloni: taggarla non sarebbe attribuzione, sarebbe provocazione.
+#      Un archivio perde autorevolezza nel momento in cui sembra cercare la rissa.
+#   2. L'account va VERIFICATO aprendolo, non dedotto dal nome. Cercando quello
+#      di Palmaroli abbiamo trovato "osho_lepiubellefrasi": privato, 10 follower,
+#      un omonimo. Taggarlo sarebbe stata una misattribuzione su una pagina che
+#      vende accuratezza.
+#   3. Se l'account non esiste o non e' verificabile, il campo resta vuoto e non
+#      succede niente. Meglio nessun tag che un tag sbagliato.
+#
+# Menzione in caption, non tag sulla foto: notifica lo stesso, e Instagram
+# guarda con meno sospetto le menzioni testuali rispetto alle etichette
+# sistematiche sulle immagini.
 def costruisci_caption(m):
     """Compone la caption Instagram (limite 2.200 caratteri)."""
     fonti = " · ".join(m["fonti"])
     return (
         f"{m['titolo']} — {m['hook']}\n\n"
         f"📅 PRIMA APPARIZIONE\n{m['prima_apparizione']}\n\n"
-        f"👤 CREATORE\n{m['creatore']}\n\n"
+        f"👤 CREATORE\n{m['creatore']}"
+        + (f"\nSu Instagram: {m['tag']}" if m.get("tag") else "")
+        + "\n\n"
         f"🧬 ORIGINI\n{m['origini']}\n\n"
         f"📈 COME È DIVENTATO MEME\n{m['storia']}\n\n"
         f"💡 COSA SIGNIFICA\n{m['significato']}\n\n"

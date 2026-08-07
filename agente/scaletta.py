@@ -30,7 +30,7 @@ CANDIDATI = {
     "Ciao sono Filippo Champagne": "personaggio del web anni 2000 — da verificare",
     "Giacomo Trave / 'Bella zio'": "tormentone da verificare",
     "Il Cinepanettone come genere-meme": "Boldi/De Sica, sfottò ricorrente online",
-    "Lercio": "testata satirica dal 2012, notizie false verosimili",
+    "Lercio": "testata satirica dal 2012, notizie false verosimili. TAG VERIFICATO: @lercio.it (1 Mln follower, account ufficiale)",
     "Spinoza.it": "dal 2006, battuta come forma editoriale con firma dell'autore",
     "Il Signoraggio": "complottismo economico diventato tormentone da forum",
     "«Renzi stai sereno»": "Renzi a Letta, dicembre 2013 — verificare la datazione",
