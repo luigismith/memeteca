@@ -1,0 +1,38 @@
+name: MEMETECA — controllo
+
+# Il controllo preliminare, eseguito dove il token vive davvero: nei segreti
+# del repository. Così non serve avere il token sul PC per verificare che
+# tutto funzioni — e infatti sulla macchina di Luigi non c'è, di proposito.
+#
+#   gh workflow run verifica.yml --repo luigismith/memeteca
+#   gh run watch --repo luigismith/memeteca
+#
+# Non pubblica niente: legge e basta.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  controllo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: agente/requirements.txt
+
+      - name: Installa le dipendenze
+        run: pip install -r agente/requirements.txt
+
+      - name: Controllo preliminare
+        working-directory: agente
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          MEMETECA_BASE_URL: ${{ secrets.MEMETECA_BASE_URL }}
+          MEMETECA_API: ${{ vars.MEMETECA_API }}
+        run: python verifica.py

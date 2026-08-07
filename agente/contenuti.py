@@ -5,6 +5,12 @@ Ogni voce alimenta sia la caption Instagram sia le 3 slide del carosello.
 Tutti i dati provengono da fonti verificate (campo `fonti`).
 """
 
+# Console Windows in cp1252: senza questo, un accento fa morire lo script.
+import sys as _sys
+for _f in (_sys.stdout, _sys.stderr):
+    if hasattr(_f, "reconfigure"):
+        _f.reconfigure(encoding="utf-8", errors="replace")
+
 BRAND = {
     "nome": "MEMETECA",
     "payoff": "L'archivio ragionato del meme italiano",

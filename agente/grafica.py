@@ -5,6 +5,12 @@ Ogni scheda produce un carosello di 3 slide 1080x1350 (4:5).
 Le immagini sono ORIGINALI (tipografiche): nessun materiale protetto da copyright
 viene ricaricato, il che rende la pagina pubblicabile senza rischi di takedown.
 """
+
+# Console Windows in cp1252: senza questo, un accento fa morire lo script.
+import sys as _sys
+for _f in (_sys.stdout, _sys.stderr):
+    if hasattr(_f, "reconfigure"):
+        _f.reconfigure(encoding="utf-8", errors="replace")
 import base64
 import html
 import pathlib

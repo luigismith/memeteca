@@ -30,6 +30,12 @@ Il dizionario `dati` vuole queste chiavi:
     fonti       lista di fonti verificate, minimo due indipendenti
     hashtag     massimo 5, specifici
 """
+
+# Console Windows in cp1252: senza questo, un accento fa morire lo script.
+import sys as _sys
+for _f in (_sys.stdout, _sys.stderr):
+    if hasattr(_f, "reconfigure"):
+        _f.reconfigure(encoding="utf-8", errors="replace")
 import pathlib
 
 from playwright.sync_api import sync_playwright

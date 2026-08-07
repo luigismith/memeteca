@@ -20,6 +20,12 @@ forte per la distribuzione sono le condivisioni in DM, e la conversazione sotto
 il post è ciò che le innesca. Una risposta che aggiunge una fonte o una data vale
 più di dieci commenti generici altrove.
 """
+
+# Console Windows in cp1252: senza questo, un accento fa morire lo script.
+import sys as _sys
+for _f in (_sys.stdout, _sys.stderr):
+    if hasattr(_f, "reconfigure"):
+        _f.reconfigure(encoding="utf-8", errors="replace")
 import sys
 
 from instagram import Instagram

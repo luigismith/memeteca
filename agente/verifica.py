@@ -14,6 +14,12 @@ import sys
 
 import requests
 
+# La console di Windows usa cp1252 e non sa stampare i caratteri accentati o i
+# tratti di separazione: senza questo, il controllo muore su una riga di grafica.
+for flusso in (sys.stdout, sys.stderr):
+    if hasattr(flusso, "reconfigure"):
+        flusso.reconfigure(encoding="utf-8", errors="replace")
+
 from contenuti import (LIMITE_INSTAGRAM, MARGINE, MEMI,
                        costruisci_caption, lunghezza_instagram)
 from instagram import Instagram, ErrorePubblicazione
