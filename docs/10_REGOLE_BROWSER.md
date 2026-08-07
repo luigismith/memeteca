@@ -73,3 +73,14 @@ silenzio, che e' anche come le guarda la maggioranza delle persone — ma se un
 giorno servisse una traccia licenziata, l'unica strada e' caricare dal telefono.
 Mai prendere audio da altrove: il rights management di Meta silenzia il video
 senza avvisare.
+
+## 9 · Dal browser non si fissa un post, e l'etichetta Creator IA e' spenta
+
+Il menu «Altre opzioni» di un post, da web, offre solo: elimina, modifica,
+nascondi i «Mi piace», disattiva commenti, condividi, copia link, incorpora.
+«Fissa sul tuo profilo» esiste solo nell'app del telefono. Se serve fissare un
+post — il manifesto, per esempio — lo fa Luigi in due tocchi.
+
+L'etichetta «Creator IA» del profilo e' stata spenta il 7 agosto 2026: e'
+volontaria, e Luigi ha deciso di non dichiarare l'uso dell'IA. L'interruttore
+sta in Modifica profilo e si salva da solo, senza premere Invia.
