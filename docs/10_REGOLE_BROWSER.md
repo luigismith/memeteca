@@ -62,3 +62,14 @@ Nessuna password viene digitata, mai, nemmeno se il gestore la precompila.
 Nessun token e nessuna chiave segreta viene letta o copiata: il token vive nei
 segreti di GitHub e non deve uscire da lì. Se un passaggio richiede una
 password, si prepara tutto fino a quel punto e si passa la mano a Luigi.
+
+## 8 · I Reel caricati da web escono muti
+
+Instagram non offre la libreria musicale nel caricamento da browser: la si
+trova solo nell'app per telefono. Un Reel pubblicato da qui resta senza audio.
+
+Per le schede non e' un danno — sono interamente testuali e si leggono in
+silenzio, che e' anche come le guarda la maggioranza delle persone — ma se un
+giorno servisse una traccia licenziata, l'unica strada e' caricare dal telefono.
+Mai prendere audio da altrove: il rights management di Meta silenzia il video
+senza avvisare.
