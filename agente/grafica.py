@@ -235,8 +235,8 @@ def slide_scheda(m):
   <!-- Instagram può far partire il carosello dalla slide 2 («seconda chance»):
        quindi la 2 deve reggere da sola, con il nome del meme in evidenza. -->
   <div class="z etichetta" style="margin:32px 0 6px;">La scheda</div>
-  <h2 class="z titolone" data-fit="66" data-min="30"
-      style="height:150px;margin-bottom:22px;">{_e(m['titolo'])}</h2>
+  <h2 class="z titolone" data-fit="66" data-min="38"
+      style="height:150px;flex:none;margin-bottom:22px;">{_e(m['titolo'])}</h2>
   <div class="z" style="flex:1;display:flex;flex-direction:column;
        justify-content:space-between;padding-bottom:22px;">{blocchi}</div>
   <div class="pie z"><span><b>{BRAND['handle']}</b></span><span>{_e(m['anno'])}</span></div>

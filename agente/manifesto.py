@@ -31,6 +31,7 @@ QUI = pathlib.Path(__file__).parent
 
 MANIFESTO = {
     "slug": "manifesto",
+    "collana": "Manifesto",
     "etichetta": "Manifesto",
     "titolo": "QUI NON C'ERA NIENTE",
     "sottotitolo": "Perché esiste MEMETECA",
@@ -62,7 +63,10 @@ MANIFESTO = {
                      "affermazione regge su almeno due fonti indipendenti, e le "
                      "fonti sono scritte in fondo a ogni post. Due schede al "
                      "giorno. La domenica è monografica: TV e pubblicità, che in "
-                     "Italia sono la miniera da cui viene metà di tutto.",
+                     "Italia sono la miniera da cui viene metà di tutto. Le schede le "
+                     "scriviamo con l'intelligenza artificiale, e lo "
+                     "dichiariamo: qui, e sull'etichetta del profilo. "
+                     "Quello che non deleghiamo è la verifica.",
         },
         {
             "titolo": "Cosa non facciamo",

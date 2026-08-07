@@ -61,9 +61,10 @@ def caption(d):
         parti += [b["titolo"].upper(), b["testo"], ""]
     if d.get("riquadro"):
         parti += [d["riquadro"]["testo"], ""]
-    parti += [d["chiusura"], "",
-              "Mandala a chi se la ricorda.", "",
-              f"— Fuori collana · Fonti: {' · '.join(d['fonti'])}",
+    parti += [d["chiusura"], ""]
+    if d.get("congedo"):
+        parti += [d["congedo"], ""]
+    parti += [f"— {collana(d)} · Fonti: {' · '.join(d['fonti'])}",
               f"Segui {BRAND['handle']}", "",
               " ".join(d["hashtag"][:5])]
     return "\n".join(parti)
@@ -97,6 +98,13 @@ def _css():
             .replace("opacity:.06", "opacity:.10"))
 
 
+def collana(d):
+    """L'etichetta in alto a destra. Il manifesto non e' «fuori collana»:
+    e' il post che spiega la collana, e scriverci sopra il contrario
+    sarebbe l'unico errore che un archivio non puo' permettersi."""
+    return d.get("collana", "Fuori collana")
+
+
 def _testata(dx):
     return (f'<div class="testata z"><span class="marchio">{BRAND["nome"]}</span>'
             f'<span class="num">{dx}</span></div>')
@@ -111,7 +119,7 @@ def slide_1(d):
                  f'color:{C["rosso"]};">{grafica._e(d["sottotitolo"])}</div>')
     return f"""<div class="slide">
   <div class="grana"></div>
-  {_testata("Fuori collana")}
+  {_testata(collana(d))}
   <div class="z" style="margin-top:56px;">
     <span class="chip">{grafica._e(d['etichetta'])}</span></div>
   <div class="z" style="flex:1;min-height:44px;"></div>
@@ -147,10 +155,10 @@ def slide_2(d):
                f'style="height:170px;">{grafica._e(d["riquadro"]["testo"])}</div></div>')
     return f"""<div class="slide">
   <div class="grana"></div>
-  {_testata("Fuori collana")}
-  <div class="z etichetta" style="margin:32px 0 6px;">Fuori collana</div>
-  <h2 class="z titolone" data-fit="66" data-min="30"
-      style="height:150px;margin-bottom:16px;">{grafica._e(d['titolo'])}</h2>
+  {_testata(collana(d))}
+  <div class="z etichetta" style="margin:32px 0 6px;">{grafica._e(collana(d))}</div>
+  <h2 class="z titolone" data-fit="66" data-min="38"
+      style="height:150px;flex:none;margin-bottom:36px;">{grafica._e(d['titolo'])}</h2>
   <div class="z" style="flex:1;display:flex;flex-direction:column;
        padding-bottom:22px;">
     <div style="display:flex;flex-direction:column;gap:38px;">{corpo}</div>
@@ -171,7 +179,7 @@ def slide_3(d):
              f'{grafica._e(d["chiusura"])}</div></div>')
     return f"""<div class="slide">
   <div class="grana"></div>
-  {_testata("Fuori collana")}
+  {_testata(collana(d))}
   <div class="z" style="flex:1;display:flex;flex-direction:column;
        justify-content:space-between;padding:38px 0 22px;">
     {corpo}
@@ -213,6 +221,7 @@ DATI_ESEMPIO = {
     "slug": "guccini",
     "titolo": "FRANCESCO GUCCINI",
     "sottotitolo": "1940 — 2026",
+    "congedo": "Mandala a chi se la ricorda.",
     "etichetta": "In memoria",
     "occhiello": "«Anche Dante è stato letto da cani e porci»",
     "apertura": "Un meme su Guccini non esiste. In compenso esiste il contrario: "
