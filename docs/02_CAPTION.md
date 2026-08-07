@@ -779,3 +779,18 @@ Segui @memeteca_italiana
 
 #uomodelmonte #delmonte #memeteca #pubblicitaitaliana #anni80
 ```
+
+## L'IA non si nomina
+
+Nei post, nelle slide e nella bio non si scrive che le schede sono scritte con
+l'intelligenza artificiale. Decisione di Luigi del 7 agosto 2026, e vale finche'
+non dice il contrario.
+
+Non e' un obbligo di piattaforma: l'etichetta «Creator IA» di Instagram e'
+volontaria, e la disclosure obbligatoria di Meta riguarda le inserzioni a
+pagamento e i contenuti fotorealistici generati o alterati con l'IA — le nostre
+slide sono composizioni tipografiche, non immagini generate.
+
+Quello che invece resta e non si tocca: ogni affermazione su due fonti
+indipendenti, le fonti scritte in fondo a ogni post. La promessa della pagina
+sta li'.
