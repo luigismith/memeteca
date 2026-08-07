@@ -1,18 +1,23 @@
 name: MEMETECA — pubblicazione automatica
 
-# Il cron automatico è SPENTO di proposito.
+# QUI ESCE IL POST ORDINARIO, e il motivo è semplice: il token vive nei segreti
+# di questo repository, quindi GitHub Actions è l'unico posto da cui si può
+# pubblicare senza che la chiave giri altrove.
 #
-# La pubblicazione è passata ai task pianificati (12:30, 18:30, 21:00 italiane):
-# ogni sessione guarda prima le notizie, decide se esce un bonus o una scheda,
-# e prepara il post poco prima di pubblicarlo. Vedi docs/03_AGENTE_AUTONOMO.md.
+# Le sessioni pianificate (12:30, 18:30, 21:00 italiane) NON pubblicano più la
+# scheda ordinaria: guardano le notizie, decidono l'eventuale post bonus e
+# scrivono le schede nuove. Vedi docs/03_AGENTE_AUTONOMO.md.
 #
-# Questo workflow resta come rete di sicurezza da lanciare a mano: se i task
-# pianificati sono fermi, pubblica la prossima scheda già pronta in coda.
-# Per riaccendere il cron, togli il commento alle righe qui sotto.
+# Il tetto di due schede al giorno non dipende da questi orari: è una regola
+# dentro `pubblica.py` (uscite_di_oggi), che conta le uscite in ora italiana.
+# Se una scheda è già uscita a mano, il cron successivo si ferma da solo.
+#
+# ATTENZIONE agli orari: il cron di GitHub è in UTC e non conosce l'ora legale.
+# Da fine ottobre, con l'ora solare, vanno spostati un'ora avanti (11:30 e 17:30).
 on:
-  # schedule:
-  #   - cron: "30 10 * * *"     # 12:30 italiane d'estate
-  #   - cron: "0 17 * * *"      # 19:00 italiane d'estate
+  schedule:
+    - cron: "30 10 * * *"     # 12:30 italiane (ora legale)
+    - cron: "30 16 * * *"     # 18:30 italiane (ora legale)
   workflow_dispatch:
     inputs:
       prova:
@@ -31,9 +36,9 @@ jobs:
   pubblica:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: pip

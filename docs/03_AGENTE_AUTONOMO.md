@@ -1,83 +1,89 @@
 # L'agente autonomo
 
-## Come funziona adesso
+## Chi fa cosa
 
-Tre sessioni al giorno, agli orari di pubblicazione: **12:30, 18:30, 21:00**.
-Ognuna fa la stessa cosa, in questo ordine.
+Il sistema ha due metà, e la divisione non è arbitraria: **il token Instagram vive
+nei segreti del repository GitHub**, e non esce da lì. Chi può pubblicare è solo
+chi può leggere quel segreto.
 
 ```
-        ┌─ guarda le notizie
-        │
-        ├─ c'è un evento che l'archivio può illuminare?
-        │     sì  → prepara il post bonus e pubblica
-        │     no  ↓
-        │
-        ├─ oggi sono uscite meno di 2 schede?
-        │     sì  → pubblica la prossima in coda
-        │     no  → non esce niente, e va bene così
-        │
-        └─ prima di chiudere: prepara la scheda successiva
+   GitHub Actions                    Sessioni pianificate
+   (ha il token)                     (hanno il web e il giudizio)
+   ─────────────                     ────────────────────────────
+   12:30  pubblica una scheda        12:30 · 18:30 · 21:00
+   18:30  pubblica una scheda        guardano le notizie
+                                     scrivono le schede nuove
+                                     preparano i post bonus
 ```
 
-**Due post al giorno, tre se succede qualcosa.** Lo slot delle 21:00 è riservato
-all'attualità: se non c'è notizia e la giornata è già completa, resta vuoto. Un
-terzo post senza una ragione è rumore.
+Il post ordinario esce da GitHub, puntuale, anche se nessuno guarda. Il giudizio
+— che cosa merita un post fuori collana, quale candidato regge la verifica —
+resta alle sessioni, che di token non ne hanno bisogno.
+
+## Il tetto giornaliero non dipende dagli orari
+
+**Due schede al giorno.** La regola sta in `pubblica.py`, non nel cron:
+
+```python
+uscite_di_oggi()      # conta le uscite in ora italiana, esclusi i fuori collana
+```
+
+Se una scheda è già uscita a mano — com'è successo con la 004 — il cron
+successivo se ne accorge e si ferma da solo. È il motivo per cui gli orari si
+possono cambiare senza paura di doppioni.
+
+Il terzo post esiste solo come **bonus legato a una notizia**, e ha un budget
+suo. Non passa dal cron: lo prepara la sessione e lo pubblica Luigi, dal telefono
+o con il mio aiuto dal browser.
 
 ## La regola che regge tutto: si prepara poco prima di pubblicare
 
-Niente più produzione a blocchi. Ogni sessione pubblica un post e **ne prepara
-uno**: ricerca il candidato successivo, lo verifica, scrive la scheda, genera le
-slide. La coda resta corta — **una, due, al massimo tre schede pronte** — e non
-torna mai a essere una scorta da venti.
+Ogni sessione **scrive una scheda nuova**: prende il candidato successivo da
+`scaletta.py`, lo verifica con almeno due fonti indipendenti, e **lo scarta senza
+rimpianti se non regge**. Scartare è la norma: nella prima settimana sono stati
+buttati oltre 50 candidati su 71, ed è esattamente il motivo per cui l'archivio è
+credibile.
 
-È il motivo per cui il sistema regge: una scorta grande invecchia, si scollega
-dall'attualità e nessuno la rilegge prima che esca. Una coda corta obbliga a
-guardare ogni scheda poco prima che venga vista da qualcun altro.
+La coda resta corta — **una, due, al massimo tre schede pronte** — e non torna mai
+a essere una scorta da venti. Una scorta grande invecchia, si scollega
+dall'attualità, e nessuno la rilegge prima che esca.
 
-La coda non va però a zero: **una o due schede di margine** servono perché una
-sessione che fallisce (rete giù, fonti irraggiungibili, candidato da scartare)
-non lasci la pagina muta.
+Ma non va nemmeno a zero: **una o due schede di margine** servono perché una
+sessione che fallisce non lasci la pagina muta.
 
-## La scaletta
+## Il passaggio manuale che resta
 
-`agente/scaletta.py` contiene **59 candidati**: nomi con una riga di appunto, non
-schede. Sono ipotesi da verificare, non fatti.
-
-```bash
-python agente/scaletta.py     # il prossimo da lavorare
-```
-
-Ogni sessione ne prende uno, lo verifica con almeno due fonti indipendenti e
-**lo scarta senza rimpianti se non regge**. Scartare è la norma: nella prima
-settimana sono stati buttati oltre 50 candidati su 71. È esattamente il motivo per
-cui l'archivio è credibile, e la scaletta è scritta apposta con voci del tipo
-*«da verificare se esiste davvero»*.
-
-Quando i candidati finiscono, la sessione ne cerca di nuovi.
-
-## Perché non GitHub Actions
-
-Il workflow c'è ancora, ma **il cron è spento**. Un'azione GitHub sa eseguire
-codice, non sa leggere le notizie, valutare se una notizia merita un post o
-verificare che un meme esista. Serviva quando le schede erano già scritte e
-bastava pubblicarle in ordine.
-
-Resta come **rete di sicurezza da lanciare a mano**: se i task pianificati sono
-fermi, pubblica la prossima scheda già pronta in coda.
+Le sessioni scrivono le schede nuove nella cartella di Luigi, non su GitHub: per
+spingere servono le sue credenziali git, che io non ho e non voglio. Quindi ogni
+tanto, quando la coda si allunga:
 
 ```bash
-gh workflow run pubblica.yml --repo TUONOME/memeteca
+cd D:\IMDB\memeteca && git add -A && git commit -m "schede nuove" && git push
 ```
 
-## Che cosa serve perché pubblichi da sola
+Non è urgente: in archivio ci sono già diciassette schede non pubblicate, cioè
+più di una settimana di margine. Le sessioni avvisano quando serve davvero.
 
-Il token Instagram (`docs/05_COSA_DEVI_FARE_TU.md`). Senza, le sessioni fanno
-tutto lo stesso — notizie, ricerca, scrittura, slide — e alla fine ti consegnano
-immagini e caption da pubblicare a mano, dicendotelo.
+## Gli orari e l'ora legale
 
-Le tre sessioni provano a prendere il progetto in quest'ordine: repository GitHub,
-poi la cartella `D:\IMDB\memeteca` dal tuo computer, poi si fermano. Una volta
-fatto il setup, il repository è la strada buona: non dipende dal PC acceso.
+Il cron di GitHub è in **UTC** e non conosce l'ora legale. Adesso è impostato su
+`30 10` e `30 16`, cioè 12:30 e 18:30 italiane. **Da fine ottobre**, con l'ora
+solare, vanno spostati un'ora avanti — `30 11` e `30 17` — altrimenti i post
+escono un'ora prima.
+
+## Se qualcosa va storto
+
+```bash
+gh workflow run verifica.yml     # controllo completo, non pubblica niente
+gh workflow run pubblica.yml     # pubblica subito la prossima in coda
+gh run list -L 5                 # come sono andate le ultime
+```
+
+Il controllo gira su GitHub apposta: verifica il token **dove il token vive**,
+senza bisogno di averlo sul PC.
+
+Le sessioni delle 18:30 e delle 21:00 controllano da sole che le run del giorno
+siano andate a buon fine, e segnalano solo ciò che richiede una decisione.
 
 ## I file
 
@@ -90,14 +96,7 @@ fatto il setup, il repository è la strada buona: non dipende dal PC acceso.
 | `agente/instagram.py` | client API: pubblica, commenta, rinnova il token |
 | `agente/commenti.py` | i commenti sui nostri post |
 | `agente/pubblica.py` | `genera` · `esporta` · `prossimo` · `pubblica` |
-| `agente/verifica.py` | controllo preliminare prima del primo post |
+| `agente/verifica.py` | controllo preliminare |
 | `agente/stato.json` | che cosa è già uscito — l'unica cosa da conservare |
-
-## Se qualcosa va storto
-
-Ogni sessione ti manda una notifica con l'esito. Le sere in cui non esce niente
-sono normali e te lo dice in una riga.
-
-Se una sessione fallisce, la successiva riprende da dove si era fermata: lo stato
-sta in `stato.json` e la coda in `contenuti.py`, entrambi nel repository. Non c'è
-niente di volatile.
+| `.github/workflows/pubblica.yml` | il cron che pubblica |
+| `.github/workflows/verifica.yml` | il controllo, a richiesta |

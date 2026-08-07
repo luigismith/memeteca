@@ -25,6 +25,7 @@ import pathlib
 import sys
 
 from contenuti import (BRAND, LIMITE_INSTAGRAM, MARGINE, MEMI, ORARI,
+                       SCHEDE_AL_GIORNO,
                        calendario, coda, costruisci_caption, lunghezza_instagram)
 
 QUI = pathlib.Path(__file__).parent
@@ -44,6 +45,32 @@ def leggi_stato():
 
 def salva_stato(s):
     STATO.write_text(json.dumps(s, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def fuso_italiano():
+    try:
+        from zoneinfo import ZoneInfo
+        return ZoneInfo("Europe/Rome")
+    except Exception:                      # runner senza tzdata
+        return dt.timezone(dt.timedelta(hours=2))
+
+
+def oggi_italiano():
+    return dt.datetime.now(fuso_italiano()).date().isoformat()
+
+
+def uscite_di_oggi():
+    """Quante schede della collana sono gia' uscite oggi (ora italiana).
+    I post fuori collana non contano: hanno un budget loro."""
+    oggi = oggi_italiano()
+    n = 0
+    for v in leggi_stato().get("storico", []):
+        if v.get("num") == "fuori collana":
+            continue
+        quando = str(v.get("quando", ""))
+        if quando.startswith(oggi):
+            n += 1
+    return n
 
 
 def prossima_scheda():
@@ -115,6 +142,13 @@ def cmd_prossimo(_):
 
 
 def cmd_pubblica(args):
+    gia = uscite_di_oggi()
+    if gia >= SCHEDE_AL_GIORNO and not args.forza:
+        print(f"Oggi sono gia' uscite {gia} schede (tetto: {SCHEDE_AL_GIORNO}). "
+              "Non pubblico: il terzo post esce solo se c'e' una notizia, "
+              "e in quel caso e' un fuori collana.")
+        return
+
     m = prossima_scheda()
     if not m:
         print("Coda esaurita: nessuna scheda da pubblicare.")
@@ -159,6 +193,8 @@ def main():
     pp = sub.add_parser("pubblica")
     pp.add_argument("--prova", action="store_true", help="simula senza chiamare le API")
     pp.add_argument("--base-url", help="URL pubblico della cartella assets")
+    pp.add_argument("--forza", action="store_true",
+                    help="pubblica anche se il tetto giornaliero e' gia' stato raggiunto")
     pp.set_defaults(fn=cmd_pubblica)
     a = p.parse_args()
     a.fn(a)
