@@ -4,7 +4,8 @@
     "002",
     "003",
     "004",
-    "005"
+    "005",
+    "006"
   ],
   "storico": [
     {
@@ -48,6 +49,12 @@
       "titolo": "QUI NON C'ERA NIENTE",
       "canale": "instagram web",
       "quando": "2026-08-07T16:42:00+00:00"
+    },
+    {
+      "num": "006",
+      "titolo": "UNA CAGATA PAZZESCA",
+      "post_id": "17974118757120892",
+      "quando": "2026-08-08T10:57:29.249728+00:00"
     }
   ],
   "reel": []
