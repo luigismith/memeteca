@@ -770,6 +770,95 @@ MEMI = [
              "E' diventata memoria collettiva.",
      "hashtags": "#carosello #memeteca #pubblicitaitaliana #tvitaliana "
                  "#storiadellatv"},
+    # ─────────────────────────────────────────────────────── scheda 029
+    {"num": "029", "giorno": "Martedì", "slot": 1, "categoria": "TV · 1991",
+     "titolo": "NON È LA RAI",
+     "occhiello": "Il pomeriggio che l'Italia non ha mai smesso di "
+                  "canticchiare",
+     "anno": "1991",
+     "creatore": "Gianni Boncompagni, con Irene Ghergo. Regia e scenografie "
+                 "dello stesso Boncompagni.",
+     "prima_apparizione": "9 settembre 1991, dallo Studio 1 del Centro "
+                          "Palatino di Roma, sulle reti Fininvest: prima "
+                          "Canale 5, poi Italia 1. Ultima puntata il 30 "
+                          "giugno 1995.",
+     "origini": "Decine di adolescenti, giochi, canzoni e balletti nel primo "
+                "pomeriggio. Alla conduzione si alternano Enrica Bonaccorti "
+                "e Paolo Bonolis, poi dalla terza stagione Ambra Angiolini: "
+                "sedici anni, guidata in diretta da Boncompagni attraverso "
+                "un auricolare.",
+     "storia": "Tre milioni di spettatori al giorno all'uscita da scuola. "
+               "Lancia Claudia Gerini, Sabrina Impacciatore, Antonella "
+               "Elia e una generazione di volti televisivi; associazioni di "
+               "genitori e Telefono Azzurro lo accusano di sessualizzare le "
+               "protagoniste. Chiude il 30 giugno 1995, al culmine del "
+               "successo.",
+     "significato": "L'auricolare di Ambra è diventato la metafora italiana "
+                    "definitiva del parlare con parole d'altri: «chi ti "
+                    "parla nell'auricolare?» si dice ancora a chi recita un "
+                    "copione altrui. E il programma è il culto rétro per "
+                    "eccellenza della TV italiana.",
+     "chicca": "«T'appartengo», il disco d'esordio di Ambra, vendette "
+               "370.000 copie con tre dischi di platino. E quando nel 2020 "
+               "Mediaset Extra rimise le repliche in onda di notte, "
+               "diventarono un rito collettivo.",
+     "dopo": "La sigla e i balletti vivono una terza vita su TikTok, "
+             "tramandati da chi non era nato: il caso più pulito di "
+             "tormentone transgenerazionale della TV italiana.",
+     "reperto": {"tipo": "citazione", "bollo": "L'auricolare",
+                 "testo": "«Le suggerivo battute terribili, irriferibili, e "
+                          "lei doveva fingere che niente accadesse»",
+                 "fonte": "Gianni Boncompagni su Ambra Angiolini"},
+     "confidenza": "alta",
+     "fonti": ["ANSA (5 lug 2025)", "nss G-Club"],
+     "hook": "Una sedicenne conduceva davanti a tre milioni di spettatori "
+             "mentre un uomo le dettava ogni parola nell'orecchio. L'Italia "
+             "ci ha messo trent'anni a decidere cosa pensarne.",
+     "hashtags": "#nonelarai #ambra #memeteca #tvitaliana #anni90"},
+    # ─────────────────────────────────────────────────────── scheda 030
+    {"num": "030", "giorno": "Martedì", "slot": 2,
+     "categoria": "TV & PUBBLICITÀ · 1966",
+     "titolo": "IL LOGORIO DELLA VITA MODERNA",
+     "occhiello": "Un tavolino in mezzo al traffico, e la parola che da "
+                  "sessant'anni descrive lo stress italiano",
+     "anno": "1966",
+     "creatore": "La campagna Cynar con Ernesto Calindri (1909-1999): "
+                 "attore di teatro e di cinema dal 1935, il commissario "
+                 "Malvasia di «Totòtruffa 62».",
+     "prima_apparizione": "1966, a Carosello. La campagna andrà avanti fino "
+                          "al 1984: quasi vent'anni con la stessa scena.",
+     "origini": "L'immagine è una sola, ripetuta fino a diventare icona: un "
+                "tavolino apparecchiato al centro di una strada trafficata, "
+                "Calindri in doppiopetto che legge il giornale e sorseggia "
+                "l'amaro al carciofo, imperturbabile. Poi lo slogan: "
+                "«contro il logorìo della vita moderna».",
+     "storia": "La campagna marchia Calindri a vita: nella memoria pubblica "
+               "cancella una carriera di prima fila, cominciata nel 1935 e "
+               "passata anche per «I bambini ci guardano» di De Sica nel "
+               "1943. Il testimonial divora l'attore.",
+     "significato": "«Logorio della vita moderna» è entrato nel lessico come "
+                    "definizione ironica dello stress prima ancora che "
+                    "«stress» diventasse parola comune. E il tavolino nel "
+                    "traffico resta la vignetta archetipa della calma "
+                    "nell'assedio: l'antenato italiano di ogni meme sulla "
+                    "serenità apparente nel disastro.",
+     "chicca": "L'uomo che per vent'anni ha impersonato la calma contro il "
+               "traffico aveva debuttato al cinema trent'anni prima dello "
+               "spot: il volto pubblicitario più longevo d'Italia era un "
+               "attore vero prestato al carciofo.",
+     "dopo": "Lo slogan è sopravvissuto alla campagna e quasi al prodotto: "
+             "si cita ancora oggi, spesso senza sapere da dove venga — il "
+             "destino dei tormentoni perfetti.",
+     "reperto": {"tipo": "citazione", "bollo": "Lo slogan",
+                 "testo": "«Contro il logorìo della vita moderna»",
+                 "fonte": "Campagna Cynar con Ernesto Calindri, 1966-1984"},
+     "confidenza": "alta",
+     "fonti": ["Il Post", "70-80.it"],
+     "hook": "Un signore in doppiopetto beveva l'amaro a un tavolino "
+             "apparecchiato in mezzo al traffico. Sessant'anni dopo è "
+             "ancora il modo italiano di dire «calma, nonostante tutto».",
+     "hashtags": "#cynar #carosello #memeteca #pubblicitaitaliana "
+                 "#vitamoderna"},
 ]
 
 
