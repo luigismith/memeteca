@@ -533,6 +533,54 @@ MEMI = [
              "proponevano battute sull'attualità. Le migliori finivano in "
              "prima pagina, con nome e cognome.",
      "hashtags": "#spinoza #satira #memeteca #blogitaliani #internetitaliano"},
+    # ─────────────────────────────────────────────────────── scheda 024
+    {"num": "024", "giorno": "Martedì", "slot": 1, "categoria": "POLITICA · 2014",
+     "titolo": "ENRICO STAI SERENO",
+     "occhiello": "La rassicurazione che da dieci anni significa il suo "
+                  "contrario",
+     "anno": "2014",
+     "creatore": "Matteo Renzi, allora segretario del PD. Il destinatario era "
+                 "Enrico Letta, presidente del Consiglio del suo stesso "
+                 "partito.",
+     "prima_apparizione": "Gennaio 2014: Renzi la pronuncia in televisione, "
+                          "ospite di Daria Bignardi. Poche settimane dopo, a "
+                          "metà febbraio, Letta sale al Quirinale a rassegnare "
+                          "le dimissioni e Renzi prende il suo posto.",
+     "origini": "I due erano legati da un patto di reciproco sostegno che la "
+                "stampa battezzò «patto della schiacciatina», dal cibo con cui "
+                "fu suggellato. La rassicurazione pubblica arrivò mentre il "
+                "sostegno interno a Letta si stava già sgretolando: è questo "
+                "scarto tra la frase e i fatti ad averla resa memorabile.",
+     "storia": "Il passaggio di consegne del febbraio 2014 fu raccontato come "
+               "uno dei più gelidi della storia repubblicana, e «stai sereno» "
+               "diventò da subito sinonimo di sgambetto in arrivo. Nel libro "
+               "«Avanti» (2017) Renzi provò a riprendersi la frase: «L'idea "
+               "che Stai sereno sia una fregatura mi ferisce… Semplicemente "
+               "perché non è vero». Non funzionò: l'uso ironico era ormai "
+               "irreversibile.",
+     "significato": "Dire «stai sereno» a un italiano, oggi, è annunciargli "
+                    "che sta per succedergli qualcosa. È il caso più pulito "
+                    "di antifrasi istituzionalizzata: una parola che "
+                    "l'esperienza collettiva ha capovolto in modo permanente.",
+     "chicca": "Il «patto della schiacciatina»: l'accordo di reciproco "
+               "sostegno tra Renzi e Letta prese il nome dalla focaccia "
+               "toscana con cui i due lo avevano suggellato.",
+     "dopo": "Nel 2022, di nuovo l'uno contro l'altro sulle alleanze "
+             "elettorali, i giornali raccontarono la lite ripartendo da lì: "
+             "otto anni dopo, «stai sereno» era ancora il titolo. Certe "
+             "frasi non si dimettono.",
+     "reperto": {"tipo": "citazione", "bollo": "La frase",
+                 "testo": "«Enrico stai sereno»",
+                 "fonte": "Matteo Renzi, gennaio 2014, in tv da Daria "
+                          "Bignardi"},
+     "confidenza": "media-alta: il contesto e le conseguenze sono documentati, "
+                   "la data esatta della battuta no",
+     "fonti": ["Il Messaggero (2022)", "Affaritaliani (dal libro «Avanti»)",
+               "il Giornale"],
+     "hook": "«Stai sereno», gli disse in tv. Un mese dopo quello non era più "
+             "presidente del Consiglio. Da allora la frase significa l'esatto "
+             "contrario di quello che dice.",
+     "hashtags": "#staisereno #renzi #memeteca #politicaitaliana #memeitaliani"},
 ]
 
 
