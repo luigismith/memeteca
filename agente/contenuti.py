@@ -681,6 +681,52 @@ MEMI = [
              "comunque italian brainrot.",
      "hashtags": "#italianbrainrot #tralalerotralala #memeteca "
                  "#bombardirocrocodilo #internetitaliano"},
+    # ─────────────────────────────────────────────────────── scheda 027
+    {"num": "027", "giorno": "Lunedì", "slot": 5, "categoria": "TV · 1990",
+     "titolo": "IL GABIBBO",
+     "occhiello": "Il pupazzo rosso che l'America ha inseguito per quindici "
+                  "anni in tribunale",
+     "anno": "1990",
+     "creatore": "Antonio Ricci, per Striscia la notizia. La voce è di "
+                 "Lorenzo Beccati, autore televisivo genovese; dentro il "
+                 "costume c'era il mimo Gero Caldarelli.",
+     "prima_apparizione": "1° ottobre 1990, a Striscia la notizia.",
+     "origini": "Il nome viene dal genovese «gabibbu»: in origine gli "
+                "scaricatori del porto di Massaua, in Eritrea, poi epiteto "
+                "ironico-dispregiativo per i non liguri. Ricci prende la "
+                "parola e la capovolge: il «gabibbo» diventa la maschera "
+                "rossa più riconoscibile della TV italiana.",
+     "storia": "Nel 2002 la Western Kentucky University accusa Mediaset di "
+               "aver copiato la sua mascotte Big Red e chiede 250 milioni "
+               "di dollari. Seguono quindici anni di processi: il tribunale "
+               "di Ravenna respinge nel 2007, la Corte d'appello di Bologna "
+               "conferma nel 2011, la Cassazione chiude nel 2017: il "
+               "Gabibbo non è un plagio. Il paradosso: nel 1991 Ricci "
+               "stesso, a Novella 2000, aveva detto ironicamente di essersi "
+               "ispirato proprio a Big Red.",
+     "significato": "È l'inviato-pupazzo che dà del tu al potere: la "
+                    "denuncia travestita da carnevale, formula unica della "
+                    "TV italiana. E il suo lessico genovese — «besugo», "
+                    "rivolto a chi non capisce — è entrato nel vocabolario "
+                    "nazionale degli insulti affettuosi.",
+     "chicca": "Caldarelli era alto un metro e cinquantatré; il costume un "
+               "metro e sessantacinque. Il Gabibbo ha sempre guardato il "
+               "mondo attraverso la propria bocca.",
+     "dopo": "Trentacinque anni dopo è ancora in onda, sopravvissuto a ogni "
+             "conduttore e a ogni causa: nessun personaggio televisivo "
+             "italiano ha avuto una carriera così lunga senza mai mostrare "
+             "il volto.",
+     "reperto": {"tipo": "citazione", "bollo": "La confessione",
+                 "testo": "«Il Gabibbo è il figlio illegittimo dell'omino "
+                          "Michelin»",
+                 "fonte": "Antonio Ricci, Novella 2000, 1991"},
+     "confidenza": "alta sulla vicenda giudiziaria, media sulla data esatta "
+                   "del debutto",
+     "fonti": ["Vice Italia", "L'Angolo di Phil"],
+     "hook": "Un'università americana ha chiesto 250 milioni di dollari a un "
+             "pupazzo rosso genovese. Ci sono voluti quindici anni di "
+             "processi per decidere chi aveva inventato cosa.",
+     "hashtags": "#gabibbo #striscialanotizia #memeteca #tvitaliana #anni90"},
 ]
 
 
