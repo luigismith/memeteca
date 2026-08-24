@@ -9,6 +9,10 @@ on:
         description: "Numero della scheda (es. 021)"
         required: true
         type: string
+      prova:
+        description: "Valida il video senza pubblicare"
+        type: boolean
+        default: false
 
 concurrency:
   group: memeteca-pubblicazione
@@ -32,7 +36,10 @@ jobs:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           MEMETECA_BASE_URL: ${{ secrets.MEMETECA_BASE_URL }}
           MEMETECA_API: ${{ vars.MEMETECA_API }}
-        run: python pubblica_reel.py "${{ inputs.num }}"
+        run: |
+          ARG=""
+          [ "${{ inputs.prova }}" = "true" ] && ARG=" --prova"
+          python pubblica_reel.py "${{ inputs.num }}"$ARG
       - name: Salva lo stato
         if: ${{ always() }}
         run: |

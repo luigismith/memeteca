@@ -35,20 +35,30 @@ def caption_reel(m):
             f"{m['hashtags']}")
 
 
-def main(num):
+def main(num, prova=False, url=None):
     m = next((x for x in MEMI if x["num"] == num), None)
     if not m:
         sys.exit(f"scheda {num} non trovata")
 
     base = os.environ.get("MEMETECA_BASE_URL", "").rstrip("/")
-    if not base:
+    if not (base or url):
         sys.exit("serve MEMETECA_BASE_URL")
-    video = f"{base}/assets/reel_{num}.mp4"
+    video = url or f"{base}/assets/reel_{num}.mp4"
 
     s = json.loads(STATO.read_text(encoding="utf-8"))
     fatti = {r.get("num") for r in s.get("reel", [])}
-    if num in fatti:
+    if num in fatti and not prova:
         print(f"il reel della {num} risulta gia' pubblicato")
+        return
+
+    if prova:
+        # crea il contenitore e aspetta la validazione, SENZA pubblicare:
+        # serve a collaudare video e hosting senza sporcare il profilo.
+        ig = Instagram()
+        c = ig._post(f"{ig.ig_user_id}/media", media_type="REELS",
+                     video_url=video, caption="prova")["id"]
+        ig._attendi_pronto(c, tentativi=60, pausa=6)
+        print(f"PROVA OK: il video {video} passa la validazione (contenitore {c}, non pubblicato)")
         return
 
     post_id = Instagram().pubblica_reel(video, caption_reel(m))
@@ -65,5 +75,8 @@ def main(num):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        sys.exit("uso: python pubblica_reel.py <numero scheda>")
-    main(sys.argv[1].zfill(3))
+        sys.exit("uso: python pubblica_reel.py <numero> [--prova] [--url URL]")
+    url = None
+    if "--url" in sys.argv:
+        url = sys.argv[sys.argv.index("--url") + 1]
+    main(sys.argv[1].zfill(3), prova="--prova" in sys.argv, url=url)
