@@ -66,9 +66,9 @@ class Instagram:
             if stato == "FINISHED":
                 return True
             if stato == "ERROR":
-                dettaglio = self._get(creation_id, fields="status")
+                dettaglio = self._get(creation_id, fields="status,status_code")
                 raise ErrorePubblicazione(
-                    f"Media {creation_id} in errore: {dettaglio.get('status')}")
+                    f"Media {creation_id} in errore: {dettaglio}")
             time.sleep(pausa)
         raise ErrorePubblicazione(f"Timeout in elaborazione per {creation_id}")
 
