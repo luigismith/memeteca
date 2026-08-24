@@ -1,0 +1,24 @@
+name: MEMETECA — commenti da rispondere
+
+# Elenca i commenti senza risposta sui nostri post (il token vive qui).
+# Solo manuale, sola lettura: la risposta la decide una persona.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  commenti:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install -r agente/requirements.txt
+      - working-directory: agente
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          MEMETECA_API: ${{ vars.MEMETECA_API }}
+        run: python commenti.py
