@@ -13,6 +13,10 @@ on:
         description: "Valida il video senza pubblicare"
         type: boolean
         default: false
+      url:
+        description: "URL video alternativo (solo per prove)"
+        type: string
+        default: ""
 
 concurrency:
   group: memeteca-pubblicazione
@@ -39,6 +43,7 @@ jobs:
         run: |
           ARG=""
           [ "${{ inputs.prova }}" = "true" ] && ARG=" --prova"
+          [ -n "${{ inputs.url }}" ] && ARG="$ARG --url ${{ inputs.url }}"
           python pubblica_reel.py "${{ inputs.num }}"$ARG
       - name: Salva lo stato
         if: ${{ always() }}
