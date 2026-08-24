@@ -100,3 +100,56 @@ siano andate a buon fine, e segnalano solo ciò che richiede una decisione.
 | `agente/stato.json` | che cosa è già uscito — l'unica cosa da conservare |
 | `.github/workflows/pubblica.yml` | il cron che pubblica |
 | `.github/workflows/verifica.yml` | il controllo, a richiesta |
+
+---
+
+# I Reel via API — la ricetta e il prezzo che l'abbiamo pagata
+
+Scoperto il 24 agosto 2026, in tre ore di tentativi. Sta scritto qui perché
+non si ripeta.
+
+## Cosa accetta l'API dei Reel
+
+La validazione di Meta rifiuta con un secco `status: ERROR` e **non dice mai
+perché**. Non esiste un messaggio diagnostico: si procede per esclusione.
+Questi sono i parametri che passano, verificati sul campo:
+
+- **720x1280** — il nostro contenuto a 1080x1920 per 27 secondi viene
+  rifiutato, mentre gli stessi 27 secondi a 720x1280 passano. Su un Reel
+  tipografico la differenza non si vede: Instagram ricomprime comunque.
+- **H.264 profilo main, `-pix_fmt yuv420p`**, GOP chiuso (`-g 60
+  -sc_threshold 0`), **niente B-frame** (`-bf 0`).
+- **Niente edit list.** ffmpeg le scrive di default e Meta le rifiuta: serve
+  un secondo passaggio di remux con `-use_editlist 0`.
+- Audio AAC 44.1 kHz stereo, con `aresample=first_pts=0`.
+
+La ricetta è dentro `agente/reel.py`: i Reel nascono già conformi.
+
+## La musica
+
+`agente/musica.py` sintetizza una traccia originale — nessun campione,
+nessun diritto altrui, quindi nessun rights management che possa silenziare
+il video. La libreria musicale di Instagram non serve e non è raggiungibile
+da API: era il motivo per cui i Reel uscivano muti.
+
+## Il freno di Meta — la regola di ritmo
+
+**Dopo una decina di container video creati in un'ora, Meta frena
+l'elaborazione dell'account e rifiuta anche i file che venti minuti prima
+passavano.** Il 24 agosto lo stesso identico file (2.599.638 byte) è stato
+accettato alle 12:38 e rifiutato alle 12:55: nessuna differenza se non il
+numero di tentativi in mezzo. Non è la quota di pubblicazione — quel giorno
+ne restavano 91 su 100.
+
+Quindi: **un tentativo per volta, mai più di un Reel all'ora.** Se fallisce,
+ci si ferma e si riprova al ciclo successivo. Insistere allunga il freno.
+
+Per validare senza pubblicare:
+`gh workflow run reel.yml -f num=<numero> -f prova=true`
+
+## La cache degli URL
+
+Meta ricorda i percorsi già tentati **ignorando la query string**: un
+`?v=123` non serve a niente. Se si rigenera un video già tentato bisogna
+cambiare il percorso del file, alzando `SUFFISSO_FILE` in
+`agente/pubblica_reel.py` (oggi `_v2`).
