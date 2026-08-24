@@ -15,9 +15,16 @@ for _f in (_sys.stdout, _sys.stderr):
         _f.reconfigure(encoding="utf-8", errors="replace")
 
 import html
+import json
 import pathlib
 
 from contenuti import BRAND, MEMI
+
+# Sul sito vanno SOLO le schede gia' uscite su Instagram: il repository e'
+# pubblico e la coda di domani non deve fare spoiler.
+_stato = json.loads((pathlib.Path(__file__).parent / "stato.json")
+                    .read_text(encoding="utf-8"))
+USCITE = [m for m in MEMI if m["num"] in set(_stato.get("pubblicate", []))]
 
 QUI = pathlib.Path(__file__).parent
 IG = "https://www.instagram.com/memeteca_italiana/"
@@ -41,8 +48,8 @@ def carta(m):
 
 
 def genera():
-    schede = "\n".join(carta(m) for m in reversed(MEMI))
-    n = len(MEMI)
+    schede = "\n".join(carta(m) for m in reversed(USCITE))
+    n = len(USCITE)
     pagina = f"""<!doctype html>
 <html lang="it">
 <head>
