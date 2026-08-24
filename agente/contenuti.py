@@ -581,6 +581,53 @@ MEMI = [
              "presidente del Consiglio. Da allora la frase significa l'esatto "
              "contrario di quello che dice.",
      "hashtags": "#staisereno #renzi #memeteca #politicaitaliana #memeitaliani"},
+    # ─────────────────────────────────────────────────────── scheda 025
+    {"num": "025", "giorno": "Lunedì", "slot": 3, "categoria": "CINEMA · 1978",
+     "titolo": "MI SI NOTA DI PIÙ",
+     "occhiello": "La domanda che l'Italia si fa da mezzo secolo prima di "
+                  "ogni invito",
+     "anno": "1978",
+     "creatore": "Nanni Moretti, che in «Ecce bombo» scrive, dirige e "
+                 "interpreta Michele Apicella, il nevrotico più citato del "
+                 "cinema italiano.",
+     "prima_apparizione": "«Ecce bombo», 1978. La scena è una telefonata: "
+                          "Michele, indeciso se presentarsi a un invito, "
+                          "chiede consiglio su come farsi notare di più.",
+     "origini": "La battuta esatta è: «Mi si nota di più se vengo e me ne sto "
+                "in disparte o se non vengo per niente?». Non è una domanda "
+                "sull'andare o meno: è una domanda su come essere guardati, "
+                "ed è per questo che non invecchia. Il narcisismo travestito "
+                "da timidezza, in diciassette parole.",
+     "storia": "È il caso più lungo di battuta migrata dal cinema alla "
+               "politica: Fini la usa in un dibattito a Bologna nel 2010, "
+               "Veltroni su Berlusconi nel 2013, Gasparri nel 2016, Carfagna "
+               "nel 2018, e nel luglio 2020 il presidente del Consiglio "
+               "Conte la cita sulle tensioni del centrodestra — "
+               "quarantadue anni dopo il film.",
+     "significato": "Serve a deridere chi minaccia di non presentarsi "
+                    "sperando che la sua assenza pesi: in politica è "
+                    "l'accusa standard a chi diserta un voto o un vertice. "
+                    "Nel parlato comune copre ogni dilemma di presenza, "
+                    "dalla riunione al gruppo WhatsApp.",
+     "chicca": "Dallo stesso film viene l'altro tormentone immortale, "
+               "«faccio cose, vedo gente»: Romano Prodi lo citò già nel "
+               "maggio 1996. Un solo film, due formule permanenti "
+               "dell'italiano.",
+     "dopo": "La scena vive una seconda vita come GIF e reaction: la faccia "
+             "di Moretti al telefono è diventata la risposta standard a "
+             "qualunque invito ricevuto con ambivalenza.",
+     "reperto": {"tipo": "citazione", "bollo": "La battuta",
+                 "testo": "«Mi si nota di più se vengo e me ne sto in "
+                          "disparte o se non vengo per niente?»",
+                 "fonte": "Michele Apicella in «Ecce bombo» (Nanni Moretti, "
+                          "1978)"},
+     "confidenza": "alta",
+     "fonti": ["Sky TG24 (8 lug 2020)", "Movieplayer"],
+     "hook": "Nel 1978 un uomo al telefono chiese se si notava di più "
+             "andando a una festa e restando in disparte, o non andando "
+             "affatto. L'Italia non ha ancora smesso di chiederselo.",
+     "hashtags": "#eccebombo #nannimoretti #memeteca #cinemaitaliano "
+                 "#misinotadipiu"},
 ]
 
 
