@@ -628,6 +628,59 @@ MEMI = [
              "affatto. L'Italia non ha ancora smesso di chiederselo.",
      "hashtags": "#eccebombo #nannimoretti #memeteca #cinemaitaliano "
                  "#misinotadipiu"},
+    # ─────────────────────────────────────────────────────── scheda 026
+    {"num": "026", "giorno": "Lunedì", "slot": 4, "categoria": "INTERNET · 2025",
+     "titolo": "ITALIAN BRAINROT",
+     "occhiello": "Il fenomeno «italiano» del 2025: fatto altrove, in un "
+                  "italiano che non esiste",
+     "anno": "2025",
+     "creatore": "Il capostipite «Tralalero Tralala» esce a inizio gennaio "
+                 "2025 dall'account TikTok @eZburger401, poi bandito dalla "
+                 "piattaforma: il padre del più grande fenomeno «italiano» "
+                 "dell'anno non ha un nome. L'attribuzione esatta resta "
+                 "contesa.",
+     "prima_apparizione": "Gennaio 2025, TikTok: uno squalo con tre scarpe "
+                          "Nike e una voce italiana sintetica. Il primo "
+                          "repost documentato è dell'8 gennaio; quello del 13 "
+                          "gennaio supera i 17 milioni di riproduzioni in tre "
+                          "mesi.",
+     "origini": "Il formato: immagini generate dall'AI di animali fusi con "
+                "oggetti, narrate da una voce sintetica maschile che declama "
+                "filastrocche sgrammaticate in un finto italiano. «Brain "
+                "rot» era stata la parola dell'anno Oxford del 2024: il "
+                "filone italiano ne è diventato il caso di scuola.",
+     "storia": "In poche settimane nasce un universo: Bombardiro Crocodilo "
+               "(metà febbraio), Brr Brr Patapim (fine marzo), la variante "
+               "indonesiana Tung Tung Tung Sahur. Seguono versioni "
+               "balcaniche e tedesche con la stessa struttura. I marketer "
+               "paragonano la coerenza dell'universo a un franchise, e "
+               "marchi come Ryanair e Loewe ne adottano l'estetica nelle "
+               "campagne.",
+     "significato": "È il primo meme «italiano» fatto da non italiani, in un "
+                    "italiano che non esiste: l'italianità ridotta a suono. "
+                    "E contiene il paradosso che riguarda questa pagina: la "
+                    "voce Wikipedia sul fenomeno cita New York Times, "
+                    "Guardian e Daily Dot. Nessuna fonte italiana.",
+     "chicca": "L'account che ha inventato tutto è stato bandito da TikTok: "
+               "il fenomeno da miliardi di visualizzazioni è ufficialmente "
+               "orfano.",
+     "dopo": "Il formato si è fatto industria — giochi, gadget, pubblicità — "
+             "mentre in Italia il dibattito resta diviso tra chi lo "
+             "considera il degrado definitivo e chi la prima avanguardia "
+             "interamente algoritmica.",
+     "reperto": {"tipo": "citazione", "bollo": "Il capostipite",
+                 "testo": "«Tralalero Tralala» — uno squalo con tre scarpe "
+                          "Nike e una voce italiana finta",
+                 "fonte": "TikTok, gennaio 2025"},
+     "confidenza": "media-alta: la genesi esatta è contesa, le date dei "
+                   "repost sono documentate",
+     "fonti": ["Know Your Meme", "La Scimmia Pensa (25 apr 2025)",
+               "Wikipedia EN"],
+     "hook": "Il più grande fenomeno italiano del 2025 non è stato fatto da "
+             "italiani e non parla italiano vero. Il mondo lo chiama "
+             "comunque italian brainrot.",
+     "hashtags": "#italianbrainrot #tralalerotralala #memeteca "
+                 "#bombardirocrocodilo #internetitaliano"},
 ]
 
 
