@@ -43,7 +43,10 @@ def main(num, prova=False, url=None):
     base = os.environ.get("MEMETECA_BASE_URL", "").rstrip("/")
     if not (base or url):
         sys.exit("serve MEMETECA_BASE_URL")
-    video = url or f"{base}/assets/reel_{num}.mp4"
+    # il parametro rompe la cache di Meta: dopo un tentativo fallito il loro
+    # downloader ricorda l'URL, e servirebbe il file vecchio anche se corretto
+    versione = os.environ.get("GITHUB_RUN_ID", "0")
+    video = url or f"{base}/assets/reel_{num}.mp4?v={versione}"
 
     s = json.loads(STATO.read_text(encoding="utf-8"))
     fatti = {r.get("num") for r in s.get("reel", [])}
