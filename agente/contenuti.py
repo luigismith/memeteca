@@ -727,6 +727,49 @@ MEMI = [
              "pupazzo rosso genovese. Ci sono voluti quindici anni di "
              "processi per decidere chi aveva inventato cosa.",
      "hashtags": "#gabibbo #striscialanotizia #memeteca #tvitaliana #anni90"},
+    # ─────────────────────────────────────────────────────── scheda 028
+    {"num": "028", "giorno": "Lunedì", "slot": 6,
+     "categoria": "TV & PUBBLICITÀ · 1957",
+     "titolo": "CAROSELLO",
+     "occhiello": "La preistoria di tutti i tormentoni italiani: "
+                  "settemiladuecento scenette e una nazione a letto dopo",
+     "anno": "1957",
+     "creatore": "La RAI, che ammette la pubblicità in televisione solo "
+                 "travestita da spettacolo. Tra i registi delle scenette: "
+                 "Federico Fellini, Sergio Leone, Pupi Avati.",
+     "prima_apparizione": "3 febbraio 1957, ogni sera dalle 20:50 alle 21:00.",
+     "origini": "La regola del formato: prima la scenetta — comica, musicale, "
+                "animata — e il prodotto solo in coda. Da quel vincolo "
+                "nascono personaggi piu' longevi delle campagne: Calimero "
+                "per il detersivo Ava, Carmencita e il Caballero per il "
+                "caffe' Paulista, Ernesto Calindri per il Cynar, Nino "
+                "Manfredi per Lavazza.",
+     "storia": "Vent'anni di onda quotidiana, oltre 7.200 episodi. Chiude il "
+               "1° gennaio 1977, accusato di essere «diseducativo». "
+               "Nessun programma italiano ha mai piu' generato cosi' tanto "
+               "lessico condiviso per abitante.",
+     "significato": "E' la fucina originaria del tormentone italiano: mezzo "
+                    "vocabolario pubblicitario nazionale nasce li'. E «a "
+                    "letto dopo Carosello» resta l'orologio dell'infanzia di "
+                    "tre generazioni: il programma come unita' di misura del "
+                    "tempo.",
+     "chicca": "Andava in onda tutti i giorni dell'anno tranne due: il "
+               "Venerdi' Santo e il 2 novembre, il giorno dei morti.",
+     "dopo": "I personaggi sono sopravvissuti al programma — Calimero e' "
+             "ancora in circolazione — e il formato scenetta-piu'-prodotto "
+             "e' l'antenato diretto di quello che oggi chiamiamo branded "
+             "content.",
+     "reperto": {"tipo": "lemma", "bollo": "Il lemma",
+                 "testo": "«A letto dopo Carosello»",
+                 "fonte": "La formula serale delle famiglie italiane, "
+                          "1957-1977"},
+     "confidenza": "alta",
+     "fonti": ["Quotidiano.net", "Il Sole 24 Ore (3 gen 2014)"],
+     "hook": "Per vent'anni l'Italia ha avuto un solo orologio serale: dieci "
+             "minuti di scenette, poi i bambini a letto. Era pubblicita'. "
+             "E' diventata memoria collettiva.",
+     "hashtags": "#carosello #memeteca #pubblicitaitaliana #tvitaliana "
+                 "#storiadellatv"},
 ]
 
 
