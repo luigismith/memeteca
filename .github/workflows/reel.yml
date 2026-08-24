@@ -1,0 +1,45 @@
+name: MEMETECA — pubblicazione reel
+
+# Pubblica il Reel di una scheda via API. Il video sta in assets/reel_<num>.mp4
+# e ha gia' dentro la musica originale (musica.py): esce completo, mai muto.
+on:
+  workflow_dispatch:
+    inputs:
+      num:
+        description: "Numero della scheda (es. 021)"
+        required: true
+        type: string
+
+concurrency:
+  group: memeteca-pubblicazione
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  reel:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install -r agente/requirements.txt
+      - name: Pubblica il reel
+        working-directory: agente
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          MEMETECA_BASE_URL: ${{ secrets.MEMETECA_BASE_URL }}
+          MEMETECA_API: ${{ vars.MEMETECA_API }}
+        run: python pubblica_reel.py "${{ inputs.num }}"
+      - name: Salva lo stato
+        if: ${{ always() }}
+        run: |
+          if [ -n "$(git status --porcelain agente/stato.json)" ]; then
+            git config user.name  "memeteca-bot"
+            git config user.email "memeteca-bot@users.noreply.github.com"
+            git add agente/stato.json
+            git commit -m "stato: pubblicato un reel"
+            git push
+          fi

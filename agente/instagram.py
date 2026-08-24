@@ -109,6 +109,16 @@ class Instagram:
         self._attendi_pronto(c)
         return self._post(f"{self.ig_user_id}/media_publish", creation_id=c)["id"]
 
+    def pubblica_reel(self, url_video, caption):
+        """Pubblica un Reel da un video mp4 raggiungibile pubblicamente.
+        I video vengono elaborati piu' lentamente delle immagini: l'attesa
+        e' piu' lunga di proposito."""
+        c = self._post(f"{self.ig_user_id}/media",
+                       media_type="REELS", video_url=url_video,
+                       caption=caption)["id"]
+        self._attendi_pronto(c, tentativi=60, pausa=6)
+        return self._post(f"{self.ig_user_id}/media_publish", creation_id=c)["id"]
+
     def commenta(self, post_id, testo):
         """Utile per mettere le fonti estese nel primo commento."""
         return self._post(f"{post_id}/comments", message=testo)["id"]
