@@ -12,11 +12,11 @@ serrato: la prima battuta deve fermare il pollice entro il primo secondo.
     python reel.py 005            # genera ../assets/reel_005.mp4
     python reel.py 005 --battute  # stampa solo il testo delle battute
 
-Il video esce MUTO di proposito. L'audio si aggiunge al caricamento, dalla
-libreria di Instagram: e' gia' licenziata, mentre una traccia presa altrove fa
-scattare il rights management di Meta, che silenzia il video senza avvisare.
-C'e' comunque una traccia silenziosa dentro il file, perche' alcuni caricamenti
-rifiutano i video senza flusso audio.
+Il video esce COMPLETO di musica: la traccia originale di musica.py
+(assets/musica_reel.wav, rigenerabile), sintetizzata da noi — quindi senza
+diritti altrui ne' rights management. Se il wav manca viene messa una traccia
+silenziosa. La codifica finale segue la ricetta validata con l'API dei Reel:
+720x1280, H.264 main, GOP chiuso, niente B-frame, niente edit list.
 """
 
 # Console Windows in cp1252: senza questo, un accento fa morire lo script.
@@ -43,7 +43,7 @@ C = BRAND["colori"]
 # Rendiamo piu' grandi del formato finale: lo zoom lento ritaglia dentro questo
 # margine, cosi' il movimento non sgrana mai.
 W, H = 1350, 2400
-W_OUT, H_OUT = 1080, 1920
+W_OUT, H_OUT = 720, 1280   # 1080x1920 a durata piena viene rifiutato dall'API
 FPS = 30
 
 # L'interfaccia di Instagram copre la fascia bassa e il bordo destro: il testo
@@ -216,12 +216,24 @@ def genera(m, cartella):
                         "-safe", "0", "-i", str(elenco), "-c", "copy", str(muto)],
                        check=True)
 
-        # traccia silenziosa: alcuni caricamenti rifiutano i video senza audio
+        musica = cartella / "musica_reel.wav"
+        sorgente_audio = (["-i", str(musica)] if musica.exists()
+                          else ["-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo"])
+        con_audio = tmp / "con_audio.mp4"
         subprocess.run([
             "ffmpeg", "-y", "-loglevel", "error", "-i", str(muto),
-            "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo",
-            "-c:v", "copy", "-c:a", "aac", "-shortest",
-            "-movflags", "+faststart", str(uscita),
+            *sorgente_audio, "-map", "0:v", "-map", "1:a",
+            "-c:v", "libx264", "-profile:v", "main", "-pix_fmt", "yuv420p",
+            "-crf", "21", "-r", str(FPS), "-g", "60", "-sc_threshold", "0",
+            "-bf", "0", "-c:a", "aac", "-b:a", "128k", "-ar", "44100",
+            "-ac", "2", "-af", "aresample=first_pts=0", "-shortest",
+            "-movflags", "+faststart", str(con_audio),
+        ], check=True)
+        # remux senza edit list: l'API dei Reel li rifiuta
+        subprocess.run([
+            "ffmpeg", "-y", "-loglevel", "error", "-i", str(con_audio),
+            "-c", "copy", "-movflags", "+faststart", "-use_editlist", "0",
+            str(uscita),
         ], check=True)
 
     return uscita
