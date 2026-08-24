@@ -24,6 +24,7 @@ from instagram import Instagram
 
 QUI = pathlib.Path(__file__).parent
 STATO = QUI / "stato.json"
+SUFFISSO_FILE = "_v2"
 
 
 def caption_reel(m):
@@ -43,10 +44,11 @@ def main(num, prova=False, url=None):
     base = os.environ.get("MEMETECA_BASE_URL", "").rstrip("/")
     if not (base or url):
         sys.exit("serve MEMETECA_BASE_URL")
-    # il parametro rompe la cache di Meta: dopo un tentativo fallito il loro
-    # downloader ricorda l'URL, e servirebbe il file vecchio anche se corretto
-    versione = os.environ.get("GITHUB_RUN_ID", "0")
-    video = url or f"{base}/assets/reel_{num}.mp4?v={versione}"
+    # La cache di Meta ricorda l'URL IGNORANDO la query: dopo i tentativi
+    # falliti il percorso reel_NNN.mp4 e' avvelenato per ore. I file vivono
+    # quindi su percorsi versionati: se un giorno serve rigenerare un reel
+    # gia' tentato, si alza il suffisso.
+    video = url or f"{base}/assets/reel_{num}{SUFFISSO_FILE}.mp4"
 
     s = json.loads(STATO.read_text(encoding="utf-8"))
     fatti = {r.get("num") for r in s.get("reel", [])}
