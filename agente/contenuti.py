@@ -759,7 +759,7 @@ MEMI = [
              "ancora in circolazione — e il formato scenetta-piu'-prodotto "
              "e' l'antenato diretto di quello che oggi chiamiamo branded "
              "content.",
-     "reperto": {"tipo": "lemma", "bollo": "Il lemma",
+     "reperto": {"tipo": "citazione", "bollo": "La formula",
                  "testo": "«A letto dopo Carosello»",
                  "fonte": "La formula serale delle famiglie italiane, "
                           "1957-1977"},
