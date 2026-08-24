@@ -1,0 +1,29 @@
+name: MEMETECA — ripara il commento con le fonti
+
+# Solo manuale: serve quando il commento automatico di pubblica.py è saltato.
+# Idempotente: se il commento c'è già, non fa nulla.
+on:
+  workflow_dispatch:
+    inputs:
+      num:
+        description: "Numero della scheda (es. 005)"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  commenta:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install -r agente/requirements.txt
+      - working-directory: agente
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          MEMETECA_API: ${{ vars.MEMETECA_API }}
+        run: python commento_fonti.py "${{ inputs.num }}"
