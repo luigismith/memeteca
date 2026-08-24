@@ -437,6 +437,102 @@ MEMI = [
  "hook": "Lo slogan diceva sì. L'Italia lo usa da quarant'anni per dire no. È forse l'unico caso in cui un Paese intero ha invertito il senso di una pubblicità.",
  "hashtags": "#uomodelmonte #delmonte #memeteca #pubblicitaitaliana #anni80",
 },
+
+    # ─────────────────────────────────────────────────────── scheda 022
+    {"num": "022", "giorno": "Lunedì", "slot": 1, "categoria": "INTERNET · 2012",
+     "titolo": "LERCIO",
+     "occhiello": "«Lo sporco che fa notizia»: la parodia del giornalismo "
+                  "diventata test di realtà",
+     "anno": "2012",
+     "tag": "@lercio.it",
+     "creatore": "Collettivo nato su idea di Michele Incollu dal gruppo della "
+                 "pagina Facebook «Acido Lattico», a sua volta erede della "
+                 "comunità del blog «La Palestra» di Daniele Luttazzi. Una "
+                 "ventina di autori sparsi per l'Italia, quasi tutti con un "
+                 "altro mestiere.",
+     "prima_apparizione": "Ottobre 2012, come pagina che imita la grafica del "
+                          "quotidiano gratuito Leggo: dal nome storpiato nasce "
+                          "«Lercio».",
+     "origini": "Parodia del giornalismo sensazionalista: titoli costruiti con "
+                "gli stessi cliché e la stessa impostazione forzata dei "
+                "giornali veri, applicati a notizie inventate. Tre notizie "
+                "inedite al giorno — un articolo lungo e due breaking news — "
+                "scelte in riunione e riviste più volte prima di uscire.",
+     "storia": "Il salto è del gennaio 2013: «Errore nel sistema operativo: "
+               "Radio Maria trasmette i Megadeth» viene ripresa come vera da "
+               "Repubblica XL. Da lì il meccanismo si ripete: l'ex ministra "
+               "Kyenge ricevette insulti per una proposta mai esistita. Nel "
+               "2018 la «grammatica lercia» finisce in un articolo "
+               "accademico peer-reviewed. Oggi: 1,5 milioni di follower su "
+               "Facebook, un milione su Instagram.",
+     "significato": "«Sembra un titolo di Lercio» è entrato nel linguaggio "
+                    "comune come test di realtà: si dice di una notizia vera "
+                    "così assurda da sembrare inventata. La satira che "
+                    "funziona da unità di misura del giornalismo.",
+     "chicca": "La redazione è la stessa dell'ottobre 2012: nessun nuovo "
+               "ingresso in più di dieci anni, per non diluire lo stile. "
+               "Le età vanno dai 27 ai 50 anni.",
+     "dopo": "Una ventina di autori continua a scriverlo come secondo lavoro, "
+             "o meglio come hobby: nessuno vive di Lercio, e il tono è "
+             "rimasto quello del primo giorno.",
+     "reperto": {"tipo": "citazione", "bollo": "Il titolo",
+                 "testo": "«Errore nel sistema operativo: Radio Maria "
+                          "trasmette i Megadeth»",
+                 "fonte": "Lercio, gennaio 2013 — ripreso come vero da "
+                          "Repubblica XL"},
+     "confidenza": "alta",
+     "fonti": ["Il Post (14 ott 2021)", "Treccani, Lingua italiana"],
+     "hook": "Nel 2013 un giornale vero ha ripreso come vera la notizia che "
+             "Radio Maria trasmetteva i Megadeth. L'aveva inventata una "
+             "redazione che di mestiere fa altro.",
+     "hashtags": "#lercio #satira #memeteca #giornalismo #internetitaliano"},
+
+    # ─────────────────────────────────────────────────────── scheda 023
+    {"num": "023", "giorno": "Lunedì", "slot": 2, "categoria": "INTERNET · 2006",
+     "titolo": "SPINOZA",
+     "occhiello": "La battuta con la firma: il forum che ha trasformato i "
+                  "commenti in una redazione",
+     "anno": "2006",
+     "creatore": "Alessandro Bonino apre il blog a metà anni Duemila; con "
+                 "Stefano Andreoli diventa il progetto collettivo che "
+                 "conosciamo. Le battute arrivano dal «Laboratorio permanente "
+                 "di satira» del forum, aperto a chiunque.",
+     "prima_apparizione": "Il blog nasce tra il 2005 e il 2006 — le fonti "
+                          "discordano sull'anno. Il boom arriva nella "
+                          "primavera 2008, con le elezioni politiche.",
+     "origini": "Bonino: «Quando i commentatori hanno cominciato a inondare "
+                "il sito di battute papabili di pubblicazione abbiamo "
+                "lanciato il forum». Dal marzo 2009 le battute si propongono "
+                "lì, migliaia di utenti; le migliori vengono selezionate, "
+                "assemblate e pubblicate una a una, ciascuna con il nome "
+                "dell'autore.",
+     "storia": "Miglior blog italiano ai Macchianera Awards nel 2009 e nel "
+               "2010, Premio Satira di Forte dei Marmi nel 2010. L'8 novembre "
+               "2010 Roberto Benigni lo omaggia in diretta a «Vieni via con "
+               "me». Seguono cinque libri tra il 2010 e il 2014, prima con "
+               "Aliberti e poi con Rizzoli.",
+     "significato": "La battuta secca sull'attualità, firmata: ogni riga è di "
+                    "qualcuno, non del marchio. È il formato che ha "
+                    "anticipato la satira social italiana, quando ancora si "
+                    "chiamava «lasciare un commento».",
+     "chicca": "Il riconoscimento più alto non fu un premio: fu Benigni che "
+               "in prima serata, su Rai 3, lesse le battute del sito davanti "
+               "a milioni di spettatori.",
+     "dopo": "Il forum resta il vivaio: prima si è autori lì, poi in prima "
+             "pagina. Il meccanismo — proposta aperta, selezione, firma — "
+             "non è mai cambiato.",
+     "reperto": {"tipo": "citazione", "bollo": "Il metodo",
+                 "testo": "«Quando i commentatori hanno cominciato a inondare "
+                          "il sito di battute papabili di pubblicazione "
+                          "abbiamo lanciato il forum»",
+                 "fonte": "Alessandro Bonino, intervista ad Apogeonline"},
+     "confidenza": "media-alta: le fonti discordano sull'anno di nascita "
+                   "(2005 per Apogeonline, 2006 per Wikipedia)",
+     "fonti": ["Wikipedia IT, Spinoza (blog)", "Apogeonline, intervista a Bonino"],
+     "hook": "Prima dei social c'era un forum dove migliaia di sconosciuti "
+             "proponevano battute sull'attualità. Le migliori finivano in "
+             "prima pagina, con nome e cognome.",
+     "hashtags": "#spinoza #satira #memeteca #blogitaliani #internetitaliano"},
 ]
 
 
