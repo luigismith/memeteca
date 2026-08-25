@@ -490,6 +490,7 @@ MEMI = [
     # ─────────────────────────────────────────────────────── scheda 023
     {"num": "023", "giorno": "Lunedì", "slot": 2, "categoria": "INTERNET · 2006",
      "titolo": "SPINOZA",
+     "tag": "@spinozait",
      "occhiello": "La battuta con la firma: il forum che ha trasformato i "
                   "commenti in una redazione",
      "anno": "2006",
@@ -684,6 +685,7 @@ MEMI = [
     # ─────────────────────────────────────────────────────── scheda 027
     {"num": "027", "giorno": "Lunedì", "slot": 5, "categoria": "TV · 1990",
      "titolo": "IL GABIBBO",
+     "tag": "@striscialanotizia",
      "occhiello": "Il pupazzo rosso che l'America ha inseguito per quindici "
                   "anni in tribunale",
      "anno": "1990",
