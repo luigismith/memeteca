@@ -56,10 +56,10 @@ def menziona(ig, m, cache=None):
         print(f"  {num}: post non trovato tra gli ultimi 50")
         return False
 
-    # se la caption contiene già la menzione, il tag è andato a segno da solo
-    if m["tag"] in (post.get("caption") or ""):
-        print(f"  {num}: {m['tag']} è già nella caption")
-        return False
+    # Il tag nella caption NON basta: finisce a meta' di un testo lungo, sotto
+    # CREATORE, e sul telefono resta dietro il «… altro». Il commento invece
+    # si vede in fondo al post senza aprire niente. Quindi la menzione si fa
+    # comunque, anche dove la caption ha gia' il tag.
 
     # L'idempotenza si tiene nello stato, NON interrogando l'API: il 25 agosto
     # /comments non ha restituito un commento che avevamo appena pubblicato, e
