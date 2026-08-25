@@ -217,5 +217,57 @@
       "quando": "2026-08-25T08:32:08.875453+00:00"
     }
   ],
-  "reel": []
+  "reel": [],
+  "menzioni": [
+    {
+      "num": "004",
+      "tag": "@federicopalmaroli",
+      "quando": "2026-08-25T09:01:00+00:00"
+    },
+    {
+      "num": "007",
+      "tag": "@boris_laserie_italia",
+      "quando": "2026-08-25T09:01:00+00:00"
+    },
+    {
+      "num": "011",
+      "tag": "@tananaimusica",
+      "quando": "2026-08-25T09:01:00+00:00"
+    },
+    {
+      "num": "013",
+      "tag": "@andreadipreshow",
+      "quando": "2026-08-25T09:01:00+00:00"
+    },
+    {
+      "num": "014",
+      "tag": "@rovazzi",
+      "quando": "2026-08-25T09:01:00+00:00"
+    },
+    {
+      "num": "016",
+      "tag": "@damiano_er_faina",
+      "quando": "2026-08-25T09:01:00+00:00"
+    },
+    {
+      "num": "019",
+      "tag": "@buondimotta",
+      "quando": "2026-08-25T09:01:00+00:00"
+    },
+    {
+      "num": "020",
+      "tag": "@vittoriosgarbi",
+      "quando": "2026-08-25T09:01:00+00:00"
+    },
+    {
+      "num": "021",
+      "tag": "@delmonteitalia",
+      "quando": "2026-08-25T09:01:00+00:00"
+    },
+    {
+      "num": "023",
+      "tag": "@spinozait",
+      "quando": "2026-08-25T09:01:00+00:00"
+    }
+  ]
 }

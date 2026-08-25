@@ -17,6 +17,7 @@ for _f in (_sys.stdout, _sys.stderr):
     if hasattr(_f, "reconfigure"):
         _f.reconfigure(encoding="utf-8", errors="replace")
 
+import datetime as dt
 import json
 import pathlib
 import sys
@@ -60,11 +61,26 @@ def menziona(ig, m, cache=None):
         print(f"  {num}: {m['tag']} è già nella caption")
         return False
 
+    # L'idempotenza si tiene nello stato, NON interrogando l'API: il 25 agosto
+    # /comments non ha restituito un commento che avevamo appena pubblicato, e
+    # la 023 si e' presa un doppione. Lo stato e' nostro e non mente.
+    s = json.loads(STATO.read_text(encoding="utf-8"))
+    gia = {(x["num"], x["tag"]) for x in s.get("menzioni", [])}
+    if (num, m["tag"]) in gia:
+        print(f"  {num}: {m['tag']} risulta già menzionato")
+        return False
+
+    # cintura e bretelle: se per caso il commento si vede, non si ripete
     if any(m["tag"] in c.get("text", "") for c in ig.commenti(post["id"])):
-        print(f"  {num}: {m['tag']} già menzionato in un commento")
+        print(f"  {num}: {m['tag']} già presente in un commento")
         return False
 
     ig.commenta(post["id"], testo(m))
+    s.setdefault("menzioni", []).append(
+        {"num": num, "tag": m["tag"],
+         "quando": dt.datetime.now(dt.timezone.utc).isoformat()})
+    STATO.write_text(json.dumps(s, ensure_ascii=False, indent=2) + "\n",
+                     encoding="utf-8", newline="\n")
     print(f"  {num}: menzionato {m['tag']}")
     return True
 
