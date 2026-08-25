@@ -24,7 +24,7 @@ from instagram import Instagram
 
 QUI = pathlib.Path(__file__).parent
 STATO = QUI / "stato.json"
-SUFFISSO_FILE = "_v2"
+SUFFISSO_FILE = "_v3"
 
 
 def caption_reel(m):
@@ -44,10 +44,12 @@ def main(num, prova=False, url=None):
     base = os.environ.get("MEMETECA_BASE_URL", "").rstrip("/")
     if not (base or url):
         sys.exit("serve MEMETECA_BASE_URL")
-    # La cache di Meta ricorda l'URL IGNORANDO la query: dopo i tentativi
-    # falliti il percorso reel_NNN.mp4 e' avvelenato per ore. I file vivono
-    # quindi su percorsi versionati: se un giorno serve rigenerare un reel
-    # gia' tentato, si alza il suffisso.
+    # Meta memorizza l'esito PER URL, ignorando la query string, e il
+    # fallimento e' DEFINITIVO: un percorso che ha ricevuto un ERROR resta
+    # rifiutato per sempre, anche con lo stesso identico file che altrove
+    # passa (verificato il 25 agosto: reel_021_v2.mp4 rifiutato, la sua copia
+    # byte per byte reel_021_v3.mp4 accettata). Quindi ogni nuovo tentativo
+    # su un reel gia' fallito richiede un percorso NUOVO: si alza il suffisso.
     video = url or f"{base}/assets/reel_{num}{SUFFISSO_FILE}.mp4"
 
     s = json.loads(STATO.read_text(encoding="utf-8"))
