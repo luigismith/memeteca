@@ -24,7 +24,7 @@ from instagram import Instagram
 
 QUI = pathlib.Path(__file__).parent
 STATO = QUI / "stato.json"
-SUFFISSO_FILE = "_v3"
+SUFFISSO_FILE = "_v4"
 
 
 def caption_reel(m):
@@ -44,12 +44,14 @@ def main(num, prova=False, url=None):
     base = os.environ.get("MEMETECA_BASE_URL", "").rstrip("/")
     if not (base or url):
         sys.exit("serve MEMETECA_BASE_URL")
-    # Meta memorizza l'esito PER URL, ignorando la query string, e il
-    # fallimento e' DEFINITIVO: un percorso che ha ricevuto un ERROR resta
-    # rifiutato per sempre, anche con lo stesso identico file che altrove
-    # passa (verificato il 25 agosto: reel_021_v2.mp4 rifiutato, la sua copia
-    # byte per byte reel_021_v3.mp4 accettata). Quindi ogni nuovo tentativo
-    # su un reel gia' fallito richiede un percorso NUOVO: si alza il suffisso.
+    # Il percorso si versiona perche' un URL gia' rifiutato resta rifiutato.
+    # ATTENZIONE pero': il vincolo vero NON e' l'URL, e' il budget di
+    # elaborazione video dell'account. Il 24 e il 25 agosto lo stesso schema:
+    # i primi container passano, poi TUTTI falliscono con un secco ERROR,
+    # anche su percorsi mai usati e con file identici a quelli appena
+    # accettati. Ogni tentativo consuma budget — LA PROVA ANCHE. Quindi:
+    # un tentativo per volta, ben distanziato, e mai una prova sul file che
+    # si intende pubblicare davvero.
     video = url or f"{base}/assets/reel_{num}{SUFFISSO_FILE}.mp4"
 
     s = json.loads(STATO.read_text(encoding="utf-8"))
