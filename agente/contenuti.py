@@ -104,6 +104,7 @@ MEMI = [
 {
  "num": "004", "giorno": "Martedì", "slot": 0, "categoria": "INTERNET · 2015",
  "titolo": "LE PIÙ BELLE FRASI DI OSHO",
+ "tag": "@federicopalmaroli",
  "occhiello": "«I pomodori non sanno più de niente»",
  "anno": "2015",
  "creatore": "Federico Palmaroli, romano, impiegato (Il Post lo indica alla Camera di Commercio, Il Fatto Quotidiano come assicuratore). Il volto è quello del mistico indiano Osho Rajneesh, morto nel 1990 ed estraneo all'operazione.",
@@ -160,6 +161,8 @@ MEMI = [
 {
  "num": "007", "giorno": "Mercoledì", "slot": 0, "categoria": "INTERNET · 2007",
  "titolo": "BORIS",
+ "tag": "@boris_laserie_italia",
+ "tag_ufficiale": False,
  "occhiello": "«A cazzo di cane», «smarmellare», «troppo italiano»",
  "anno": "2007",
  "creatore": "Soggetto di Luca Manzi e Carlo Mazzotta; sceneggiatura di Mattia Torre, Giacomo Ciarrapico e Luca Vendruscolo. I volti dei tormentoni: Francesco Pannofino (René Ferretti), Pietro Sermonti (Stanis La Rochelle), Ninni Bruschetta (Duccio).",
@@ -233,6 +236,7 @@ MEMI = [
 {
  "num": "011", "giorno": "Giovedì", "slot": 1, "categoria": "INTERNET · 2022",
  "titolo": "TANANAI ULTIMO",
+ "tag": "@tananaimusica",
  "occhiello": "Come si vince un festival arrivando venticinquesimo",
  "anno": "2022",
  "creatore": "Alberto Cotta Ramusino, in arte Tananai, classe 1995, di Cologno Monzese. Meme collettivo; tra gli acceleratori riconosciuti la pagina Instagram Socialisti Gaudenti.",
@@ -269,6 +273,7 @@ MEMI = [
 {
  "num": "013", "giorno": "Venerdì", "slot": 0, "categoria": "INTERNET · 2011",
  "titolo": "ANDREA DIPRÈ",
+ "tag": "@andreadipreshow",
  "occhiello": "L'avvocato critico d'arte che ha inventato il trash italiano post-social",
  "anno": "2011",
  "creatore": "Andrea Diprè, nato a Tione di Trento il 9 novembre 1974, laureato in Giurisprudenza a Trento, autoproclamato critico d'arte. È insieme creatore dei propri contenuti e oggetto del meme.",
@@ -286,6 +291,7 @@ MEMI = [
 {
  "num": "014", "giorno": "Venerdì", "slot": 1, "categoria": "INTERNET · 2016",
  "titolo": "ANDIAMO A COMANDARE",
+ "tag": "@rovazzi",
  "occhiello": "Il momento in cui il meme italiano è diventato industria discografica",
  "anno": "2016",
  "creatore": "Fabio Rovazzi, all'epoca videomaker e non cantante: «non so cantare, non ho mai cantato in vita mia se non nel coro delle medie». Base musicale di Merk & Kremont.",
@@ -326,6 +332,7 @@ MEMI = [
 {
  "num": "016", "giorno": "Sabato", "slot": 0, "categoria": "INTERNET · 2015",
  "titolo": "ER FAINA",
+ "tag": "@damiano_er_faina",
  "occhiello": "«A regà, buongiorno» — il commento di pancia diventato format",
  "anno": "2015",
  "creatore": "Damiano Coccia, nato a Roma nel 1988. Si presenta come netturbino; Fanpage segnala che il dato potrebbe far parte del personaggio.",
@@ -383,6 +390,7 @@ MEMI = [
 {
  "num": "019", "giorno": "Domenica", "slot": 0, "categoria": "TV & PUBBLICITÀ · 2017",
  "titolo": "L'ASTEROIDE DEL BUONDÌ",
+ "tag": "@buondimotta",
  "occhiello": "«Possa colpirmi un asteroide se esiste»",
  "anno": "2017",
  "creatore": "Campagna ideata da Saatchi & Saatchi per Bauli/Motta; direttore creativo Alessandro Orlandi. Protagoniste: una bambina e sua madre.",
@@ -403,6 +411,7 @@ MEMI = [
 {
  "num": "020", "giorno": "Domenica", "slot": 1, "categoria": "TV & PUBBLICITÀ · anni '80",
  "titolo": "CAPRA! CAPRA! CAPRA!",
+ "tag": "@vittoriosgarbi",
  "occhiello": "L'insulto scelto per non farsi più querelare",
  "anno": "1989",
  "creatore": "Vittorio Sgarbi. Non è una battuta scritta: è un intercalare televisivo autoprodotto.",
@@ -420,6 +429,7 @@ MEMI = [
 {
  "num": "021", "giorno": "Domenica", "slot": 2, "categoria": "TV & PUBBLICITÀ · 1985",
  "titolo": "L'UOMO DEL MONTE HA DETTO SÌ",
+ "tag": "@delmonteitalia",
  "occhiello": "Il verdetto insindacabile più citato d'Italia (che oggi usiamo al negativo)",
  "anno": "1985",
  "creatore": "Campagna internazionale Del Monte ideata da McCann Erickson. Protagonista: l'attore britannico Osmond Brian Jackson (Bolton, 1931 – 8 luglio 2022), scelto dopo che un attore americano aveva ottenuto test negativi con il pubblico.",
@@ -890,6 +900,23 @@ def lunghezza_instagram(testo):
 # Menzione in caption, non tag sulla foto: notifica lo stesso, e Instagram
 # guarda con meno sospetto le menzioni testuali rispetto alle etichette
 # sistematiche sulle immagini.
+def _riga_tag(m):
+    """La riga del tag sotto CREATORE.
+
+    Regola di Luigi, 25 agosto 2026: in ogni post si tagga. Se l'account
+    ufficiale non esiste si tagga la pagina non ufficiale attiva piu' seguita.
+    In quel caso pero' NON si scrive «Su Instagram», che affermerebbe il
+    falso: si dice che e' la pagina piu' seguita sul tema. Un archivio che
+    vive di verifiche non puo' spacciare una fan page per l'originale — e
+    soprattutto non si tagga mai un account che finge di ESSERE il soggetto.
+    """
+    if not m.get("tag"):
+        return ""
+    if m.get("tag_ufficiale") is False:
+        return f"\nLa pagina piu' seguita sul tema: {m['tag']}"
+    return f"\nSu Instagram: {m['tag']}"
+
+
 def costruisci_caption(m):
     """Compone la caption Instagram (limite 2.200 caratteri)."""
     fonti = " · ".join(m["fonti"])
@@ -897,7 +924,7 @@ def costruisci_caption(m):
         f"{m['titolo']} — {m['hook']}\n\n"
         f"📅 PRIMA APPARIZIONE\n{m['prima_apparizione']}\n\n"
         f"👤 CREATORE\n{m['creatore']}"
-        + (f"\nSu Instagram: {m['tag']}" if m.get("tag") else "")
+        + _riga_tag(m)
         + "\n\n"
         f"🧬 ORIGINI\n{m['origini']}\n\n"
         f"📈 COME È DIVENTATO MEME\n{m['storia']}\n\n"
