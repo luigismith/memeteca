@@ -871,6 +871,59 @@ MEMI = [
              "ancora il modo italiano di dire «calma, nonostante tutto».",
      "hashtags": "#cynar #carosello #memeteca #pubblicitaitaliana "
                  "#vitamoderna"},
+    # ─────────────────────────────────────────────────────── scheda 031
+    {"num": "031", "giorno": "Martedì", "slot": 3,
+     "categoria": "INTERNET & POLITICA · 2022",
+     "titolo": "IL PARTITO CAPIBARA",
+     "occhiello": "Il meme che ha smesso di essere un meme e ha cominciato a "
+                  "raccogliere firme",
+     "anno": "2022",
+     "creatore": "L'animatore più visibile è Davide Dibitonto, in rete "
+                 "xenodibi. Il partito però l'etichetta la rifiuta: si "
+                 "definisce «uno strumento politico open source», «né capi, "
+                 "né fondatori».",
+     "tag": "@partito.capibara",
+     "prima_apparizione": "Dal 6 settembre all'8 ottobre 2022, nelle storie "
+                          "di Instagram: le «Elezioni Iperstizionali», un "
+                          "torneo fra otto liste immaginarie votato con "
+                          "le reaction. Vinse il Partito "
+                          "Xenocomunista dei Post-Lavoratori.",
+     "origini": "Nel 2021 i capibara scesero in massa nei giardini di "
+                "Nordelta, quartiere di lusso recintato alle porte di Buenos "
+                "Aires, tirato su nel 1999 sulla palude dove vivevano da "
+                "sempre. I residenti chiesero di rimuoverli; internet si "
+                "schierò col roditore: enorme, placido, seduto dove non "
+                "dovrebbe.",
+     "storia": "Finita la finta campagna, la battuta non si è sgonfiata: "
+               "si è organizzata. Dai gruppi meme ai collettivi in carne e "
+               "ossa in cinque città, fino al raduno di Padova del 24 giugno "
+               "2026. Oggi l'account ha quasi sedicimila follower e il "
+               "partito dichiara diecimila firme.",
+     "significato": "È il caso italiano più limpido di «iperstizione»: una "
+                    "finzione che, diffondendosi abbastanza, si costruisce "
+                    "da sola le condizioni per diventare vera. Il "
+                    "riferimento teorico è Mark Fisher, che i loro "
+                    "manifesti ribaltano di continuo. E il capibara rende "
+                    "simpatica una richiesta che a parole suonerebbe "
+                    "estremista.",
+     "chicca": "La patrimoniale che propongono è del 100% oltre i 6.660.000 "
+               "euro: il tetto alla ricchezza scritto col numero della "
+               "bestia.",
+     "dopo": "La raccolta firme è partita davvero. Per presentare le liste "
+             "ne servono circa 112.500: il salto dalla reaction al "
+             "modulo col timbro è la parte non ancora fatta.",
+     "reperto": {"tipo": "citazione", "bollo": "Il manifesto",
+                 "testo": "«È più facile immaginare la remigrazione che il "
+                          "week-end lungo»",
+                 "fonte": "Partito Capibara, 2026 — da Mark Fisher"},
+     "confidenza": "alta",
+     "fonti": ["Pagella Politica (6 lug 2026)", "Open (11 giu 2026)",
+               "Adnkronos"],
+     "hook": "Nel 2022 otto partiti inesistenti si sono sfidati nei "
+             "sondaggi delle storie di Instagram. Quattro anni dopo il "
+             "vincitore ha un simbolo, dei collettivi e diecimila firme.",
+     "hashtags": "#partitocapibara #capibara #memeteca #memeitaliani "
+                 "#politicaitaliana"},
 ]
 
 
