@@ -35,8 +35,8 @@ BRAND = {
 # un evento esce il bonus, altrimenti esce la scheda. Lo slot delle 21:00 è
 # riservato all'attualità e resta vuoto se non c'è niente da dire.
 # Il funzionamento completo è in docs/03_AGENTE_AUTONOMO.md.
-ORARI = ["12:30", "18:30", "21:00"]
-SCHEDE_AL_GIORNO = 2          # il terzo post esce solo se c'è una notizia
+ORARI = ["12:30"]
+SCHEDE_AL_GIORNO = 1          # 3 post a settimana: lun/mer/ven, uno per giorno
 BONUS_AL_GIORNO = 1
 
 INIZIO = "2026-08-07"    # primo giorno di calendario dopo il lancio del 6 agosto
@@ -924,6 +924,57 @@ MEMI = [
              "vincitore ha un simbolo, dei collettivi e diecimila firme.",
      "hashtags": "#partitocapibara #capibara #memeteca #memeitaliani "
                  "#politicaitaliana"},
+    # ─────────────────────────────────────────────────────── scheda 032
+    {"num": "032", "giorno": "Mercoledì", "slot": 1,
+     "categoria": "CINEMA · 1997",
+     "titolo": "IL CINEPANETTONE",
+     "occhiello": "Una stroncatura diventata il nome di un genere, e poi un "
+                  "vanto di chi l'aveva inventato",
+     "anno": "1997",
+     "creatore": "La parola è di un critico, non del cinema che descrive: "
+                 "Franco Montini su «la Repubblica». Il genere invece è dei "
+                 "Vanzina, di Neri Parenti e della Filmauro dei De Laurentiis.",
+     "tag": "@christiandesica35official",
+     "prima_apparizione": "La data è contesa fra due fonti della stessa casa: "
+                          "il Vocabolario Treccani dei Neologismi dà «la "
+                          "Repubblica» del 1° dicembre 1997; il Magazine "
+                          "Treccani la sposta a dicembre 1999.",
+     "origini": "Il genere nasce prima della parola: «Vacanze di Natale» di "
+                "Carlo Vanzina, 1983. Formula fissa — località esotica o "
+                "innevata, coppie in crisi, equivoci, volgarità di buon "
+                "cuore, uscita a ridosso del 25 dicembre. Per vent'anni ha "
+                "fatto gli incassi più alti dell'anno.",
+     "storia": "«Cinepanettone» nasce come insulto e vince proprio per "
+               "questo: è troppo bella per non essere usata. Nel giro di "
+               "pochi anni la adottano tutti — critici, giornali, pubblico, "
+               "e alla fine gli autori stessi. È il caso da manuale della "
+               "stroncatura che diventa etichetta ufficiale.",
+     "significato": "In italiano indica ormai qualunque prodotto stagionale, "
+                    "furbo e rassicurante, anche fuori dal cinema: si dice "
+                    "cinepanettone di un libro, di un disco, di una serie. "
+                    "Ed è una delle poche parole che descrivono un genere "
+                    "esprimendo insieme il disprezzo e l'affetto di chi lo "
+                    "guarda comunque.",
+     "chicca": "Nella stessa voce Treccani che la registra come stroncatura, "
+               "Enrico Vanzina rivendica sul Giornale del 29 marzo 2008 di "
+               "aver «inventato il cinepanettone ventitré anni fa». "
+               "L'insulto era diventato un titolo di merito nel giro di "
+               "dieci anni.",
+     "dopo": "Il record del filone è «Natale sul Nilo» (2002): 28.296.128 "
+             "euro. Poi il declino, e una parola che è sopravvissuta al "
+             "genere — oggi si usa soprattutto per cose che con il Natale "
+             "non c'entrano niente.",
+     "reperto": {"tipo": "citazione", "bollo": "Il necrologio",
+                 "testo": "«Checco Zalone ha battuto Avatar e rottamato il "
+                          "cine-panettone»",
+                 "fonte": "Luca Mastrantonio, Il Sole 24 Ore, 9 gennaio 2011"},
+     "confidenza": "alta",
+     "fonti": ["Treccani, Neologismi (2008)", "Treccani Magazine (2011)",
+               "Il Sole 24 Ore"],
+     "hook": "È nata come stroncatura di un critico. Dieci anni dopo chi "
+             "quei film li girava se la prendeva come un merito: «l'ho "
+             "inventato io».",
+     "hashtags": "#cinepanettone #vanzina #memeteca #cinemaitaliano #natale"},
 ]
 
 

@@ -13,11 +13,10 @@ name: MEMETECA — pubblicazione automatica
 # Se una scheda è già uscita a mano, il cron successivo si ferma da solo.
 #
 # ATTENZIONE agli orari: il cron di GitHub è in UTC e non conosce l'ora legale.
-# Da fine ottobre, con l'ora solare, vanno spostati un'ora avanti (11:30 e 17:30).
+# Da fine ottobre, con l'ora solare, va spostato un'ora avanti (11:30).
 on:
   schedule:
-    - cron: "30 10 * * *"     # 12:30 italiane (ora legale)
-    - cron: "30 16 * * *"     # 18:30 italiane (ora legale)
+    - cron: "30 10 * * 1,3,5"   # 12:30 italiane (ora legale), lun/mer/ven
   workflow_dispatch:
     inputs:
       prova:
