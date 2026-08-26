@@ -24,7 +24,7 @@ from instagram import Instagram
 
 QUI = pathlib.Path(__file__).parent
 STATO = QUI / "stato.json"
-SUFFISSO_FILE = "_v4"
+SUFFISSO_FILE = "_v5"
 
 
 def caption_reel(m):
