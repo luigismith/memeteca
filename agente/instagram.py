@@ -69,26 +69,15 @@ class Instagram:
     def _attendi_pronto(self, creation_id, tentativi=30, pausa=4):
         """La Graph API elabora i media in modo asincrono.
 
-        SI DORME PRIMA DI LEGGERE, e non e' un dettaglio: e' la ragione per
-        cui i Reel non sono mai passati.
+        Si dorme PRIMA di leggere. Quando un'API dichiara di elaborare in
+        modo asincrono, la prima lettura a t=0 non e' un dato: e' rumore.
 
-        27 agosto 2026. Per quattro giorni ogni Reel via API e' finito in
-        `{'status': 'ERROR'}`, nudo, senza codice. Abbiamo dato la colpa al
-        budget video, ai percorsi bruciati, al formato del file, e infine
-        all'account. Erano tutte sbagliate. Undici contenitori creati a mano
-        dalle sonde — stesso video, stesso URL, stessa caption, stesso
-        minuto — arrivavano tutti a FINISHED; i cinque creati da qui
-        fallivano tutti. L'unica differenza era questo ciclo, che
-        interrogava lo stato a t=0, appena creato il contenitore.
-
-        Un contenitore video, nell'istante in cui nasce, risponde ERROR:
-        l'elaborazione non e' ancora cominciata. Sei secondi dopo dice
-        IN_PROGRESS e poi FINISHED. Le immagini non se ne accorgono perche'
-        sono pronte quasi subito, e infatti i caroselli hanno sempre
-        funzionato: il difetto era invisibile su tutto tranne che sui video.
-
-        Regola: quando un'API dichiara di elaborare in modo asincrono, la
-        prima lettura non e' un dato. E' rumore."""
+        NOTA ONESTA, 27 agosto 2026: per un'ora abbiamo creduto che fosse
+        questa riga la causa dei quattro giorni di Reel in ERROR. Non lo
+        era: spostare la pausa non ha cambiato niente. La causa vera era
+        l'URL del video, che rispondeva 404 — vedi pubblica_reel.py. La
+        pausa resta perche' e' comunque corretta, non perche' abbia
+        risolto qualcosa."""
         for _ in range(tentativi):
             time.sleep(pausa)
             stato = self._get(creation_id, fields="status_code")["status_code"]
@@ -139,21 +128,19 @@ class Instagram:
         self._attendi_pronto(c)
         return self._post(f"{self.ig_user_id}/media_publish", creation_id=c)["id"]
 
-    def pubblica_reel(self, url_video, caption, tentativi=4, pausa=90):
+    def pubblica_reel(self, url_video, caption, tentativi=2, pausa=90):
         """Pubblica un Reel da un video mp4 raggiungibile pubblicamente.
 
-        L'ingestione video di Meta e' INTERMITTENTE, e per tre giorni ci ha
-        fatto credere di essere un muro. 27 agosto 2026, stesso file e stesso
-        URL: contenitore FINISHED alle 13:04, contenitore ERROR alle 13:11,
-        di nuovo FINISHED poco dopo. L'ERROR arriva nudo, senza codice e
-        senza messaggio, quindi non c'e' niente da correggere nel file: il
-        video 720x1280 H.264 main / AAC 44.1 e' a norma su ogni parametro e
-        passa, quando passa.
+        Due giri, non di piu'. La causa vera dei quattro giorni di ERROR
+        era l'URL a 404 (vedi pubblica_reel.scegli_url), non un'ingestione
+        capricciosa: con l'URL giusto il contenitore passa al primo colpo.
+        Il secondo giro copre solo il caso di un intoppo momentaneo.
 
-        Per questo qui si insiste, e non e' il «riprovare in loop» che il
-        progetto vieta: i tentativi falliti non consumano quota (verificato
-        con content_publishing_limit, 1 su 100), il numero di giri e' chiuso
-        e la pausa e' lunga. Se falliscono tutti, si alza le mani e lo dice.
+        E si sta stretti apposta. Il 27 agosto, sondando, abbiamo creato
+        una venticinquina di contenitori in mezz'ora e ci siamo presi un
+        403 «Application request limit reached»: il limite di richieste di
+        Meta non e' la quota di pubblicazione, e si tocca molto prima.
+        Ritentare tanto non e' gratis, e' solo lento a presentare il conto.
 
         Ogni giro crea un contenitore nuovo: uno andato in ERROR non torna
         buono, e scade da solo in 24 ore."""
