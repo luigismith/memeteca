@@ -38,6 +38,48 @@ def caption_reel(m):
             f"{m['hashtags']}")
 
 
+def basi_possibili():
+    """Le basi da provare, in ordine, per costruire l'URL del video.
+
+    27 agosto 2026: MEMETECA_BASE_URL serve le immagini ma risponde 404 sui
+    .mp4 — il log della prova sulla 022 dice `.../assets/reel_022_v5.mp4 →
+    HTTP 404`. E' un segreto, quindi da qui non si legge e non si corregge;
+    ma la base giusta non e' un'informazione segreta, e' deducibile: GitHub
+    Pages di questo repository sta sempre su <utente>.github.io/<repo>, e
+    GITHUB_REPOSITORY ce l'ha scritto dentro.
+
+    Quindi si prova prima la base configurata (se un giorno viene sistemata
+    torna a vincere lei) e poi quella dedotta. Vince la prima che risponde
+    200. Cosi' la pagina non dipende da un segreto che nessuna automazione
+    puo' controllare."""
+    basi = []
+    configurata = os.environ.get("MEMETECA_BASE_URL", "").rstrip("/")
+    if configurata:
+        basi.append(configurata)
+    repo = os.environ.get("GITHUB_REPOSITORY", "")
+    if "/" in repo:
+        utente, nome = repo.split("/", 1)
+        dedotta = f"https://{utente}.github.io/{nome}"
+        if dedotta != configurata:
+            basi.append(dedotta)
+    return basi
+
+
+def scegli_url(num):
+    """Il primo URL che risponde davvero 200."""
+    coda = f"/assets/reel_{num}{SUFFISSO_FILE}.mp4"
+    ultimo = None
+    for base in basi_possibili():
+        video = base + coda
+        r = requests.head(video, timeout=30, allow_redirects=True)
+        print(f"provo {video} → HTTP {r.status_code}")
+        if r.status_code == 200:
+            return video
+        ultimo = r.status_code
+    sys.exit(f"nessuna base serve {coda} (ultima risposta {ultimo}): "
+             f"il file e' su Pages? il push e' arrivato?")
+
+
 def controlla_online(video):
     """Il video DEVE rispondere 200 prima di chiamare l'API.
 
@@ -65,9 +107,8 @@ def main(num, prova=False, url=None):
     if not m:
         sys.exit(f"scheda {num} non trovata")
 
-    base = os.environ.get("MEMETECA_BASE_URL", "").rstrip("/")
-    if not (base or url):
-        sys.exit("serve MEMETECA_BASE_URL")
+    if not (url or basi_possibili()):
+        sys.exit("serve MEMETECA_BASE_URL, oppure GITHUB_REPOSITORY")
     # Il percorso si versiona perche' un URL gia' rifiutato resta rifiutato.
     #
     # LA TEORIA DEL «BUDGET VIDEO» ERA SBAGLIATA. Il 24 e il 25 agosto, dopo
@@ -103,7 +144,7 @@ def main(num, prova=False, url=None):
     # funzionava. Se un giorno si vuole riaprire la strada API, la prova da
     # fare e' un'altra: collegare una Pagina Facebook e passare a
     # MEMETECA_API=facebook, non un ventunesimo tentativo identico.
-    video = url or f"{base}/assets/reel_{num}{SUFFISSO_FILE}.mp4"
+    video = url or scegli_url(num)
 
     s = json.loads(STATO.read_text(encoding="utf-8"))
     fatti = {r.get("num") for r in s.get("reel", [])}
