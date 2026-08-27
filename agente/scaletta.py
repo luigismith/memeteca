@@ -21,6 +21,9 @@ import sys as _sys
 for _f in (_sys.stdout, _sys.stderr):
     if hasattr(_f, "reconfigure"):
         _f.reconfigure(encoding="utf-8", errors="replace")
+import re
+import unicodedata
+
 from contenuti import MEMI
 
 # Chiavi: nome di lavoro → appunto di partenza (da verificare, non da citare)
@@ -29,9 +32,6 @@ CANDIDATI = {
     "Er Trenta": "presunto meme universitario romano — verificare se esiste davvero",
     "Ciao sono Filippo Champagne": "personaggio del web anni 2000 — da verificare",
     "Giacomo Trave / 'Bella zio'": "tormentone da verificare",
-    "Il Cinepanettone come genere-meme": "Boldi/De Sica, sfottò ricorrente online",
-    "Lercio": "testata satirica dal 2012, notizie false verosimili. TAG VERIFICATO: @lercio.it (1 Mln follower, account ufficiale)",
-    "Spinoza": "dal 2006, battuta come forma editoriale con firma dell'autore — SCHEDATO, scheda 036",
     "Il Signoraggio": "complottismo economico diventato tormentone da forum",
     "«Renzi stai sereno»": "Renzi a Letta, dicembre 2013 — verificare la datazione",
     "«Che vor dì?» / Er Faina II": "eventuale seconda scheda sul personaggio",
@@ -44,8 +44,6 @@ CANDIDATI = {
     "Barbara d'Urso e il 'cuore'": "gestualità diventata meme",
 
     # ── internet italiano recente ───────────────────────────────────────────
-    "Italian brainrot": "2025, fenomeno ITALIANO documentato solo da fonti straniere "
-                        "(NYT, Guardian, Daily Dot). Scheda ad alto potenziale",
     "Il pandoro-gate: gli sviluppi 2026": "eventuale aggiornamento della scheda 008",
     "«Non è normale che sia normale»": "da verificare",
     "Cateno De Luca": "sindaco-meme, verificare la documentazione",
@@ -61,10 +59,7 @@ CANDIDATI = {
     "Il 'nonno' di TikTok Italia": "da identificare e verificare",
 
     # ── cinema e televisione ────────────────────────────────────────────────
-    # schedati: la chiave deve combaciare con il titolo della scheda, altrimenti
-# prossimo_candidato() li ripropone all'infinito (27 ago 2026).
-    "Mi si nota di più": "Moretti, Ecce Bombo 1978 — SCHEDATO, scheda 034",
-    "«Le donne ci guardano» / Ecce Bombo": "verificare quale battuta ha fatto scuola",
+        "«Le donne ci guardano» / Ecce Bombo": "verificare quale battuta ha fatto scuola",
     "«Ho fatto tredici!» / Totò": "verificare",
     "«A me gli occhi, please»": "Gigi Proietti, 1976 — verificare la seconda vita online",
     "«Come è profondo il mare»": "Dalla, uso ironico online",
@@ -79,16 +74,12 @@ CANDIDATI = {
     "Boris: seconda scheda su «la qualità»": "il lessico della serie dà per più schede",
 
     # ── TV e pubblicità (le domeniche) ──────────────────────────────────────
-    "Carosello": "1957-1977, la preistoria del formato pubblicitario italiano",
     "«No Martini, no party»": "campagna anni 90",
     "«Che mondo sarebbe senza Nutella»": "verificare la datazione",
     "«Ava come lava»": "pubblicità storica",
-    "«Contro il logorio della vita moderna» / Cynar": "Calindri, anni 60-70",
     "«Ricco, mi fai impazzire» / Ferrero Rocher": "anni 80-90",
-    "Il Gabibbo": "1990, Striscia la notizia",
     "«Chi vuol essere miliardario» e Gerry Scotti": "Meme Award 2023 al personaggio più memato",
     "«Sarabanda» e la Zorro": "verificare",
-    "Non è la Rai": "1991-1995, culto e archivio",
     "«Domenica In» e i tormentoni della TV di stato": "restringere a un caso documentato",
     "«Ok il prezzo è giusto» / Iva Zanicchi": "verificare",
     "Il jingle Amaro Montenegro": "verificare",
@@ -97,18 +88,51 @@ CANDIDATI = {
 }
 
 
+def _norm(t):
+    """Riduce un titolo alla sua sostanza, per confrontarlo con un candidato.
+    «Mi si nota di piu' se vengo e me ne sto in disparte» e la scheda
+    «MI SI NOTA DI PIU'» sono la stessa cosa; il confronto secco no."""
+    t = unicodedata.normalize("NFC", t).lower()
+    t = re.sub(r"[«»\"'’`.,;:!?()\-–—/]", " ", t)
+    return re.sub(r"\s+", " ", t).strip()
+
+
+# Candidati che restano validi ANCHE se un titolo simile e' gia' in archivio:
+# sono seconde schede volute sullo stesso soggetto, non doppioni.
+BIS = {"«Che vor dì?» / Er Faina II", "Boris: seconda scheda su «la qualità»"}
+
+
 def gia_fatti():
     """I titoli già presenti in archivio, normalizzati per il confronto."""
-    return {m["titolo"].lower() for m in MEMI}
+    return {_norm(m["titolo"]) for m in MEMI}
+
+
+def stantii():
+    """I candidati che corrispondono a una scheda gia' scritta.
+
+    27 agosto 2026: una sessione ha letto CANDIDATI a occhio e ha riscritto
+    cinque schede che esistevano gia' — LERCIO, MI SI NOTA DI PIU', ITALIAN
+    BRAINROT, SPINOZA, IL GABIBBO. CANDIDATI e' una lista statica: non si
+    sfoltisce da sola quando una voce viene lavorata. Chi cerca un candidato
+    passa da prossimo_candidato(), mai dal dizionario nudo."""
+    fatti = gia_fatti()
+    fuori = []
+    for nome in CANDIDATI:
+        if nome in BIS:
+            continue
+        n = _norm(nome)
+        if any(t and (t in n or n in t) for t in fatti):
+            fuori.append(nome)
+    return fuori
 
 
 def prossimo_candidato(saltati=()):
     """Il primo candidato non ancora lavorato. `saltati` sono quelli scartati
     in sessioni precedenti perché non verificabili."""
-    fatti = gia_fatti()
-    saltati = {s.lower() for s in saltati}
+    esclusi = set(stantii()) | {s for s in saltati}
+    saltati_n = {_norm(s) for s in saltati}
     for nome, appunto in CANDIDATI.items():
-        if nome.lower() in fatti or nome.lower() in saltati:
+        if nome in esclusi or _norm(nome) in saltati_n:
             continue
         return nome, appunto
     return None, None
@@ -122,5 +146,8 @@ def prossimo_numero():
 if __name__ == "__main__":
     nome, appunto = prossimo_candidato()
     print(f"scaletta: {len(CANDIDATI)} candidati, {len(MEMI)} schede già scritte")
+    fermi = stantii()
+    if fermi:
+        print(f"da togliere (già schedati): {', '.join(fermi)}")
     print(f"prossimo numero: {prossimo_numero()}")
     print(f"prossimo candidato: {nome}\n  {appunto}")
