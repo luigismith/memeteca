@@ -22,3 +22,11 @@ jobs:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           MEMETECA_API: ${{ vars.MEMETECA_API }}
         run: python diagnosi.py
+      # 27 agosto 2026: la diagnosi dei Reel gira qui dentro invece che in un
+      # workflow suo, cosi' e' lanciabile con un dispatch solo. E' sola
+      # lettura: non crea container, quindi non consuma budget video.
+      - working-directory: agente
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          MEMETECA_API: ${{ vars.MEMETECA_API }}
+        run: python diagnosi_reel.py
