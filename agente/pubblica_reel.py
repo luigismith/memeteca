@@ -97,6 +97,7 @@ def main(num, prova=False, url=None):
         print(f"PROVA OK: il video {video} passa la validazione (contenitore {c}, non pubblicato)")
         return
 
+    print(f"video: {video}")
     post_id = Instagram().pubblica_reel(video, caption_reel(m))
 
     # lo stato si salva subito, come per le schede

@@ -67,8 +67,30 @@ class Instagram:
         return corpo
 
     def _attendi_pronto(self, creation_id, tentativi=30, pausa=4):
-        """La Graph API elabora i media in modo asincrono."""
+        """La Graph API elabora i media in modo asincrono.
+
+        SI DORME PRIMA DI LEGGERE, e non e' un dettaglio: e' la ragione per
+        cui i Reel non sono mai passati.
+
+        27 agosto 2026. Per quattro giorni ogni Reel via API e' finito in
+        `{'status': 'ERROR'}`, nudo, senza codice. Abbiamo dato la colpa al
+        budget video, ai percorsi bruciati, al formato del file, e infine
+        all'account. Erano tutte sbagliate. Undici contenitori creati a mano
+        dalle sonde — stesso video, stesso URL, stessa caption, stesso
+        minuto — arrivavano tutti a FINISHED; i cinque creati da qui
+        fallivano tutti. L'unica differenza era questo ciclo, che
+        interrogava lo stato a t=0, appena creato il contenitore.
+
+        Un contenitore video, nell'istante in cui nasce, risponde ERROR:
+        l'elaborazione non e' ancora cominciata. Sei secondi dopo dice
+        IN_PROGRESS e poi FINISHED. Le immagini non se ne accorgono perche'
+        sono pronte quasi subito, e infatti i caroselli hanno sempre
+        funzionato: il difetto era invisibile su tutto tranne che sui video.
+
+        Regola: quando un'API dichiara di elaborare in modo asincrono, la
+        prima lettura non e' un dato. E' rumore."""
         for _ in range(tentativi):
+            time.sleep(pausa)
             stato = self._get(creation_id, fields="status_code")["status_code"]
             if stato == "FINISHED":
                 return True
@@ -76,7 +98,6 @@ class Instagram:
                 dettaglio = self._get(creation_id, fields="status,status_code")
                 raise ErrorePubblicazione(
                     f"Media {creation_id} in errore: {dettaglio}")
-            time.sleep(pausa)
         raise ErrorePubblicazione(f"Timeout in elaborazione per {creation_id}")
 
     # ---------------------------------------------------------------- pubblico
