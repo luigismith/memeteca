@@ -45,13 +45,40 @@ def main(num, prova=False, url=None):
     if not (base or url):
         sys.exit("serve MEMETECA_BASE_URL")
     # Il percorso si versiona perche' un URL gia' rifiutato resta rifiutato.
-    # ATTENZIONE pero': il vincolo vero NON e' l'URL, e' il budget di
-    # elaborazione video dell'account. Il 24 e il 25 agosto lo stesso schema:
-    # i primi container passano, poi TUTTI falliscono con un secco ERROR,
-    # anche su percorsi mai usati e con file identici a quelli appena
-    # accettati. Ogni tentativo consuma budget — LA PROVA ANCHE. Quindi:
-    # un tentativo per volta, ben distanziato, e mai una prova sul file che
-    # si intende pubblicare davvero.
+    #
+    # LA TEORIA DEL «BUDGET VIDEO» ERA SBAGLIATA. Il 24 e il 25 agosto, dopo
+    # una ventina di container tutti finiti in ERROR, avevamo scritto qui che
+    # il vincolo era un budget di elaborazione video dell'account, e che
+    # anche --prova lo consumasse. Il 27 agosto 2026 diagnosi_reel.py ha
+    # chiesto il dato all'API invece di dedurlo:
+    #
+    #   content_publishing_limit → quota_total 100 / 24h, quota_usage 1
+    #
+    # Uno su cento. Il budget non c'entrava niente: i tentativi falliti non
+    # consumano quota, perche' la quota conta le pubblicazioni riuscite.
+    # Distanziare i tentativi non serviva, e la regola «mai una prova sul
+    # file vero» era una precauzione contro un vincolo inesistente.
+    #
+    # Quello che la stessa diagnosi ha trovato davvero:
+    #   · account_type MEDIA_CREATOR, 34 media, di cui 33 CAROUSEL_ALBUM in
+    #     FEED e UNO solo VIDEO/REELS — quell'uno caricato dal telefono. Via
+    #     API non e' mai passato niente.
+    #   · assets/reel_021_v5.mp4 e' a norma: 720x1280, 27,5 s, avc1 + mp4a,
+    #     nessuna edit list, moov in testa. Servito da GitHub Pages con
+    #     Content-Type video/mp4 e HTTP 200.
+    #
+    # Cioe': il file va bene, l'URL va bene, la quota e' libera, e i reel
+    # falliscono lo stesso. Resta un'ipotesi sola, ed e' strutturale: la
+    # pubblicazione di REELS non e' aperta a questo account per la strada
+    # Instagram Login (graph.instagram.com, senza Pagina Facebook), dove
+    # invece i caroselli passano da sempre. Non e' una cosa che si aggiusta
+    # ritentando.
+    #
+    # REGOLA: non si ricopia il file su un percorso nuovo, non si riprova.
+    # I reel si caricano dal telefono, che e' come funzionava prima e
+    # funzionava. Se un giorno si vuole riaprire la strada API, la prova da
+    # fare e' un'altra: collegare una Pagina Facebook e passare a
+    # MEMETECA_API=facebook, non un ventunesimo tentativo identico.
     video = url or f"{base}/assets/reel_{num}{SUFFISSO_FILE}.mp4"
 
     s = json.loads(STATO.read_text(encoding="utf-8"))
