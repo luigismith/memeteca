@@ -238,7 +238,14 @@
       "quando": "2026-08-27T09:48:36.825740+00:00"
     }
   ],
-  "reel": [],
+  "reel": [
+    {
+      "num": "021",
+      "post_id": "17967086220138700",
+      "quando": "2026-08-27T13:41:02.868870+00:00",
+      "canale": "github actions (api, musica originale)"
+    }
+  ],
   "menzioni": [
     {
       "num": "004",
