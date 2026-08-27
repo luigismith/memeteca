@@ -19,6 +19,8 @@ import os
 import pathlib
 import sys
 
+import requests
+
 from contenuti import BRAND, MEMI
 from instagram import Instagram
 
@@ -34,6 +36,28 @@ def caption_reel(m):
             f"e' sul profilo.\n\n"
             f"Segui {BRAND['handle']}\n\n"
             f"{m['hashtags']}")
+
+
+def controlla_online(video):
+    """Il video DEVE rispondere 200 prima di chiamare l'API.
+
+    27 agosto 2026: quattro giorni di Reel finiti in `{'status': 'ERROR'}`
+    nudo, senza codice e senza messaggio. Quando l'URL non e' raggiungibile,
+    la Graph API non lo dice: crea il contenitore, prova a scaricare, e
+    fallisce con lo stesso ERROR generico che darebbe un file malformato.
+    Non c'e' modo di distinguere le due cose dall'API — quindi si distingue
+    prima, da qui.
+
+    La stessa regola vale per le immagini (GitHub Pages ci mette un minuto a
+    distribuire un file appena pushato), ma sui video costa molto di piu':
+    un carosello sbagliato lo vedi, un reel no."""
+    r = requests.head(video, timeout=30, allow_redirects=True)
+    print(f"video: {video} → HTTP {r.status_code} "
+          f"{r.headers.get('content-type','?')} "
+          f"{r.headers.get('content-length','?')} byte")
+    if r.status_code != 200:
+        sys.exit(f"il video non e' raggiungibile ({r.status_code}): "
+                 f"controlla MEMETECA_BASE_URL e che il file sia su Pages")
 
 
 def main(num, prova=False, url=None):
@@ -90,6 +114,7 @@ def main(num, prova=False, url=None):
     if prova:
         # crea il contenitore e aspetta la validazione, SENZA pubblicare:
         # serve a collaudare video e hosting senza sporcare il profilo.
+        controlla_online(video)
         ig = Instagram()
         c = ig._post(f"{ig.ig_user_id}/media", media_type="REELS",
                      video_url=video, caption="prova")["id"]
@@ -97,7 +122,7 @@ def main(num, prova=False, url=None):
         print(f"PROVA OK: il video {video} passa la validazione (contenitore {c}, non pubblicato)")
         return
 
-    print(f"video: {video}")
+    controlla_online(video)
     post_id = Instagram().pubblica_reel(video, caption_reel(m))
 
     # lo stato si salva subito, come per le schede
