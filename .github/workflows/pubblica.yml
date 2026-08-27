@@ -16,7 +16,13 @@ name: MEMETECA — pubblicazione automatica
 # Da fine ottobre, con l'ora solare, va spostato un'ora avanti (11:30).
 on:
   schedule:
-    - cron: "30 10 * * 1,3,5"   # 12:30 italiane (ora legale), lun/mer/ven
+    # Si tenta OGNI ORA dalle 12:30 alle 20:30 italiane, lun/mer/ven.
+    # Non e' uno spreco: `uscite_di_oggi` dentro pubblica.py fa uscire UNA
+    # sola scheda al giorno, quindi i tentativi successivi al primo riuscito
+    # escono subito senza pubblicare niente. Serve a questo: il 26 agosto la
+    # corsa delle 12:30 e' fallita (token invalidato) e la giornata e' saltata
+    # del tutto, perche' non c'era nessuno a rilanciarla. Ora si rilancia da sola.
+    - cron: "30 10-18 * * 1,3,5"
   workflow_dispatch:
     inputs:
       prova:

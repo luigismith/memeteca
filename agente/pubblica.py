@@ -151,8 +151,11 @@ def cmd_pubblica(args):
 
     m = prossima_scheda()
     if not m:
-        print("Coda esaurita: nessuna scheda da pubblicare.")
-        sys.exit(2)
+        # NON si esce con errore: il workflow ritenta ogni ora, e una coda vuota
+        # colorerebbe di rosso otto corse al giorno, seppellendo i guasti veri.
+        # Una coda vuota e' un problema editoriale, non un guasto: si segnala.
+        print("::warning::Coda esaurita: nessuna scheda da pubblicare.")
+        return
 
     base = (args.base_url or os.environ.get("MEMETECA_BASE_URL", "")).rstrip("/")
     urls = [f"{base}/{m['num']}_{i}.jpg" for i in (1, 2, 3)]
