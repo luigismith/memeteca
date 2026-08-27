@@ -975,6 +975,204 @@ MEMI = [
              "quei film li girava se la prendeva come un merito: «l'ho "
              "inventato io».",
      "hashtags": "#cinepanettone #vanzina #memeteca #cinemaitaliano #natale"},
+    # ─────────────────────────────────────────────────────── scheda 033
+    {"num": "033", "giorno": "Mercoledì", "slot": 2,
+     "categoria": "INTERNET · 2008",
+     "titolo": "WILLWOOSH",
+     "occhiello": "Il primo italiano diventato famoso senza che nessuno lo "
+                  "mandasse in onda",
+     "anno": "2008",
+     "creatore": "Guglielmo Scilla, romano, nato il 26 novembre 1987. Nei "
+                 "video fa tutte le parti cambiando parrucca, tanto da "
+                 "guadagnarsi il soprannome di re delle parrucche.",
+     "tag": "@guglielmoscilla",
+     "prima_apparizione": "Il canale nasce fra il 2008 e il 2009 e le fonti "
+                          "non concordano: l'iscrizione risale al 1° gennaio "
+                          "2008, il primo video a un 31 dicembre — di "
+                          "quell'anno o del successivo secondo chi lo "
+                          "racconta.",
+     "origini": "Non c'era un formato e non c'era un mestiere: un ragazzo si "
+                "riprendeva in camera sua e raccontava situazioni di tutti i "
+                "giorni, o parodie di film, interpretando ogni personaggio. "
+                "Montaggio casalingo, luce quella che c'era. È il modello di "
+                "tutti i videomaker italiani venuti dopo.",
+     "storia": "Nel maggio 2011 il suo è il canale con più iscritti e più "
+               "visitato d'Italia, quando la parola «youtuber» in italiano "
+               "non esisteva ancora. Il Post, che nel 2016 gli dedica una "
+               "guida, gli conta 700.000 iscritti. Da lì passa alla "
+               "webserie «Freaks!», alla radio, al cinema, alla televisione.",
+     "significato": "Willwoosh è il precedente: la prova che in Italia si "
+                    "poteva diventare un personaggio pubblico senza passare "
+                    "da una rete, un provino o un agente. Tutto quello che "
+                    "oggi si dà per scontato comincia da un ragazzo con una "
+                    "parrucca in camera sua.",
+     "chicca": "Il 31 ottobre 2013 smette di pubblicare e sparisce per quasi "
+               "due anni; torna a settembre 2015. È uno dei primi casi "
+               "italiani di quello che oggi si chiama burnout da creator, "
+               "molto prima che la parola arrivasse fin qui.",
+     "dopo": "Nel 2017 lancia «Vita Buttata» e il 13 settembre fa coming out "
+             "in un video che supera il milione di visualizzazioni. Il "
+             "milione di iscritti arriva a giugno 2019, dieci anni dopo il "
+             "primo video.",
+     "confidenza": "alta, tranne la data esatta del primo video",
+     "fonti": ["Wikipedia IT", "Il Post (13 feb 2016)", "Panorama"],
+     "hook": "Nel 2011 il canale più seguito d'Italia era di un ragazzo che "
+             "si riprendeva in camera sua con una parrucca. La parola "
+             "«youtuber», in italiano, non esisteva ancora.",
+     "hashtags": "#willwoosh #guglielmoscilla #memeteca #youtubeitalia "
+                 "#internetitaliano"},
+
+    # ─────────────────────────────────────────────────────── scheda 034
+    # Nessun tag. L'autore dell'intercalare e' Silvio Berlusconi, morto nel
+    # giugno 2023: taggare un account commemorativo, o quello di un partito,
+    # non sarebbe attribuzione ma appropriazione. Campo vuoto per scelta.
+    {"num": "034", "giorno": "Mercoledì", "slot": 3,
+     "categoria": "POLITICA · 1994",
+     "titolo": "MI CONSENTA",
+     "occhiello": "Due parole di cortesia diventate il marchio di fabbrica "
+                  "di un ventennio",
+     "anno": "1994",
+     "creatore": "Silvio Berlusconi (1936-2023). Non una battuta scritta "
+                 "da qualcuno: un intercalare personale, la forma di meme "
+                 "più difficile da fabbricare a tavolino e da togliersi di "
+                 "dosso.",
+     "prima_apparizione": "Non ha un debutto datato: è un intercalare, non "
+                          "una battuta. Il pubblico lo lega all'era che "
+                          "comincia il 26 gennaio 1994, con il "
+                          "videomessaggio della «discesa in campo», nove "
+                          "minuti e mezzo recapitati a tutte le redazioni.",
+     "origini": "«Mi consenta» non chiede davvero il permesso: lo dà per "
+                "acquisito. Serve a prendere la parola e a tenerla, con una "
+                "patina di cortesia che rende scortese interrompere. "
+                "Treccani lo colloca nel «berlusconese», con «scendere in "
+                "campo» e l'arcaico «giuoco».",
+     "storia": "Diventa meme prima dell'internet italiano, per la via "
+               "vecchia: imitazioni televisive, titoli di giornale, parlato "
+               "quotidiano. Nel 2002 Alessandro Amadori intitola "
+               "«Mi consenta» il suo studio su come Berlusconi ha "
+               "conquistato il consenso: due parole bastavano già a "
+               "identificare un uomo e un metodo.",
+     "significato": "Oggi segnala che qualcuno sta per dire una cosa "
+                    "indifendibile con tono ragionevole: è la maschera della "
+                    "cortesia sopra l'imposizione. Si usa molto oltre la "
+                    "politica, ogni volta che una richiesta è in realtà una "
+                    "decisione già presa.",
+     "chicca": "Il videomessaggio del 1994 non fu girato ad Arcore, come "
+               "quasi tutti credono, ma a Macherio — e non in uno studio: in "
+               "un ripostiglio degli attrezzi. Il discorso che ha aperto un "
+               "ventennio è stato registrato in uno sgabuzzino.",
+     "dopo": "La linguista Maria Vittoria Dell'Anna, su Treccani, osserva "
+             "che quel linguaggio procede per asserzioni e non per "
+             "argomentazioni: dà per acquisito il consenso invece di "
+             "cercarlo. «Mi consenta» è quella grammatica in due parole.",
+     "reperto": {"tipo": "citazione", "bollo": "L'incipit",
+                 "testo": "«L'Italia è il Paese che amo. Qui ho le mie "
+                          "radici, le mie speranze, i miei orizzonti»",
+                 "fonte": "Videomessaggio della «discesa in campo», "
+                          "26 gennaio 1994"},
+     "confidenza": "alta",
+     "fonti": ["Treccani, Lingua italiana", "Il Post (26 gen 2014)",
+               "Il Fatto Quotidiano (26 gen 2014)"],
+     "hook": "Due parole di cortesia diventate il marchio di un ventennio. E "
+             "il videomessaggio che aprì quell'era non fu girato ad Arcore, "
+             "ma in un ripostiglio degli attrezzi.",
+     "hashtags": "#miconsenta #berlusconi #memeteca #politicaitaliana "
+                 "#discesaincampo"},
+
+    # ─────────────────────────────────────────────────────── scheda 035
+    {"num": "035", "giorno": "Giovedì", "slot": 0,
+     "categoria": "TV & PUBBLICITÀ · 2000",
+     "titolo": "IL GRANDE FRATELLO",
+     "occhiello": "Novantanove giorni che hanno insegnato alla televisione "
+                  "italiana a guardare la gente comune",
+     "anno": "2000",
+     "creatore": "Il format è l'olandese «Big Brother» di Endemol. "
+                 "L'edizione italiana esce su Canale 5, condotta da Daria "
+                 "Bignardi con Marco Liorni inviato. Dieci concorrenti, e "
+                 "nessuno entra a gioco iniziato.",
+     "tag": "@grandefratellotv",
+     "prima_apparizione": "14 settembre 2000 su Canale 5. Finisce il 21 "
+                          "dicembre, dopo novantanove giorni.",
+     "origini": "Dieci sconosciuti chiusi in una casa a Cinecittà e ripresi "
+                "ventiquattr'ore su ventiquattro. Non c'era niente da "
+                "vedere, ed era esattamente quello il punto: la televisione "
+                "italiana scopriva che la gente comune, senza copione, "
+                "teneva lo schermo meglio di molti programmi scritti.",
+     "storia": "La finale del 21 dicembre 2000 fa 16 milioni di spettatori e "
+               "il 59,97% di share. Vince Cristina Plevani, bagnina di Iseo, "
+               "con il 60% dei voti: dentro la casa la chiamavano «la "
+               "Cenerentola triste». Con Pietro Taricone nasce la prima "
+               "coppia della storia dei reality italiani.",
+     "significato": "È l'anno zero di tutto quello che viene dopo: i "
+                    "tormentoni da reality, i personaggi costruiti al "
+                    "montaggio, l'idea che chiunque possa diventare famoso "
+                    "restando sé stesso davanti a una telecamera. Buona "
+                    "parte dei meme televisivi italiani discende da quei "
+                    "novantanove giorni.",
+     "chicca": "Fra i dieci concorrenti c'era un ingegnere di ventotto anni, "
+               "Rocco Casalino. Diciotto anni dopo sarà il portavoce del "
+               "presidente del Consiglio: dalla casa di Cinecittà a Palazzo "
+               "Chigi, per la stessa ragione — sapere come si costruisce un "
+               "racconto.",
+     "dopo": "Il 3 luglio 2025, venticinque anni dopo, Cristina Plevani "
+             "vince anche L'Isola dei Famosi: la doppietta l'aveva fatta "
+             "solo Walter Nudo. Pietro Taricone è morto il 29 giugno 2010.",
+     "confidenza": "alta",
+     "fonti": ["Wikipedia IT", "ANSA (3 lug 2025)", "Today.it"],
+     "hook": "Sedici milioni di persone hanno guardato la finale. Ha vinto "
+             "una bagnina di Iseo che dentro la casa chiamavano «la "
+             "Cenerentola triste». Venticinque anni dopo ha vinto anche "
+             "l'Isola.",
+     "hashtags": "#grandefratello #cristinaplevani #memeteca #tvitaliana "
+                 "#reality"},
+
+    # ─────────────────────────────────────────────────────── scheda 036
+    {"num": "036", "giorno": "Giovedì", "slot": 1,
+     "categoria": "INTERNET · 2007",
+     "titolo": "LAMENTECONTORTA",
+     "occhiello": "Il ragazzo che telefonava agli sconosciuti, e il giorno "
+                  "in cui la TV è andata a prenderselo",
+     "anno": "2007",
+     "creatore": "Frank Matano, nato a Caserta il 14 settembre 1989 e "
+                 "cresciuto a Carinola. Apre il canale nel 2007, a "
+                 "diciotto anni, con il nome «lamentecontorta»: il proprio "
+                 "ce lo metterà solo più tardi.",
+     "tag": "@frankmatano",
+     "prima_apparizione": "2007, su YouTube. Il formato è minimo: una "
+                          "telefonata a uno sconosciuto, registrata, e la "
+                          "voce di chi chiama che tiene il gioco il più a "
+                          "lungo possibile.",
+     "origini": "Lo scherzo telefonico non lo inventa lui: è un genere "
+                "radiofonico vecchio quanto il telefono. Quello che cambia è "
+                "il mezzo. Su YouTube la telefonata non passa da una "
+                "redazione, non ha un orario e non finisce: resta lì, si "
+                "riguarda, si cita. Da rubrica diventa archivio.",
+     "storia": "Nel 2009 la televisione va a prenderselo: entra a «Le Iene» "
+               "come inviato e porta in prima serata un formato nato in "
+               "cameretta. È uno dei primi casi italiani di passaggio "
+               "inverso — non dalla TV al web, ma dal web alla TV — e sarà "
+               "fra i primi italiani a superare il milione di iscritti.",
+     "significato": "Con Willwoosh, Matano è il precedente che ha convinto "
+                    "la televisione italiana che YouTube non fosse un "
+                    "passatempo. Oggi quel percorso è la norma; nel 2009 era "
+                    "una scommessa, e l'ha vinta un genere che sembrava "
+                    "minore.",
+     "chicca": "Il nome del canale non era il suo. «lamentecontorta» è un "
+               "nickname da forum, scelto quando firmare un video con nome e "
+               "cognome non era ancora venuto in mente a nessuno: "
+               "l'anonimato era la regola, non l'eccezione.",
+     "dopo": "Da lì cinema e televisione: dal 2021 è giudice di «Italia's "
+             "Got Talent» e il suo profilo Instagram supera i tre milioni di "
+             "follower. Gli scherzi telefonici restano il pezzo con cui lo "
+             "ricordano tutti.",
+     "confidenza": "alta sul percorso, media sulla data esatta di apertura "
+                   "del canale",
+     "fonti": ["Wikipedia EN", "TvZoom (15 feb 2021)", "Il Messaggero"],
+     "hook": "Nel 2007 un diciottenne telefonava a sconosciuti e metteva le "
+             "registrazioni su YouTube. Due anni dopo la televisione è "
+             "andata a prenderselo.",
+     "hashtags": "#frankmatano #scherzitelefonici #memeteca #youtubeitalia "
+                 "#leiene"},
 ]
 
 

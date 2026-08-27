@@ -26,6 +26,33 @@ import unicodedata
 
 from contenuti import MEMI
 
+# Scartati con motivo, 27 agosto 2026. Restano scritti perche' la prossima
+# sessione non li ricerchi da capo: uno scarto documentato vale quanto una
+# scheda. Non tornano in CANDIDATI.
+SCARTATI = {
+    "Er Trenta": "nessuna fonte: non risulta documentato da nessuna parte, "
+                 "ne' come meme ne' come tormentone universitario",
+    "Ciao sono Filippo Champagne": "esiste ed e' documentato (Il Messaggero, "
+                                   "MonzaToday), ma e' un personaggio del "
+                                   "presente, non un meme, e l'appunto lo "
+                                   "datava agli anni 2000: falso. In piu' la "
+                                   "notorieta' si regge su ludopatia e alcol, "
+                                   "e schedarlo somiglierebbe a uno sfottio",
+    "Giacomo Trave / 'Bella zio'": "«bella zio» e' gergo documentato, ma il "
+                                   "nome dell'inventore no: nessuna fonte "
+                                   "collega l'espressione a una persona",
+    "Il Signoraggio": "i fatti storici reggono (Auriti 1923-2006, cattedra "
+                      "di diritto internazionale a Teramo, il SIMEC "
+                      "sequestrato a Guardiagrele nell'agosto 2000), ma la "
+                      "parte che serve a noi — che sia diventato un "
+                      "tormentone da forum — sta quasi solo su blog. "
+                      "Riprendibile se salta fuori una fonte seria",
+    "«Renzi stai sereno»": "e' gia' in archivio come scheda 024 ENRICO STAI "
+                           "SERENO. Il confronto normalizzato non lo "
+                           "riconosce perche' cambia il nome: tolto a mano",
+}
+
+
 # Chiavi: nome di lavoro → appunto di partenza (da verificare, non da citare)
 CANDIDATI = {
     # ── internet italiano, era forum e primo Facebook ───────────────────────
@@ -33,13 +60,9 @@ CANDIDATI = {
     "Ciao sono Filippo Champagne": "personaggio del web anni 2000 — da verificare",
     "Giacomo Trave / 'Bella zio'": "tormentone da verificare",
     "Il Signoraggio": "complottismo economico diventato tormentone da forum",
-    "«Renzi stai sereno»": "Renzi a Letta, dicembre 2013 — verificare la datazione",
     "«Che vor dì?» / Er Faina II": "eventuale seconda scheda sul personaggio",
-    "Frank Matano / Le Iene scherzi telefonici": "primo YouTube italiano",
-    "Willwoosh (Guglielmo Scilla)": "primo youtuber italiano di massa, 2009",
     "iPantellas / Favij": "generazione YouTube 2013-2015",
     "«Sto ca**o» di Vasco Rossi a Sanremo": "da verificare",
-    "Il Grande Fratello 1 e 'Cristina Plevani'": "2000, nascita del reality italiano",
     "«Sei un mito» / Alessandro Borghese": "verificare se è meme o solo tormentone TV",
     "Barbara d'Urso e il 'cuore'": "gestualità diventata meme",
 
@@ -48,7 +71,6 @@ CANDIDATI = {
     "«Non è normale che sia normale»": "da verificare",
     "Cateno De Luca": "sindaco-meme, verificare la documentazione",
     "Er Pipa / neomelodici su TikTok": "da verificare",
-    "«Mi consenta» di Berlusconi": "tormentone storico, verificare la prima volta",
     "Il tormentone «Ambaradan»": "verificare origine storica (Amba Aradam) e uso online",
     "«Vabbè, ciao» di Rocco Siffredi": "da verificare",
     "I Ferragnez come format": "distinguere dal pandoro-gate",
@@ -129,7 +151,7 @@ def stantii():
 def prossimo_candidato(saltati=()):
     """Il primo candidato non ancora lavorato. `saltati` sono quelli scartati
     in sessioni precedenti perché non verificabili."""
-    esclusi = set(stantii()) | {s for s in saltati}
+    esclusi = set(stantii()) | set(SCARTATI) | {s for s in saltati}
     saltati_n = {_norm(s) for s in saltati}
     for nome, appunto in CANDIDATI.items():
         if nome in esclusi or _norm(nome) in saltati_n:
