@@ -118,15 +118,42 @@ class Instagram:
         self._attendi_pronto(c)
         return self._post(f"{self.ig_user_id}/media_publish", creation_id=c)["id"]
 
-    def pubblica_reel(self, url_video, caption):
+    def pubblica_reel(self, url_video, caption, tentativi=4, pausa=90):
         """Pubblica un Reel da un video mp4 raggiungibile pubblicamente.
-        I video vengono elaborati piu' lentamente delle immagini: l'attesa
-        e' piu' lunga di proposito."""
-        c = self._post(f"{self.ig_user_id}/media",
-                       media_type="REELS", video_url=url_video,
-                       caption=caption)["id"]
-        self._attendi_pronto(c, tentativi=60, pausa=6)
-        return self._post(f"{self.ig_user_id}/media_publish", creation_id=c)["id"]
+
+        L'ingestione video di Meta e' INTERMITTENTE, e per tre giorni ci ha
+        fatto credere di essere un muro. 27 agosto 2026, stesso file e stesso
+        URL: contenitore FINISHED alle 13:04, contenitore ERROR alle 13:11,
+        di nuovo FINISHED poco dopo. L'ERROR arriva nudo, senza codice e
+        senza messaggio, quindi non c'e' niente da correggere nel file: il
+        video 720x1280 H.264 main / AAC 44.1 e' a norma su ogni parametro e
+        passa, quando passa.
+
+        Per questo qui si insiste, e non e' il «riprovare in loop» che il
+        progetto vieta: i tentativi falliti non consumano quota (verificato
+        con content_publishing_limit, 1 su 100), il numero di giri e' chiuso
+        e la pausa e' lunga. Se falliscono tutti, si alza le mani e lo dice.
+
+        Ogni giro crea un contenitore nuovo: uno andato in ERROR non torna
+        buono, e scade da solo in 24 ore."""
+        ultimo = None
+        for giro in range(1, tentativi + 1):
+            c = self._post(f"{self.ig_user_id}/media",
+                           media_type="REELS", video_url=url_video,
+                           caption=caption)["id"]
+            try:
+                self._attendi_pronto(c, tentativi=60, pausa=6)
+            except ErrorePubblicazione as e:
+                ultimo = e
+                print(f"  giro {giro}/{tentativi}: contenitore {c} non passa — {e}")
+                if giro < tentativi:
+                    time.sleep(pausa)
+                continue
+            print(f"  giro {giro}/{tentativi}: contenitore {c} pronto")
+            return self._post(f"{self.ig_user_id}/media_publish",
+                              creation_id=c)["id"]
+        raise ErrorePubblicazione(
+            f"Reel non passato in {tentativi} tentativi. Ultimo: {ultimo}")
 
     def commenta(self, post_id, testo):
         """Utile per mettere le fonti estese nel primo commento."""
