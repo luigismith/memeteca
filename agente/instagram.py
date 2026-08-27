@@ -36,7 +36,14 @@ class ErrorePubblicazione(RuntimeError):
 class Instagram:
     def __init__(self, ig_user_id=None, token=None, api=None, timeout=60):
         self.token = token or os.environ["IG_ACCESS_TOKEN"]
-        self.api = (api or os.environ.get("MEMETECA_API", "instagram")).lower()
+        # 27 agosto 2026: `${{ vars.MEMETECA_API }}` di una variabile che non
+        # esiste non e' una variabile assente, e' una variabile VUOTA. Con
+        # os.environ.get(chiave, "instagram") il default non scatta mai,
+        # perche' la chiave c'e': self.api diventava "". Publica funzionava
+        # lo stesso (li' si confronta solo con "facebook"), ma rinnova(), che
+        # controlla == "instagram", moriva dicendo di essere su Facebook
+        # Login. Un `or` in piu' e il default torna a valere.
+        self.api = (api or os.environ.get("MEMETECA_API") or "instagram").lower()
         self.host = HOST_FACEBOOK if self.api == "facebook" else HOST_INSTAGRAM
         # Con Instagram Login il token è già legato all'account: "me" basta.
         self.ig_user_id = ig_user_id or os.environ.get("IG_USER_ID") or "me"
