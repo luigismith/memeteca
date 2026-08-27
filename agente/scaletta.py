@@ -31,7 +31,7 @@ CANDIDATI = {
     "Giacomo Trave / 'Bella zio'": "tormentone da verificare",
     "Il Cinepanettone come genere-meme": "Boldi/De Sica, sfottò ricorrente online",
     "Lercio": "testata satirica dal 2012, notizie false verosimili. TAG VERIFICATO: @lercio.it (1 Mln follower, account ufficiale)",
-    "Spinoza.it": "dal 2006, battuta come forma editoriale con firma dell'autore",
+    "Spinoza": "dal 2006, battuta come forma editoriale con firma dell'autore — SCHEDATO, scheda 036",
     "Il Signoraggio": "complottismo economico diventato tormentone da forum",
     "«Renzi stai sereno»": "Renzi a Letta, dicembre 2013 — verificare la datazione",
     "«Che vor dì?» / Er Faina II": "eventuale seconda scheda sul personaggio",
@@ -61,7 +61,9 @@ CANDIDATI = {
     "Il 'nonno' di TikTok Italia": "da identificare e verificare",
 
     # ── cinema e televisione ────────────────────────────────────────────────
-    "«Mi si nota di più se vengo e me ne sto in disparte»": "Moretti, Ecce Bombo 1978",
+    # schedati: la chiave deve combaciare con il titolo della scheda, altrimenti
+# prossimo_candidato() li ripropone all'infinito (27 ago 2026).
+    "Mi si nota di più": "Moretti, Ecce Bombo 1978 — SCHEDATO, scheda 034",
     "«Le donne ci guardano» / Ecce Bombo": "verificare quale battuta ha fatto scuola",
     "«Ho fatto tredici!» / Totò": "verificare",
     "«A me gli occhi, please»": "Gigi Proietti, 1976 — verificare la seconda vita online",

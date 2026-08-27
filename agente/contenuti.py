@@ -975,6 +975,257 @@ MEMI = [
              "quei film li girava se la prendeva come un merito: «l'ho "
              "inventato io».",
      "hashtags": "#cinepanettone #vanzina #memeteca #cinemaitaliano #natale"},
+    # ─────────────────────────────────────────────────────── scheda 033
+    {"num": "033", "giorno": "Mercoledì", "slot": 2,
+     "categoria": "INTERNET · 2012",
+     "titolo": "LERCIO",
+     "occhiello": "Il sito che inventa le notizie, e i giornali veri che "
+                  "gliele ricopiano",
+     "anno": "2012",
+     "creatore": "Michele Incollu lancia il sito nel 2012. La redazione è un "
+                 "collettivo di una trentina di persone che scrivono satira "
+                 "come secondo lavoro: fra loro Vittorio Lattanzi, Alfonso "
+                 "Biondi e Andrea Michielotto.",
+     "tag": "@lercio.it",
+     "prima_apparizione": "Ottobre 2012. Il modello dichiarato è «Leggo», il "
+                          "quotidiano gratuito: stessa impaginazione da free "
+                          "press, stessi titoli sensazionalistici, notizie "
+                          "però interamente inventate.",
+     "origini": "Il gruppo nasce prima del sito, intorno al 2009, nella "
+                "«Palestra» del blog di Daniele Luttazzi: una sezione dove i "
+                "lettori commentavano con una battuta una notizia vera. "
+                "Chiusa la Palestra, una quarantina di superstiti fonda su "
+                "Facebook «Acido Lattico». Da lì, nel 2012, esce Lercio.",
+     "storia": "Il meccanismo funziona meglio del previsto quando le notizie "
+               "false cominciano a essere prese per vere. Nel 2013 il titolo "
+               "«Errore nel sistema operativo, Radio Maria passa i Megadeth» "
+               "gira come autentico e costringe il direttore dell'emittente "
+               "a smentire, dopo il rilancio di testate vere.",
+     "significato": "«Ah, ma è Lercio» è diventata la formula italiana con "
+                    "cui si smonta una notizia troppo assurda per essere "
+                    "vera — e insieme la confessione di chi ci era cascato. "
+                    "Il bersaglio non è il lettore: è il giornalismo che "
+                    "titola per il clic, e la pigrizia di chi condivide "
+                    "senza aprire.",
+     "chicca": "La redazione rifiuta l'etichetta di fake news: quello che "
+               "pubblica non deve essere creduto, è una battuta travestita "
+               "da notizia. Il paradosso è che la prova della riuscita è "
+               "sempre qualcuno che ci crede.",
+     "dopo": "Oggi Lercio conta circa 1,5 milioni di seguaci su Facebook, "
+             "800mila su Twitter e 700mila su Instagram, pubblica un libro "
+             "all'anno e porta la satira nei locali. Chi scrive continua a "
+             "farlo nel tempo libero: di mestiere fanno altro.",
+     "reperto": {"tipo": "citazione", "bollo": "Il titolo",
+                 "testo": "«Errore nel sistema operativo, Radio Maria passa "
+                          "i Megadeth»",
+                 "fonte": "Lercio, 2013. Ricostruzione tipografica, non "
+                          "riproduzione."},
+     "confidenza": "alta",
+     "fonti": ["Il Post (14 ott 2021)", "Treccani Magazine", "Primonumero"],
+     "hook": "Un sito inventa notizie false per ridere del giornalismo. Nel "
+             "2013 una di quelle notizie è finita sui giornali veri, e Radio "
+             "Maria ha dovuto smentire.",
+     "hashtags": "#lercio #satira #memeteca #fakenews #internetitaliano"},
+
+    # ─────────────────────────────────────────────────────── scheda 034
+    {"num": "034", "giorno": "Mercoledì", "slot": 3,
+     "categoria": "CINEMA · 1978",
+     "titolo": "MI SI NOTA DI PIÙ",
+     "occhiello": "«...se vengo e me ne sto in disparte o se non vengo per "
+                  "niente?»",
+     "anno": "1978",
+     "creatore": "Nanni Moretti, che scrive, dirige e interpreta Michele "
+                 "Apicella. È il suo secondo lungometraggio, girato in 16mm "
+                 "per ragioni di budget e poi gonfiato in 35mm per la "
+                 "distribuzione in sala.",
+     "tag": "@sachercinema",
+     "prima_apparizione": "«Ecce bombo», nelle sale italiane l'8 marzo 1978. "
+                          "Nello stesso anno il film è in concorso al 31° "
+                          "Festival di Cannes.",
+     "origini": "Michele, al telefono, deve decidere se andare a una festa e "
+                "fa la domanda che nessuno aveva mai osato porre ad alta "
+                "voce: conta di più esserci restando in disparte, o non "
+                "esserci affatto? La battuta non ha una risposta, ed è "
+                "esattamente per questo che ha funzionato.",
+     "storia": "La seconda vita della frase è politica. Sky TG24 ne ha "
+               "censito l'uso da parte di Gianfranco Fini e Pippo Civati nel "
+               "2010, Debora Serracchiani nel 2014, Maurizio Gasparri nel "
+               "2016, Mara Carfagna nel 2018, Gregorio De Falco e Giuseppe "
+               "Conte nel 2020: quasi sempre per dare del vanitoso a "
+               "qualcuno.",
+     "significato": "Si usa per smascherare chi calcola la propria presenza "
+                    "in funzione dell'effetto che fa: il collega che diserta "
+                    "la riunione perché si noti, il politico che non entra "
+                    "in aula. È la formula italiana dell'assenza strategica, "
+                    "e resta una domanda perché la risposta metterebbe in "
+                    "imbarazzo chi la pone.",
+     "chicca": "Dallo stesso film esce anche «faccio cose, vedo gente», con "
+               "cui si prende in giro chi riempie le giornate senza "
+               "combinare niente. Nel maggio 1996 l'ha usata Romano Prodi "
+               "per rispondere ai giornalisti che gli chiedevano conto del "
+               "suo lavoro.",
+     "dopo": "Il titolo del film viene dal grido di uno straccivendolo "
+             "romano, raccontato da Moretti stesso. La battuta è "
+             "sopravvissuta a tutto il resto: oggi si cita senza sapere che "
+             "dietro c'è un ragazzo indeciso se andare a una festa.",
+     "reperto": {"tipo": "citazione", "bollo": "La battuta",
+                 "testo": "«Mi si nota di più se vengo e me ne sto in "
+                          "disparte o se non vengo per niente?»",
+                 "fonte": "Michele Apicella in «Ecce bombo», di Nanni "
+                          "Moretti, 1978"},
+     "confidenza": "alta",
+     "fonti": ["Wikipedia IT", "Sky TG24 (8 lug 2020)", "MYmovies"],
+     "hook": "Una domanda fatta al telefono nel 1978 da un ragazzo che non "
+             "sapeva se andare a una festa. Da mezzo secolo i politici "
+             "italiani la usano per darsi dei vanitosi a vicenda.",
+     "hashtags": "#eccebombo #nannimoretti #memeteca #cinemaitaliano "
+                 "#misinotadipiu"},
+
+    # ─────────────────────────────────────────────────────── scheda 035
+    # Nessun tag: il primo video è attribuito all'account TikTok @eZburger401,
+    # rimosso poco dopo, e gli altri personaggi hanno autori dispersi e non
+    # identificabili. Non esiste un account ufficiale del fenomeno da taggare
+    # e taggarne uno qualunque sarebbe una misattribuzione. Campo vuoto.
+    {"num": "035", "giorno": "Giovedì", "slot": 0,
+     "categoria": "INTERNET · 2025",
+     "titolo": "ITALIAN BRAINROT",
+     "occhiello": "Il meme italiano più visto al mondo, e non l'ha fatto un "
+                  "italiano",
+     "anno": "2025",
+     "creatore": "Autori dispersi e in larga parte non italiani. Il primo "
+                 "personaggio è attribuito all'utente TikTok @eZburger401, "
+                 "gennaio 2025, il cui account è stato poi rimosso. «Tung "
+                 "Tung Tung Sahur» nasce invece in Indonesia.",
+     "prima_apparizione": "Gennaio 2025 su TikTok, con «Tralalero Tralala»: "
+                          "uno squalo a tre gambe con le Nike e una voce "
+                          "sintetica che canta in italiano una filastrocca "
+                          "senza senso. Il 13 gennaio un rilancio supera i "
+                          "7 milioni di visualizzazioni.",
+     "origini": "Immagini generate al computer e voci narranti in un "
+                "italiano finto: nomi tronchi, rime facili, plurali "
+                "sbagliati. Nessuno dei personaggi viene da un contesto "
+                "italiano reale. L'italiano non è la lingua del meme, è il "
+                "suo effetto sonoro: suona buffo a chi non lo parla.",
+     "storia": "In pochi mesi arrivano «Bombardiro Crocodilo», «Ballerina "
+               "Cappuccina» (19 marzo 2025), «Tung Tung Tung Sahur». I "
+               "bambini se li scambiano come figurine e ne scrivono le "
+               "storie: parentele, litigi, tradimenti. Il fenomeno esplode "
+               "soprattutto fuori dall'Italia — Stati Uniti, Corea del Sud, "
+               "Germania.",
+     "significato": "È il primo caso in cui l'Italia diventa materia prima "
+                    "di un meme globale senza parteciparvi: non "
+                    "un'italianità raccontata, ma campionata e ridotta a "
+                    "suono. Per un archivio del meme italiano è il caso "
+                    "limite — italiano nel nome, straniero in tutto il "
+                    "resto.",
+     "chicca": "La copertura seria è quasi tutta estera: il New York Times "
+               "il 30 aprile 2025, il Guardian il 25 giugno. Il meme più "
+               "«italiano» dell'anno è stato spiegato al mondo in inglese.",
+     "dopo": "Resta la domanda che l'archivio non scioglie: se un meme "
+             "parla italiano ma non l'ha scritto nessun italiano, di chi è? "
+             "Qui è schedato per quello che è — un fenomeno sull'Italia, non "
+             "dell'Italia.",
+     "confidenza": "alta sui fatti, media sull'attribuzione dei singoli video",
+     "fonti": ["Wikipedia EN", "The New York Times (30 apr 2025)",
+               "The Guardian (25 giu 2025)"],
+     "hook": "Il meme italiano più visto del 2025 è fatto di parole "
+             "inventate, personaggi mai esistiti e nessun autore italiano. "
+             "Ce l'hanno spiegato il New York Times e il Guardian.",
+     "hashtags": "#italianbrainrot #tralalerotralala #memeteca #tiktok "
+                 "#memeitaliani"},
+
+    # ─────────────────────────────────────────────────────── scheda 036
+    {"num": "036", "giorno": "Giovedì", "slot": 1,
+     "categoria": "INTERNET · 2006",
+     "titolo": "SPINOZA",
+     "occhiello": "Il blog dove la battuta ha una firma",
+     "anno": "2006",
+     "creatore": "Stefano Andreoli e Alessandro Bonino, con uno staff di "
+                 "redattori volontari. Ma le battute arrivano dal forum: le "
+                 "scrivono i lettori, e chi passa la selezione viene "
+                 "pubblicato con il proprio nome sotto.",
+     "tag": "@spinozait",
+     "prima_apparizione": "2006, secondo la voce enciclopedica. La scheda "
+                          "«Info» del sito stesso si data però al 2005: la "
+                          "discrepanza è di un anno e non è mai stata "
+                          "sciolta.",
+     "origini": "Il formato è una riga sola: una notizia del giorno e una "
+                "battuta che la ribalta. Niente vignette, niente articolo, "
+                "niente contesto. Dal marzo 2009 il forum è l'unico canale "
+                "ufficiale per proporre battute, e la redazione sceglie "
+                "quali mandare in pagina.",
+     "storia": "L'idea che una battuta da bar potesse avere un autore "
+               "riconosciuto è ciò che separa Spinoza dal resto "
+               "dell'internet italiano dell'epoca. Miglior blog italiano ai "
+               "Macchianera nel 2009 e nel 2010, Premio Internazionale di "
+               "Satira di Forte dei Marmi nel 2010, e l'8 novembre 2010 la "
+               "citazione di Benigni a «Vieni via con me».",
+     "significato": "Spinoza ha insegnato all'internet italiano che la "
+                    "battuta è un genere breve con una firma, non materiale "
+                    "di pubblico dominio. È il motivo per cui ancora oggi, "
+                    "nelle pagine satiriche che si rispettano, "
+                    "l'attribuzione si mette — e quando manca si nota.",
+     "chicca": "I contenuti escono con una licenza Creative Commons che "
+               "vieta l'uso commerciale e le opere derivate. Un sito di "
+               "battute che si difende dal copia-incolla è un'anomalia in un "
+               "ecosistema dove tutto viene fotografato dallo schermo e "
+               "ripubblicato senza credito.",
+     "dopo": "Fra il 2010 e il 2014 escono cinque libri, l'ultimo con "
+             "Rizzoli il 7 maggio 2014. Le battute passano su «Il Fatto "
+             "Quotidiano» e in televisione su Rai 3. Il sito è ancora "
+             "online, e il forum riceve ancora proposte.",
+     "confidenza": "alta, tranne l'anno di nascita",
+     "fonti": ["Wikipedia IT", "spinoza.it (scheda Info)"],
+     "hook": "Nel 2006 un blog italiano ha fatto una cosa che non faceva "
+             "nessuno: mettere la firma sotto la battuta. Le scrivono i "
+             "lettori, e chi passa la selezione ci mette il nome.",
+     "hashtags": "#spinoza #satira #memeteca #blog #internetitaliano"},
+
+    # ─────────────────────────────────────────────────────── scheda 037
+    {"num": "037", "giorno": "Giovedì", "slot": 2,
+     "categoria": "TV & PUBBLICITÀ · 1990",
+     "titolo": "IL GABIBBO",
+     "occhiello": "Il pupazzo rosso che ha vinto una causa per plagio durata "
+                  "tre gradi di giudizio",
+     "anno": "1990",
+     "creatore": "Antonio Ricci, autore di «Striscia la notizia», che lo "
+                 "manda in onda nel 1990. Da allora il pupazzo rosso è il "
+                 "simbolo del programma e uno dei personaggi più "
+                 "riconoscibili della televisione italiana.",
+     "tag": "@ilgabibbo___",
+     "prima_apparizione": "1990, a «Striscia la notizia» su Canale 5.",
+     "origini": "L'accusa arriva dagli Stati Uniti: il Gabibbo sarebbe la "
+                "copia di Big Red, mascotte della Western Kentucky "
+                "University disegnata nel 1979 dallo studente Ralph Carey. "
+                "Stesso rosso, stessi occhi sporgenti, stessa bocca larga, "
+                "nessun naso e nessun orecchio riconoscibile.",
+     "storia": "Le società Crossland Enterprises e Adfra chiedono a Mediaset "
+               "100.000 euro di danni e che il pupazzo non vada più in onda. "
+               "La causa attraversa tre gradi di giudizio e più di un "
+               "decennio: è il caso italiano meglio documentato di un "
+               "personaggio televisivo portato in tribunale per somiglianza.",
+     "significato": "La vicenda ha dato al Gabibbo una seconda vita online: "
+                    "non come satira, ma come precedente. È la storia che si "
+                    "tira fuori ogni volta che si discute se un personaggio "
+                    "possa essere «troppo simile» a un altro — e la risposta "
+                    "italiana, per tre volte, è stata che la somiglianza da "
+                    "sola non basta.",
+     "chicca": "Nel 2007 il Tribunale di Ravenna dichiara infondata "
+               "l'accusa; nel 2011 la Corte d'appello di Bologna conferma, "
+               "ritenendo che Big Red non fosse abbastanza originale da "
+               "meritare tutela d'autore; l'11 gennaio 2017 la Cassazione "
+               "chiude con la sentenza n. 503.",
+     "dopo": "Il pupazzo è in onda da oltre trent'anni e dal febbraio 2026 "
+             "ha una pagina Instagram ufficiale sua, separata da quella del "
+             "programma: il personaggio ha superato il contenitore che "
+             "l'aveva inventato.",
+     "confidenza": "alta",
+     "fonti": ["Panorama", "Vice Italia", "diritto.it"],
+     "hook": "Un pupazzo rosso italiano è stato accusato per anni di essere "
+             "la copia di una mascotte universitaria americana. Ha vinto in "
+             "tre gradi di giudizio: la somiglianza non basta.",
+     "hashtags": "#gabibbo #striscialanotizia #memeteca #tvitaliana "
+                 "#bigred"},
 ]
 
 

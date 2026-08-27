@@ -101,7 +101,7 @@ def genera():
   <p class="payoff">L'archivio ragionato del meme italiano. Chi l'ha fatto,
   quando è apparso la prima volta, cosa significa oggi — <b>ogni affermazione
   su almeno due fonti verificate</b>, scritte in fondo a ogni post.
-  {n} schede, due al giorno.</p>
+  {n} schede, tre a settimana — lunedì, mercoledì e venerdì.</p>
   <a class="cta" href="{IG}" target="_blank" rel="noopener">Seguici su Instagram →</a>
 </header>
 <main>

@@ -135,7 +135,14 @@ i{{font-family:'Instrument Serif';font-style:italic;font-size:1.05em;}}
   letter-spacing:-.03em;text-transform:uppercase;overflow:hidden;display:block;
   /* aria a destra: con la crenatura negativa i grotteschi pesanti
      arrivano a filo del bordo e sembrano tagliati */
-  padding-right:26px;}}
+  padding-right:26px;
+  /* 27 agosto 2026: la 034 «MI SI NOTA DI PIÙ» usciva «...DI PIU» nella
+     slide 2. line-height .86 fa una riga più bassa dei glifi, e con
+     overflow:hidden l'accento della Ù finiva tagliato sopra il bordo.
+     Sulla copertina non si vedeva perché l'accento cadeva in seconda riga.
+     Regola: un titolo con vocale accentata maiuscola va SEMPRE guardato
+     renderizzato, non solo letto nel codice. */
+  padding-top:.14em;}}
 .serif{{font-family:'Instrument Serif';line-height:1.2;overflow:hidden;}}
 .anno-fantasma{{position:absolute;right:-34px;bottom:96px;z-index:1;
   font-family:'Archivo';font-weight:900;font-size:320px;line-height:.8;
@@ -193,6 +200,19 @@ def _reperto(m):
             f'<div class="fonte">{_e(r["fonte"])}</div></div>')
 
 
+# 27 agosto 2026, seconda cicatrice della stessa scheda (034 «MI SI NOTA DI
+# PIÙ»): in copertina il titolo va a capo, e con line-height .86 l'accento
+# della Ù della seconda riga risaliva addosso alla prima, dove sembrava una
+# virgola appiccicata alla I di «SI». Le maiuscole accentate hanno bisogno di
+# più interlinea delle altre: qui si allenta solo per loro, così tutti i
+# titoli già pubblicati restano identici al pixel.
+VOCALI_ACCENTATE = set("ÀÁÈÉÌÍÒÓÙÚ")
+
+
+def _interlinea(titolo):
+    return "line-height:1.02;" if set(titolo) & VOCALI_ACCENTATE else ""
+
+
 def slide_copertina(m):
     return f"""<div class="slide">
   <div class="grana"></div><div class="vignetta"></div>
@@ -203,7 +223,7 @@ def slide_copertina(m):
   {_reperto(m)}
   <div class="z" style="flex:1;min-height:44px;"></div>
   <div class="z titolone" data-fit="164" data-min="44"
-       style="height:430px;">{_e(m['titolo'])}</div>
+       style="height:430px;{_interlinea(m['titolo'])}">{_e(m['titolo'])}</div>
   <div class="z" style="width:180px;height:9px;background:{C['inchiostro']};margin:42px 0 32px;"></div>
   <div class="z serif" data-fit="56" data-min="30"
        style="height:200px;max-width:880px;margin-bottom:54px;">{_e(m['occhiello'])}</div>
