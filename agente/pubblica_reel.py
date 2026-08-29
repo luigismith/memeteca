@@ -26,7 +26,24 @@ from instagram import Instagram
 
 QUI = pathlib.Path(__file__).parent
 STATO = QUI / "stato.json"
-SUFFISSO_FILE = "_v5"
+# 29 agosto 2026: era "_v5", e non serviva a niente.
+#
+# Il suffisso nasceva dalla teoria dei «percorsi bruciati»: si credeva che
+# Meta ricordasse gli URL falliti e li rifiutasse per sempre, ignorando la
+# query string, quindi a ogni tentativo si ricopiava lo stesso video su un
+# nome nuovo — _v2, _v3, _v4, _v5. Erano tutti rifiutati, e la conclusione
+# era sempre «anche questo percorso e' bruciato».
+#
+# La causa vera era un'altra: l'URL costruito da MEMETECA_BASE_URL rispondeva
+# 404, e l'API segnala un download fallito con lo stesso ERROR nudo di un file
+# malformato. Nessun percorso e' mai stato bruciato: erano tutti sbagliati
+# allo stesso modo. Cambiare nome al file non poteva funzionare, e in quattro
+# giorni di tentativi non ha mai funzionato.
+#
+# Ora i video si chiamano come li scrive reel.py, e basta. Le tre versioni
+# vecchie restano in assets solo perche' i reel 021, 022 e 026 sono stati
+# pubblicati da quei file: non se ne creano altre.
+SUFFISSO_FILE = ""
 
 
 def caption_reel(m):
@@ -109,8 +126,6 @@ def main(num, prova=False, url=None):
 
     if not (url or basi_possibili()):
         sys.exit("serve MEMETECA_BASE_URL, oppure GITHUB_REPOSITORY")
-    # Il percorso si versiona perche' un URL gia' rifiutato resta rifiutato.
-    #
     # LA TEORIA DEL «BUDGET VIDEO» ERA SBAGLIATA. Il 24 e il 25 agosto, dopo
     # una ventina di container tutti finiti in ERROR, avevamo scritto qui che
     # il vincolo era un budget di elaborazione video dell'account, e che
