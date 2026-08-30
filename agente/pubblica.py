@@ -141,7 +141,41 @@ def cmd_prossimo(_):
     print(f"\n{costruisci_caption(m)}")
 
 
+# Fuori da questa fascia non si pubblica. 29 agosto 2026: la scheda 034 e'
+# uscita alle 2:37 del mattino, ora italiana. Non era un guasto — era una
+# corsa `schedule` di venerdi' consegnata da GitHub con oltre sei ore di
+# ritardo, che ha trovato la coda piena e ha fatto il suo dovere.
+#
+# Il cron di GitHub non garantisce l'orario: garantisce, quando va bene, che
+# prima o poi la corsa parta. Allargare i tentativi (lo abbiamo fatto il 28
+# agosto, da nove a venti) aumenta le probabilita' che uno arrivi puntuale,
+# ma non impedisce a un ritardatario di svegliarsi nel cuore della notte.
+#
+# Quindi il controllo dell'orario sta QUI, dove si decide, e non nel cron,
+# che e' solo una sveglia inaffidabile. Un post alle 2:37 non lo legge
+# nessuno: e' peggio di un post saltato, perche' brucia la scheda in silenzio.
+# Con --forza si pubblica lo stesso, per i casi in cui si sa quello che si fa.
+ORA_MINIMA, ORA_MASSIMA = 11, 21
+
+
+def fuori_orario():
+    """Se siamo fuori fascia, ritorna l'ora italiana; altrimenti None."""
+    adesso = dt.datetime.now(fuso_italiano())
+    if ORA_MINIMA <= adesso.hour < ORA_MASSIMA:
+        return None
+    return adesso.strftime("%H:%M")
+
+
 def cmd_pubblica(args):
+    tardi = fuori_orario()
+    if tardi and not args.forza:
+        print(f"::warning::Sono le {tardi} italiane, fuori dalla fascia "
+              f"{ORA_MINIMA}:00-{ORA_MASSIMA}:00. Non pubblico: una corsa "
+              f"arrivata in ritardo non deve far uscire un post di notte. "
+              f"Se la giornata e' saltata, si recupera al prossimo giorno "
+              f"di uscita o a mano con --forza.")
+        return
+
     gia = uscite_di_oggi()
     if gia >= SCHEDE_AL_GIORNO and not args.forza:
         print(f"Oggi sono gia' uscite {gia} schede (tetto: {SCHEDE_AL_GIORNO}). "

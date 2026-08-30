@@ -55,46 +55,50 @@ def caption_reel(m):
             f"{m['hashtags']}")
 
 
-def basi_possibili():
-    """Le basi da provare, in ordine, per costruire l'URL del video.
+def url_possibili(num):
+    """Gli URL da provare per il video, in ordine.
 
-    27 agosto 2026: MEMETECA_BASE_URL serve le immagini ma risponde 404 sui
-    .mp4 — il log della prova sulla 022 dice `.../assets/reel_022_v5.mp4 →
-    HTTP 404`. E' un segreto, quindi da qui non si legge e non si corregge;
-    ma la base giusta non e' un'informazione segreta, e' deducibile: GitHub
-    Pages di questo repository sta sempre su <utente>.github.io/<repo>, e
-    GITHUB_REPOSITORY ce l'ha scritto dentro.
+    30 agosto 2026, la spiegazione esatta del 404 che per quattro giorni ha
+    fatto fallire i Reel. MEMETECA_BASE_URL **include gia' `/assets`**: si
+    vede in pubblica.py, che costruisce le immagini come `{base}/{num}_1.jpg`
+    senza aggiungere niente. Qui invece si scriveva `{base}/assets/reel_...`,
+    e l'indirizzo diventava `.../assets/assets/reel_021.mp4`. Un 404, sempre.
 
-    Quindi si prova prima la base configurata (se un giorno viene sistemata
-    torna a vincere lei) e poi quella dedotta. Vince la prima che risponde
-    200. Cosi' la pagina non dipende da un segreto che nessuna automazione
-    puo' controllare."""
-    basi = []
-    configurata = os.environ.get("MEMETECA_BASE_URL", "").rstrip("/")
-    if configurata:
-        basi.append(configurata)
+    Per questo le immagini funzionavano e i video no, con lo stesso segreto e
+    lo stesso token: non era il tipo di file, era una cartella di troppo. E
+    per questo nessuna delle ipotesi tentate poteva reggere — budget video,
+    percorsi bruciati, formato del file, account non abilitato: l'URL non
+    esisteva e basta, e la Graph API lo segnala con lo stesso ERROR nudo che
+    userebbe per un video malformato.
+
+    Si prova comunque piu' di un indirizzo, e si sceglie quello che risponde
+    200: il segreto non e' leggibile da qui, quindi non si puo' sapere con
+    certezza come e' fatto, e una verifica costa una HEAD."""
+    base = os.environ.get("MEMETECA_BASE_URL", "").rstrip("/")
+    nome = f"reel_{num}{SUFFISSO_FILE}.mp4"
+    urls = []
+    if base:
+        urls.append(f"{base}/{nome}")          # base che include gia' /assets
+        urls.append(f"{base}/assets/{nome}")   # base che si ferma alla radice
     repo = os.environ.get("GITHUB_REPOSITORY", "")
     if "/" in repo:
-        utente, nome = repo.split("/", 1)
-        dedotta = f"https://{utente}.github.io/{nome}"
-        if dedotta != configurata:
-            basi.append(dedotta)
-    return basi
+        utente, nome_repo = repo.split("/", 1)
+        urls.append(f"https://{utente}.github.io/{nome_repo}/assets/{nome}")
+    return list(dict.fromkeys(urls))
 
 
 def scegli_url(num):
     """Il primo URL che risponde davvero 200."""
-    coda = f"/assets/reel_{num}{SUFFISSO_FILE}.mp4"
     ultimo = None
-    for base in basi_possibili():
-        video = base + coda
+    for video in url_possibili(num):
         r = requests.head(video, timeout=30, allow_redirects=True)
         print(f"provo {video} → HTTP {r.status_code}")
         if r.status_code == 200:
             return video
         ultimo = r.status_code
-    sys.exit(f"nessuna base serve {coda} (ultima risposta {ultimo}): "
-             f"il file e' su Pages? il push e' arrivato?")
+    sys.exit(f"nessun indirizzo serve reel_{num}{SUFFISSO_FILE}.mp4 "
+             f"(ultima risposta {ultimo}): il file e' su Pages? "
+             f"il push e' arrivato?")
 
 
 def controlla_online(video):
@@ -124,7 +128,7 @@ def main(num, prova=False, url=None):
     if not m:
         sys.exit(f"scheda {num} non trovata")
 
-    if not (url or basi_possibili()):
+    if not (url or url_possibili(num)):
         sys.exit("serve MEMETECA_BASE_URL, oppure GITHUB_REPOSITORY")
     # LA TEORIA DEL «BUDGET VIDEO» ERA SBAGLIATA. Il 24 e il 25 agosto, dopo
     # una ventina di container tutti finiti in ERROR, avevamo scritto qui che
