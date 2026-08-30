@@ -47,6 +47,20 @@ SCARTATI = {
                       "parte che serve a noi — che sia diventato un "
                       "tormentone da forum — sta quasi solo su blog. "
                       "Riprendibile se salta fuori una fonte seria",
+    "Il caso Marrazzo": "proposto da Luigi il 29 agosto 2026, scartato lo "
+                        "stesso giorno per DUE motivi. Il primo: come meme "
+                        "non esiste — nessuna fonte documenta un tormentone "
+                        "o un formato nato da quella vicenda, c'e' solo "
+                        "cronaca (luglio 2009, il video dei carabinieri in "
+                        "via Gradoli, la condanna dei quattro militari nel "
+                        "novembre 2018). Il secondo, che pesa di piu' e "
+                        "vale anche se un giorno saltasse fuori una fonte: "
+                        "e' una storia di ricatto con una vittima di reato, "
+                        "e la donna trans coinvolta e' morta in un incendio "
+                        "pochi mesi dopo. Schedarla sarebbe rovistare in una "
+                        "vicenda privata finita male sotto forma di "
+                        "intrattenimento — la definizione esatta di «cercare "
+                        "la rissa». NON si riprende",
     "«Renzi stai sereno»": "e' gia' in archivio come scheda 024 ENRICO STAI "
                            "SERENO. Il confronto normalizzato non lo "
                            "riconosce perche' cambia il nome: tolto a mano",
