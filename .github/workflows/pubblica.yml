@@ -14,6 +14,31 @@ name: MEMETECA — pubblicazione automatica
 #
 # ATTENZIONE agli orari: il cron di GitHub è in UTC e non conosce l'ora legale.
 # Da fine ottobre, con l'ora solare, va spostato un'ora avanti (11:30).
+# 1 SETTEMBRE 2026: QUESTO CRON NON E' PIU' QUELLO CHE FA USCIRE I POST.
+#
+# Lo schedule di GitHub ha smesso di essere eseguito su questo repository.
+# Venerdi' 28 agosto: zero corse su venti. Lunedi' 31: zero su venti. Sabato
+# 29: una corsa di venerdi' consegnata con sei ore di ritardo, che ha fatto
+# uscire la 034 alle 2:37 del mattino. Il workflow risulta «active», il file
+# e' sul ramo di default, i permessi sono a posto: non c'e' niente da
+# riparare, GitHub semplicemente non lo esegue.
+#
+# Un sospetto, che resta un sospetto: fino al 26 agosto le corse programmate
+# partivano regolari da settimane. Il 27 abbiamo lanciato decine di workflow
+# a mano per diagnosticare i Reel — una venticinquina di contenitori e altri
+# dispatch — e da li' lo schedule non e' piu' partito. GitHub deprioritizza
+# le corse programmate dei repository che consumano molto. Non e' dimostrato,
+# ma il momento coincide troppo bene per non scriverlo.
+#
+# Decisione di Luigi, 1 settembre 2026: la pubblicazione la innesca un
+# compito pianificato di Claude, che lancia workflow_dispatch su questo
+# workflow lunedi', mercoledi' e venerdi' alle 12:35 italiane. Il cron qui
+# sotto resta acceso e non fa danni: se un giorno GitHub tornasse a
+# eseguirlo, il tetto di una scheda al giorno dentro pubblica.py impedisce il
+# doppione, e la fascia oraria impedisce il post notturno.
+#
+# Quindi: se un giorno la scheda non esce, NON e' questo cron ad aver
+# fallito. E' il compito pianificato che non e' partito, e si guarda li'.
 on:
   schedule:
     # Si tenta ogni VENTI MINUTI dalle 12:34 alle 21:54 italiane, lun/mer/ven.
