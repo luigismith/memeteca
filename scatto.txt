@@ -1,0 +1,25 @@
+IL CORDONE
+==========
+
+Questo file non contiene niente di utile. Serve solo a essere toccato.
+
+Un push che modifica scatto.txt fa partire .github/workflows/pubblica.yml,
+cioe' la pubblicazione della scheda del giorno. E' l'innesco di riserva, e
+in pratica quello principale, perche' e' l'unico che non dipende da niente:
+non dallo scheduler di GitHub, che su questo repository ha smesso di
+funzionare il 28 agosto 2026, e non dagli strumenti GitHub di una sessione
+di Claude, che il 2 settembre non c'erano e hanno fatto fallire in silenzio
+il compito pianificato.
+
+Un push, invece, lo sa fare chiunque abbia il repository collegato.
+
+Per tirarlo:
+
+    date -u +"%Y-%m-%dT%H:%M:%SZ tirato il cordone" >> scatto.txt
+    git add scatto.txt && git commit -m "scatto: pubblicazione del giorno" && git push
+
+Non fa danni se lo si tira due volte: pubblica.py pubblica al massimo una
+scheda al giorno e si rifiuta di pubblicare fuori dalla fascia 11:00-21:00
+italiane. Nel dubbio, tiralo.
+
+--- registro ---
