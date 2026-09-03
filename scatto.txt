@@ -23,3 +23,4 @@ scheda al giorno e si rifiuta di pubblicare fuori dalla fascia 11:00-21:00
 italiane. Nel dubbio, tiralo.
 
 --- registro ---
+2026-09-03T19:06:32Z prova del cordone, fuori fascia: non deve pubblicare
