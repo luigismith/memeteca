@@ -78,7 +78,19 @@ on:
   #
   # `paths` limita l'innesco a quel file solo: il commit che il workflow fa da
   # solo su agente/stato.json non lo ritriggera, altrimenti si avviterebbe.
+  #
+  # `branches: main` e' arrivato dopo, il 3 settembre, e l'ha trovato la prova
+  # a vuoto invece di un guaio in produzione: il commit che ha introdotto il
+  # cordone ne ha fatte partire DUE, di corse — una su main e una sul ramo di
+  # lavoro. Senza il vincolo, ogni push di un ramo qualsiasi che tocchi
+  # scatto.txt fa girare la pubblicazione, e per giunta con il codice e la
+  # coda di quel ramo. Quella volta non e' uscito niente solo perche' il tetto
+  # giornaliero era gia' stato raggiunto: una protezione che ha coperto un
+  # buco diverso da quello per cui era stata scritta, il che vale come
+  # fortuna, non come progetto.
   push:
+    branches:
+      - main
     paths:
       - "scatto.txt"
   workflow_dispatch:
