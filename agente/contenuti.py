@@ -1172,7 +1172,153 @@ MEMI = [
              "registrazioni su YouTube. Due anni dopo la televisione è "
              "andata a prenderselo.",
      "hashtags": "#frankmatano #scherzitelefonici #memeteca #youtubeitalia "
-                 "#leiene"},
+                 "#leiene"},    # ─────────────────────────────────────────────────────── scheda 037
+    # Nessun tag: l'autore del romanzo e' morto nel 1957, il regista del film
+    # nel 1976. Non esiste un account da taggare che sia attribuzione e non
+    # appropriazione, quindi il campo resta vuoto per scelta.
+    {"num": "037", "giorno": "Giovedì", "slot": 2,
+     "categoria": "CINEMA · 1963",
+     "titolo": "IL GATTOPARDO",
+     "occhiello": "La frase più citata della politica italiana viene da un "
+                  "libro che nessuno voleva pubblicare",
+     "anno": "1963",
+     "creatore": "Giuseppe Tomasi di Lampedusa, morto nel 1957 senza vedere "
+                 "stampato il suo unico romanzo. La battuta non è del "
+                 "principe Salina, come quasi tutti credono: è di Tancredi "
+                 "Falconeri, suo nipote.",
+     "prima_apparizione": "Il romanzo esce postumo per Feltrinelli l'11 "
+                          "novembre 1958. Il film di Luchino Visconti, quello "
+                          "che porta la frase al grande pubblico, è del 1963 "
+                          "e vince la Palma d'oro.",
+     "origini": "Tancredi sta per unirsi ai garibaldini e lo spiega allo zio: "
+                "non per convinzione, ma per restare dalla parte giusta "
+                "quando la Sicilia cambierà padrone. «Se vogliamo che tutto "
+                "rimanga com'è, bisogna che tutto cambi» non è cinismo "
+                "giovanile, è conservazione travestita da entusiasmo.",
+     "storia": "La frase esce dal romanzo e diventa un'accusa pronta all'uso: "
+               "ogni riforma italiana annunciata e poi svuotata si prende del "
+               "gattopardismo. La parola è finita in vocabolario — Treccani "
+               "la definisce l'atteggiamento di chi si adatta ai nuovi "
+               "assetti fingendo di appoggiarli, per conservare privilegi.",
+     "significato": "Si usa per dire che un cambiamento è finto, e che chi lo "
+                    "annuncia lo fa per non cambiare niente. È una delle "
+                    "poche citazioni letterarie italiane che funziona come "
+                    "diagnosi: chi la pronuncia non sta facendo sfoggio di "
+                    "cultura, sta accusando qualcuno.",
+     "chicca": "Il libro fu rifiutato da Mondadori e da Einaudi. A bocciarlo "
+               "per Einaudi fu Elio Vittorini, che pure lo apprezzava: lo "
+               "trovava troppo tradizionale per la collana sperimentale che "
+               "dirigeva. Vinse il Premio Strega nel 1959, due anni dopo la "
+               "morte dell'autore.",
+     "dopo": "Nei primi otto mesi vende 250.000 copie. Oggi «gattopardismo» "
+             "è una voce di vocabolario, e la frase che l'ha generata la dice "
+             "un ragazzo che sta per cambiare bandiera.",
+     "reperto": {"tipo": "citazione", "bollo": "La frase",
+                 "testo": "«Se vogliamo che tutto rimanga com'è, bisogna che "
+                          "tutto cambi»",
+                 "fonte": "Tancredi Falconeri ne «Il Gattopardo», Giuseppe "
+                          "Tomasi di Lampedusa, 1958"},
+     "confidenza": "alta",
+     "fonti": ["Wikipedia IT", "Treccani, Vocabolario"],
+     "hook": "La frase che in Italia serve ad accusare i finti cambiamenti "
+             "viene da un romanzo rifiutato da Mondadori e da Einaudi, che "
+             "l'autore non vide mai stampato.",
+     "hashtags": "#ilgattopardo #gattopardismo #memeteca #tomasidilampedusa "
+                 "#cinemaitaliano"},
+
+    # ─────────────────────────────────────────────────────── scheda 038
+    # Nessun tag: Gigi Proietti e' morto nel 2020 e non risulta un account
+    # ufficiale verificabile che sia suo e non commemorativo. Campo vuoto.
+    {"num": "038", "giorno": "Giovedì", "slot": 3,
+     "categoria": "TEATRO · 1976",
+     "titolo": "A ME GLI OCCHI, PLEASE",
+     # L'occhiello non ripete l'hook: sulla copertina si leggono vicini e
+     # due volte la stessa frase sembra un errore di impaginazione.
+     "occhiello": "La frase con cui l'Italia chiede attenzione è nata per "
+                  "distrarla",
+     "anno": "1976",
+     "creatore": "Gigi Proietti (1940-2020), con i testi di Roberto Lerici. "
+                 "Uno spettacolo per un attore solo in scena, costruito su "
+                 "personaggi cambiati a vista invece che su un copione da "
+                 "recitare.",
+     "prima_apparizione": "5 giugno 1976, Teatro Comunale di Sulmona. Poi il "
+                          "Teatro Tenda di Roma, dove la programmazione "
+                          "prevedeva sei giorni.",
+     "origini": "Il titolo viene da un personaggio dello spettacolo, un "
+                "illusionista che dice «a me gli occhi» per spostare "
+                "l'attenzione del pubblico mentre fa il trucco. Il «please» "
+                "arrivò dopo. È una formula da imbonitore, e funziona "
+                "proprio perché chi la pronuncia sta per fregarti.",
+     "storia": "Al Teatro Tenda ci restò quattro anni, e Proietti lo porterà "
+               "in giro per un quarto di secolo. La frase esce dal teatro e "
+               "diventa il modo italiano di chiedere attenzione con un filo "
+               "di autoironia: la si dice quando si sa di doversi guadagnare "
+               "l'ascolto, non quando lo si pretende.",
+     "significato": "Oggi apre una spiegazione che si teme noiosa, o una "
+                    "richiesta di attenzione fatta da chi non ha l'autorità "
+                    "per esigerla. È l'opposto di «ascoltatemi»: non ordina, "
+                    "seduce. E il «please» finale, aggiunto quasi per gioco, "
+                    "è la parte che la salva dall'arroganza.",
+     "chicca": "Non è una battuta scritta per restare: è il tormentone di un "
+               "personaggio secondario, e serviva a coprire un gioco di "
+               "prestigio. La frase che in Italia chiede attenzione nasce "
+               "come la frase che la distoglie.",
+     "dopo": "Proietti è morto il 2 novembre 2020, il giorno del suo "
+             "ottantesimo compleanno. I giornali lo salutarono con la sua "
+             "stessa frase.",
+     "confidenza": "alta",
+     "fonti": ["gigiproietti.it", "Teatro e Critica (nov 2020)",
+               "ANSA (2 nov 2020)"],
+     "hook": "Doveva restare in cartellone sei giorni e ci restò quattro "
+             "anni. La frase che gli dà il titolo, in origine, serviva a "
+             "distrarre il pubblico mentre l'illusionista faceva il trucco.",
+     "hashtags": "#gigiproietti #amegliocchiplease #memeteca #teatroitaliano "
+                 "#roma"},
+
+    # ─────────────────────────────────────────────────────── scheda 039
+    {"num": "039", "giorno": "Venerdì", "slot": 0,
+     "categoria": "INTERNET · 2023",
+     "titolo": "IL GERRYVERSO",
+     "occhiello": "Il conduttore che ha vinto un premio per essere il più "
+                  "preso in giro d'Italia, e ha ringraziato",
+     "anno": "2023",
+     "creatore": "Nessuno in particolare, ed è esattamente il punto: i meme "
+                 "su Gerry Scotti li fanno gli utenti, da anni, senza un "
+                 "autore riconoscibile. Lui si è limitato ad accorgersene e "
+                 "a starci.",
+     "tag": "@gerryscotti",
+     "prima_apparizione": "Non ha una data: si accumula su trent'anni di "
+                          "quiz in prima serata. Ha un riconoscimento "
+                          "ufficiale, però, ed è il novembre 2023.",
+     "origini": "La materia prima è la sovraesposizione. Chi ha condotto "
+                "«Chi vuol essere milionario?» e mezza televisione "
+                "commerciale italiana diventa un volto che tutti sanno "
+                "leggere: il meme non ha bisogno di spiegare chi sia, basta "
+                "la faccia, e il contesto lo mette chi guarda.",
+     "storia": "Nel novembre 2023 i Meme Awards, il premio della Memissima, "
+               "gli assegnano il titolo di personaggio più memato dell'anno. "
+               "Lui risponde con un videomessaggio: «Sono onorato, vuol dire "
+               "che chi mi ha votato ha capito il mio divertimento "
+               "nell'essere memato».",
+     "significato": "È il caso italiano più chiaro di un personaggio pubblico "
+                    "che smette di difendersi dai meme e ci si mette dentro. "
+                    "Non li rivendica e non li combatte: li lascia fare e "
+                    "ogni tanto risponde. È la strategia opposta a quella di "
+                    "chi manda gli avvocati, e funziona molto meglio.",
+     "chicca": "Si è aperto un secondo profilo apposta per la parte "
+               "scherzosa, e sull'account principale c'è il rimando: «Per "
+               "amenità». Due account, uno serio e uno per farsi sfottere.",
+     "dopo": "Il fenomeno non si è fermato al premio: nel 2024 la stampa "
+             "parla di «Gerryverso» per l'insieme di parodie, canzoni e "
+             "video costruiti sulla sua voce e la sua faccia.",
+     "confidenza": "alta sui fatti, media sulla datazione dell'inizio",
+     "fonti": ["Meme Awards / Memissima (nov 2023)",
+               "TheGiornale (7 ott 2024)"],
+     "hook": "Nel 2023 ha vinto un premio come personaggio più preso in giro "
+             "d'Italia, e ha ringraziato con un videomessaggio. Poi si è "
+             "aperto un secondo profilo apposta per quello.",
+     "hashtags": "#gerryscotti #memeawards #memeteca #tvitaliana "
+                 "#memeitaliani"},
 ]
 
 
