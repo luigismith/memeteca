@@ -123,6 +123,64 @@ def controlla_online(video):
                  f"controlla MEMETECA_BASE_URL e che il file sia su Pages")
 
 
+# 5 settembre 2026 — la stessa distrazione, la seconda volta. Il commit che
+# ha introdotto scatto.txt fece partire il cordone delle schede da solo; il
+# commit che ha introdotto scatto_reel.txt ha fatto partire il cordone dei
+# reel, con dentro gia' il numero 001, sette minuti dopo il reel 020. Due
+# reel a distanza di sette minuti sono esattamente cio' che il 6 agosto e'
+# costato un blocco morbido. L'ho annullata dieci secondi dopo la partenza,
+# prima del passo di pubblicazione: nessun reel e' uscito.
+#
+# REGOLA: un file che innesca qualcosa lo innesca anche il giorno in cui
+# nasce. Ma la vera lezione e' un'altra, perche' la prima volta la lezione
+# «attento al commit» non e' bastata a evitare la seconda: se la sicurezza
+# dipende dal fatto che io mi ricordi qualcosa, prima o poi salta. Quindi il
+# freno non sta nel cordone, sta qui — dove si pubblica, e vale per tutte le
+# strade, dispatch compreso.
+ORA_MINIMA, ORA_MASSIMA = 11, 21
+DISTANZA_MINIMA_ORE = 4
+
+
+def fuso_italiano():
+    from pubblica import fuso_italiano as _f
+    return _f()
+
+
+def troppo_presto(s):
+    """Ritorna il motivo per cui non si deve pubblicare adesso, o None.
+
+    Due freni, gli stessi delle schede:
+      · la fascia 11:00-21:00 italiane, perche' una corsa in ritardo non
+        deve far uscire un post di notte;
+      · quattro ore dall'ultima uscita, reel o scheda che sia, perche' due
+        pubblicazioni ravvicinate sono quello che il 6 agosto 2026 ha
+        fatto scattare un blocco morbido dopo quattro post di fila."""
+    adesso = dt.datetime.now(dt.timezone.utc)
+    ora = adesso.astimezone(fuso_italiano())
+    if not (ORA_MINIMA <= ora.hour < ORA_MASSIMA):
+        return (f"sono le {ora:%H:%M} italiane, fuori dalla fascia "
+                f"{ORA_MINIMA}:00-{ORA_MASSIMA}:00")
+    ultime = []
+    for r in s.get("reel", []):
+        if r.get("quando"):
+            ultime.append(("reel " + r.get("num", "?"), r["quando"]))
+    for r in s.get("storico", []):
+        if isinstance(r, dict) and r.get("quando"):
+            ultime.append(("scheda " + str(r.get("num", "?")), r["quando"]))
+    for cosa, quando in ultime:
+        try:
+            t = dt.datetime.fromisoformat(quando)
+        except ValueError:
+            continue
+        if t.tzinfo is None:
+            t = t.replace(tzinfo=dt.timezone.utc)
+        ore = (adesso - t).total_seconds() / 3600
+        if 0 <= ore < DISTANZA_MINIMA_ORE:
+            return (f"{cosa} e' uscita {ore:.1f} ore fa, meno di "
+                    f"{DISTANZA_MINIMA_ORE}")
+    return None
+
+
 def controlla_file(num):
     """Il video sul disco deve essere a norma E avere l'audio.
 
@@ -164,7 +222,7 @@ def controlla_file(num):
                  f"(serve assets/musica_reel.wav, lo scrive musica.py)")
 
 
-def main(num, prova=False, url=None):
+def main(num, prova=False, url=None, forza=False):
     m = next((x for x in MEMI if x["num"] == num), None)
     if not m:
         sys.exit(f"scheda {num} non trovata")
@@ -235,6 +293,12 @@ def main(num, prova=False, url=None):
         print(f"PROVA OK: il video {video} passa la validazione (contenitore {c}, non pubblicato)")
         return
 
+    fermo = troppo_presto(s)
+    if fermo and not forza:
+        print(f"::warning::Non pubblico il reel {num}: {fermo}. "
+              f"Con --forza si pubblica lo stesso.")
+        return
+
     controlla_file(num)
     controlla_online(video)
     post_id = Instagram().pubblica_reel(video, caption_reel(m))
@@ -251,8 +315,10 @@ def main(num, prova=False, url=None):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        sys.exit("uso: python pubblica_reel.py <numero> [--prova] [--url URL]")
+        sys.exit("uso: python pubblica_reel.py <numero> "
+                 "[--prova] [--url URL] [--forza]")
     url = None
     if "--url" in sys.argv:
         url = sys.argv[sys.argv.index("--url") + 1]
-    main(sys.argv[1].zfill(3), prova="--prova" in sys.argv, url=url)
+    main(sys.argv[1].zfill(3), prova="--prova" in sys.argv, url=url,
+         forza="--forza" in sys.argv)
