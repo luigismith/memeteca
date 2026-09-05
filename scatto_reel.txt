@@ -1,0 +1,33 @@
+# IL CORDONE DEI REEL
+# ===================
+#
+# Un push che modifica questo file fa partire .github/workflows/reel.yml,
+# cioe' la pubblicazione del Reel della scheda scritta qui sotto.
+#
+# Stesso motivo del cordone delle schede (scatto.txt): un push e' l'unica
+# cosa che qualunque sessione con il repository collegato sa fare di sicuro,
+# mentre lo scheduler di GitHub su questo repository ha smesso di funzionare
+# il 28 agosto 2026 e gli strumenti GitHub di una sessione appena nata
+# possono non esserci — il 2 e il 3 settembre non c'erano.
+#
+# I reel pero' hanno bisogno di un argomento, e un push non ne porta:
+# quindi l'argomento sta scritto nel file. La prima riga di tre cifre e' il
+# numero della scheda da pubblicare. Tutto il resto sono commenti.
+#
+# Per tirarlo:
+#
+#     sed -i 's/^[0-9]\{3\}$/012/' scatto_reel.txt
+#     git add scatto_reel.txt
+#     git commit -m "scatto reel: 012" && git push
+#
+# Non fa danni tirarlo due volte sullo stesso numero: pubblica_reel.py
+# controlla stato.json e si ferma se quel reel risulta gia' pubblicato.
+#
+# I video pronti e non ancora usciti si contano cosi':
+#
+#     ls assets/reel_*.mp4 | grep -o '[0-9]\{3\}' | sort > /tmp/a
+#     python3 -c "import json;print('\n'.join(r['num'] for r in json.load(open('agente/stato.json'))['reel']))" | sort > /tmp/b
+#     comm -23 /tmp/a /tmp/b
+#
+# ─── il numero da pubblicare ───
+001

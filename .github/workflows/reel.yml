@@ -3,6 +3,21 @@ name: MEMETECA — pubblicazione reel
 # Pubblica il Reel di una scheda via API. Il video sta in assets/reel_<num>.mp4
 # e ha gia' dentro la musica originale (musica.py): esce completo, mai muto.
 on:
+  # Il cordone dei reel. Stesso motivo del cordone delle schede (scatto.txt,
+  # vedi pubblica.yml): un compito pianificato che deve lanciare un
+  # workflow_dispatch dipende dagli strumenti GitHub, e il 3 settembre una
+  # sessione appena nata non li aveva e ha riportato «riuscito» senza
+  # pubblicare niente. Il push invece lo sa fare chiunque abbia il
+  # repository collegato.
+  #
+  # I reel pero' hanno un argomento — quale scheda — e un push non porta
+  # argomenti. Quindi il numero sta scritto dentro il file: si cambia la
+  # riga, si committa, e parte quel reel li'.
+  push:
+    branches:
+      - main
+    paths:
+      - "scatto_reel.txt"
   workflow_dispatch:
     inputs:
       num:
@@ -34,6 +49,20 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r agente/requirements.txt
+      - name: Quale reel
+        # Da dispatch il numero arriva negli inputs; dal cordone si legge la
+        # prima riga utile di scatto_reel.txt (i commenti iniziano con #).
+        run: |
+          NUM="${{ inputs.num }}"
+          if [ -z "$NUM" ]; then
+            NUM=$(grep -m1 -E '^[0-9]{3}$' scatto_reel.txt || true)
+          fi
+          if [ -z "$NUM" ]; then
+            echo "nessun numero: ne' inputs.num ne' una riga valida in scatto_reel.txt"
+            exit 1
+          fi
+          echo "NUM=$NUM" >> "$GITHUB_ENV"
+          echo "reel da pubblicare: $NUM"
       - name: Pubblica il reel
         working-directory: agente
         env:
@@ -44,7 +73,7 @@ jobs:
           ARG=""
           [ "${{ inputs.prova }}" = "true" ] && ARG=" --prova"
           [ -n "${{ inputs.url }}" ] && ARG="$ARG --url ${{ inputs.url }}"
-          python pubblica_reel.py "${{ inputs.num }}"$ARG
+          python pubblica_reel.py "$NUM"$ARG
       - name: Salva lo stato
         if: ${{ always() }}
         run: |
