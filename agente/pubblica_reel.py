@@ -123,6 +123,47 @@ def controlla_online(video):
                  f"controlla MEMETECA_BASE_URL e che il file sia su Pages")
 
 
+def controlla_file(num):
+    """Il video sul disco deve essere a norma E avere l'audio.
+
+    5 settembre 2026: assets/reel_005.mp4 esisteva dal 27 agosto e sembrava
+    pronto. Era 1080x1920 profilo High e soprattutto MUTO (mean_volume
+    -91 dB): un residuo della prima infornata, prima che musica.py entrasse
+    nella pipeline. Nessun controllo lo avrebbe fermato: risponde 200 su
+    Pages, ha la traccia aac al posto giusto, e l'API lo avrebbe pubblicato
+    volentieri. Sarebbe uscito un reel senza suono, e me ne sarei accorto
+    guardando il profilo.
+
+    REGOLA: «il file esiste» non vuol dire «il file va bene». Prima di
+    pubblicare si guarda cosa c'e' dentro, non solo che ci sia.
+
+    Se ffprobe non c'e', si va avanti: e' un controllo in piu', non un
+    cancello. Su ubuntu-latest c'e' sempre."""
+    import shutil, subprocess
+    f = QUI.parent / "assets" / f"reel_{num}{SUFFISSO_FILE}.mp4"
+    if not f.exists() or not shutil.which("ffprobe"):
+        return
+    def sonda(args):
+        return subprocess.run(args, capture_output=True, text=True).stdout.strip()
+    dim = sonda(["ffprobe", "-v", "error", "-select_streams", "v:0",
+                 "-show_entries", "stream=width,height",
+                 "-of", "csv=p=0:s=x", str(f)])
+    vol = subprocess.run(["ffmpeg", "-hide_banner", "-i", str(f),
+                          "-af", "volumedetect", "-f", "null", "-"],
+                         capture_output=True, text=True).stderr
+    media = [r for r in vol.splitlines() if "mean_volume" in r]
+    print(f"file: {f.name} {dim} {media[0].split(']')[-1].strip() if media else 'audio: ?'}")
+    if dim and dim != "720x1280":
+        sys.exit(f"reel_{num}.mp4 e' {dim}, non 720x1280: rigeneralo con reel.py")
+    # niente traccia audio del tutto: volumedetect non stampa nulla e senza
+    # questo ramo il file passerebbe indisturbato.
+    if not media:
+        sys.exit(f"reel_{num}.mp4 non ha una traccia audio: rigeneralo con reel.py")
+    if float(media[0].split(":")[-1].replace("dB", "").strip()) < -60:
+        sys.exit(f"reel_{num}.mp4 e' muto: rigeneralo con reel.py "
+                 f"(serve assets/musica_reel.wav, lo scrive musica.py)")
+
+
 def main(num, prova=False, url=None):
     m = next((x for x in MEMI if x["num"] == num), None)
     if not m:
@@ -158,11 +199,22 @@ def main(num, prova=False, url=None):
     # invece i caroselli passano da sempre. Non e' una cosa che si aggiusta
     # ritentando.
     #
-    # REGOLA: non si ricopia il file su un percorso nuovo, non si riprova.
-    # I reel si caricano dal telefono, che e' come funzionava prima e
-    # funzionava. Se un giorno si vuole riaprire la strada API, la prova da
-    # fare e' un'altra: collegare una Pagina Facebook e passare a
-    # MEMETECA_API=facebook, non un ventunesimo tentativo identico.
+    # 30 agosto 2026 — QUESTA CONCLUSIONE ERA SBAGLIATA, e la lascio scritta
+    # perche' e' l'errore piu' istruttivo di tutta la vicenda. «Resta
+    # un'ipotesi sola, ed e' strutturale» non era una deduzione: era la
+    # quarta ipotesi di fila costruita per spiegare un fallimento di cui non
+    # avevo ancora trovato la causa. Le prime tre (budget video, percorsi
+    # bruciati, formato del file) erano gia' cadute allo stesso modo.
+    #
+    # La causa vera era la cartella `/assets` contata due volte nell'URL
+    # (vedi url_possibili). Corretta quella, i reel passano da graph.
+    # instagram.com senza Pagina Facebook: 021, 022, 026, 003, 006, 019, 020
+    # pubblicati via API. Nessuna strada era chiusa.
+    #
+    # REGOLA: quando un tentativo fallisce senza dire perche', non si
+    # inventa il motivo. Si va a guardare l'anello che nessuno ha
+    # verificato — qui era una HEAD sull'URL, trenta secondi — prima di
+    # dichiarare strutturale un problema.
     video = url or scegli_url(num)
 
     s = json.loads(STATO.read_text(encoding="utf-8"))
@@ -174,6 +226,7 @@ def main(num, prova=False, url=None):
     if prova:
         # crea il contenitore e aspetta la validazione, SENZA pubblicare:
         # serve a collaudare video e hosting senza sporcare il profilo.
+        controlla_file(num)
         controlla_online(video)
         ig = Instagram()
         c = ig._post(f"{ig.ig_user_id}/media", media_type="REELS",
@@ -182,6 +235,7 @@ def main(num, prova=False, url=None):
         print(f"PROVA OK: il video {video} passa la validazione (contenitore {c}, non pubblicato)")
         return
 
+    controlla_file(num)
     controlla_online(video)
     post_id = Instagram().pubblica_reel(video, caption_reel(m))
 

@@ -752,24 +752,24 @@ MEMI = [
      "prima_apparizione": "3 febbraio 1957, ogni sera dalle 20:50 alle 21:00.",
      "origini": "La regola del formato: prima la scenetta — comica, musicale, "
                 "animata — e il prodotto solo in coda. Da quel vincolo "
-                "nascono personaggi piu' longevi delle campagne: Calimero "
+                "nascono personaggi più longevi delle campagne: Calimero "
                 "per il detersivo Ava, Carmencita e il Caballero per il "
-                "caffe' Paulista, Ernesto Calindri per il Cynar, Nino "
+                "caffè Paulista, Ernesto Calindri per il Cynar, Nino "
                 "Manfredi per Lavazza.",
      "storia": "Vent'anni di onda quotidiana, oltre 7.200 episodi. Chiude il "
                "1° gennaio 1977, accusato di essere «diseducativo». "
-               "Nessun programma italiano ha mai piu' generato cosi' tanto "
+               "Nessun programma italiano ha mai più generato così tanto "
                "lessico condiviso per abitante.",
-     "significato": "E' la fucina originaria del tormentone italiano: mezzo "
-                    "vocabolario pubblicitario nazionale nasce li'. E «a "
+     "significato": "È la fucina originaria del tormentone italiano: mezzo "
+                    "vocabolario pubblicitario nazionale nasce lì. E «a "
                     "letto dopo Carosello» resta l'orologio dell'infanzia di "
-                    "tre generazioni: il programma come unita' di misura del "
+                    "tre generazioni: il programma come unità di misura del "
                     "tempo.",
      "chicca": "Andava in onda tutti i giorni dell'anno tranne due: il "
-               "Venerdi' Santo e il 2 novembre, il giorno dei morti.",
-     "dopo": "I personaggi sono sopravvissuti al programma — Calimero e' "
-             "ancora in circolazione — e il formato scenetta-piu'-prodotto "
-             "e' l'antenato diretto di quello che oggi chiamiamo branded "
+               "Venerdì Santo e il 2 novembre, il giorno dei morti.",
+     "dopo": "I personaggi sono sopravvissuti al programma — Calimero è "
+             "ancora in circolazione — e il formato scenetta-più-prodotto "
+             "è l'antenato diretto di quello che oggi chiamiamo branded "
              "content.",
      "reperto": {"tipo": "citazione", "bollo": "La formula",
                  "testo": "«A letto dopo Carosello»",
@@ -778,8 +778,8 @@ MEMI = [
      "confidenza": "alta",
      "fonti": ["Quotidiano.net", "Il Sole 24 Ore (3 gen 2014)"],
      "hook": "Per vent'anni l'Italia ha avuto un solo orologio serale: dieci "
-             "minuti di scenette, poi i bambini a letto. Era pubblicita'. "
-             "E' diventata memoria collettiva.",
+             "minuti di scenette, poi i bambini a letto. Era pubblicità. "
+             "È diventata memoria collettiva.",
      "hashtags": "#carosello #memeteca #pubblicitaitaliana #tvitaliana "
                  "#storiadellatv"},
     # ─────────────────────────────────────────────────────── scheda 029
