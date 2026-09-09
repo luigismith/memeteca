@@ -30,6 +30,23 @@ from contenuti import MEMI
 # sessione non li ricerchi da capo: uno scarto documentato vale quanto una
 # scheda. Non tornano in CANDIDATI.
 SCARTATI = {
+    "«Bella zio» / Verdone «Un sacco bello»": "l'appunto attribuiva la "
+        "battuta a «Un sacco bello» (1980). Cercata: le fonti sul film "
+        "(MYmovies, Davinotti, Bietti) elencano le battute celebri e questa "
+        "non c'e'. Il gergo esiste, il film no: e' un ricordo, non un fatto. "
+        "Vedi anche la voce «Giacomo Trave / 'Bella zio'» qui sotto: e' lo "
+        "stesso vicolo cieco preso da un'altra parte",
+    "Ferrero Rocher / «Ambasciatore, lei ci sta viziando»": "lo spot esiste "
+        "ed e' documentato, ma e' BRITANNICO: girato per il Regno Unito nel "
+        "1993, dove e' diventato un tormentone parodiato per decenni (Il "
+        "Post, 3 mag 2018). La frase italiana che tutti citano e' una "
+        "ritraduzione, e non sono riuscito a trovarne due fonti che ne "
+        "fissino il testo esatto e la messa in onda italiana. Riprendibile "
+        "se salta fuori l'archivio dello spot italiano",
+    "Barbara d'Urso e il «col cuore»": "il tormentone esiste, ma le uniche "
+        "fonti sono siti di gossip che lo raccontano di sfuggita: nessuna "
+        "ricostruzione di quando nasce ne' di come diventa meme. In piu' "
+        "sarebbe una scheda sul bersaglio e non sull'autore di un formato",
     "Er Trenta": "nessuna fonte: non risulta documentato da nessuna parte, "
                  "ne' come meme ne' come tormentone universitario",
     "Ciao sono Filippo Champagne": "esiste ed e' documentato (Il Messaggero, "
@@ -85,7 +102,6 @@ CANDIDATI = {
     "«Non è normale che sia normale»": "da verificare",
     "Cateno De Luca": "sindaco-meme, verificare la documentazione",
     "Er Pipa / neomelodici su TikTok": "da verificare",
-    "Il tormentone «Ambaradan»": "verificare origine storica (Amba Aradam) e uso online",
     "«Vabbè, ciao» di Rocco Siffredi": "da verificare",
     "I Ferragnez come format": "distinguere dal pandoro-gate",
     "Il meme di Sinner e il 'mai una gioia'": "verificare se esiste come meme",
@@ -97,13 +113,10 @@ CANDIDATI = {
     # ── cinema e televisione ────────────────────────────────────────────────
         "«Le donne ci guardano» / Ecce Bombo": "verificare quale battuta ha fatto scuola",
     "«Ho fatto tredici!» / Totò": "verificare",
-    "«A me gli occhi, please»": "Gigi Proietti, 1976 — verificare la seconda vita online",
     "«Come è profondo il mare»": "Dalla, uso ironico online",
     "«Bella zio» / Verdone «Un sacco bello»": "1980",
     "«Che c'ho la faccia da fesso?» / Verdone": "da verificare",
-    "«Sono un uomo di mondo» / Totò": "verificare la battuta esatta e il film",
     "«Fantozzi subisce»": "la formula narrativa come meme",
-    "«Il Gattopardo: se vogliamo che tutto rimanga com'è»": "uso politico della citazione",
     "«L'anno che verrà»": "da verificare",
     "Ricky Memphis / Notte prima degli esami": "verificare",
     "«Che fai, mi cacci?» / Il Divo": "da verificare",
@@ -112,7 +125,6 @@ CANDIDATI = {
     # ── TV e pubblicità (le domeniche) ──────────────────────────────────────
     "«No Martini, no party»": "campagna anni 90",
     "«Che mondo sarebbe senza Nutella»": "verificare la datazione",
-    "«Ava come lava»": "pubblicità storica",
     "«Ricco, mi fai impazzire» / Ferrero Rocher": "anni 80-90",
     "«Chi vuol essere miliardario» e Gerry Scotti": "Meme Award 2023 al personaggio più memato",
     "«Sarabanda» e la Zorro": "verificare",

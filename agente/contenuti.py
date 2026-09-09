@@ -1319,6 +1319,157 @@ MEMI = [
              "aperto un secondo profilo apposta per quello.",
      "hashtags": "#gerryscotti #memeawards #memeteca #tvitaliana "
                  "#memeitaliani"},
+
+    # ─────────────────────────────────────────────────────── scheda 040
+    # Nessun tag: una parola non ha un autore da taggare. Treccani e Crusca
+    # sono le fonti, non i creatori, e la regola dice di taggare l'autore.
+    {"num": "040", "giorno": "Venerdì", "slot": 1,
+     "categoria": "LINGUA · 1936",
+     "titolo": "AMBARADAN",
+     "occhiello": "La parola più allegra che abbiamo per dire «confusione» "
+                  "viene da una battaglia coloniale",
+     "anno": "1936",
+     "creatore": "Nessuno l'ha inventata a tavolino: la portarono a casa i "
+                 "soldati italiani di ritorno dall'Africa Orientale. È una "
+                 "delle poche parole italiane di uso quotidiano nate in una "
+                 "guerra coloniale e sopravvissute alla sua rimozione.",
+     "prima_apparizione": "Amba Aradam, massiccio montuoso dell'Etiopia. "
+                          "La battaglia si combatte nel febbraio 1936, "
+                          "durante la guerra d'Etiopia.",
+     "origini": "Sul campo le alleanze cambiavano di continuo: formazioni "
+                "locali schierate con gli italiani passavano al nemico e poi "
+                "tornavano indietro. Rientrati in patria, i soldati "
+                "chiamavano «come ad Amba Aradam» qualunque situazione in "
+                "cui non si capiva più niente, e le due parole si sono fuse "
+                "in una sola.",
+     "storia": "La m finale è diventata n perché la parola si dice e non si "
+               "scrive quasi mai: nessuno l'ha mai vista scritta abbastanza "
+               "da correggersi. Oggi sta in tutti i dizionari, e "
+               "l'Accademia della Crusca le ha dedicato una consulenza "
+               "linguistica che ricostruisce questo passaggio.",
+     "significato": "Vuol dire baraonda, groviglio, gran casino, e per "
+                    "estensione una faccenda così complicata da richiedere "
+                    "doti organizzative fuori dal comune. Si usa ridendo, "
+                    "ed è questo il punto: una parola nata in una guerra "
+                    "coloniale è finita a descrivere il disordine di una "
+                    "cucina.",
+     "chicca": "Il Vocabolario Treccani indica Amba Aradam ma tiene "
+               "l'etimologia come «incerta»: la ricostruzione convince, un "
+               "documento che la fissi non c'è. La parola italiana per il "
+               "caos ha un'origine che resta, appunto, un ambaradan.",
+     "dopo": "La si dice ogni giorno senza sapere da dove viene. E "
+             "sapendolo non si smette: cambia solo il retrogusto.",
+     "confidenza": "alta sull'uso e sui dizionari, media sull'etimologia "
+                   "(Treccani la dà per incerta)",
+     "fonti": ["Vocabolario Treccani, lemma «ambaradàn»",
+               "Accademia della Crusca, consulenza linguistica "
+               "«Origine della parola ambaradan»"],
+     # Il gancio in copertina viene tagliato a 190 caratteri da grafica.py
+     # (_taglia, riga 233): non è un limite scritto da nessuna parte se non
+     # qui, e la prima versione di questa scheda si fermava a metà frase.
+     "hook": "La usiamo tutti, e ridendo. Viene da una montagna etiope dove "
+             "nel 1936 si combatté una battaglia così confusa che i soldati, "
+             "tornati a casa, chiamavano «come ad Amba Aradam» ogni casino.",
+     "hashtags": "#ambaradan #linguaitaliana #memeteca #etimologia "
+                 "#paroleitaliane"},
+
+    # ─────────────────────────────────────────────────────── scheda 041
+    # Nessun tag: Antonio de Curtis è morto nel 1967 e da qui non ho potuto
+    # aprire e guardare nessun account per verificare che sia davvero
+    # ufficiale. Candidati da controllare a mano, se un giorno serve:
+    # @toto_antoniodecurtis, @totoprincipedellarisata.
+    {"num": "041", "giorno": "Venerdì", "slot": 2,
+     "categoria": "CINEMA · 1952",
+     "titolo": "SONO UN UOMO DI MONDO",
+     "occhiello": "La battuta che tutti attribuiscono al film sbagliato",
+     "anno": "1952",
+     "creatore": "Totò, cioè Antonio de Curtis (1898-1967). La battuta nasce "
+                 "dentro uno scambio a due, nel modo in cui Totò lavorava "
+                 "meglio: una spalla che fa il serio e lui che le smonta la "
+                 "serietà addosso.",
+     "prima_apparizione": "«Totò a colori», 1952, nello sketch del vagone "
+                          "letto con l'onorevole Cosimo Trombetta.",
+     "origini": "«Sono un uomo di mondo, ho fatto tre anni di militare a "
+                "Cuneo.» La forza sta tutta nella sproporzione: per "
+                "dimostrare di conoscere il mondo si porta come prova la "
+                "città più improbabile possibile, detta con la sicurezza di "
+                "chi sta esibendo un titolo di studio.",
+     "storia": "Totò la riusa e la varia per anni: in «Signori si nasce» "
+               "diventa «tre anni di seminario a Cuneo», in «Totò e i re di "
+               "Roma» diventa «tre anni di militare a Cuneo hanno influito "
+               "sulla mia psiche». È la stessa battuta che cambia vestito, "
+               "e a furia di tornare si stacca dal film e diventa un modo "
+               "di dire.",
+     "significato": "Oggi la si usa per prendere in giro chi si vanta di "
+                    "un'esperienza minuscola, e più spesso per prendere in "
+                    "giro se stessi. È l'autoironia italiana in una riga: "
+                    "il curriculum gonfiato detto ad alta voce, così nessuno "
+                    "può accusarti di crederci davvero.",
+     "chicca": "Quasi tutti la ricordano dentro «Totò, Peppino e la "
+               "malafemmina», che è del 1956, cioè quattro anni dopo. Il "
+               "meme ha inghiottito il film che l'aveva prodotto e l'ha "
+               "riassegnato a quello più famoso.",
+     "dopo": "De Curtis a Cuneo non ci fece mai il militare, e con ogni "
+             "probabilità non ci mise mai piede. La città se l'è tenuta lo "
+             "stesso: è la sua citazione più celebre nel mondo.",
+     "confidenza": "alta su film e battuta, alta sull'errore di "
+                   "attribuzione",
+     "fonti": ["QuiCampania, scheda «Sono un uomo di mondo»",
+               "Cuneo24 (aprile 2019)"],
+     "hook": "«Sono un uomo di mondo, ho fatto tre anni di militare a "
+             "Cuneo.» Tutti la ricordano in «Totò, Peppino e la "
+             "malafemmina». È di quattro anni prima, in un altro film.",
+     "hashtags": "#toto #sonounuomodimondo #memeteca #cinemaitaliano "
+                 "#cuneo"},
+
+    # ─────────────────────────────────────────────────────── scheda 042
+    # Nessun tag: l'unico account che si presenta come «the original
+    # Calimero» è un profilo NFT che rivendica i diritti Pagot, e da qui non
+    # ho potuto aprirlo e guardarlo per capire se sia davvero ufficiale.
+    # Nel dubbio non si tagga: la regola dice mai un account che finge.
+    {"num": "042", "giorno": "Venerdì", "slot": 3,
+     "categoria": "TV & PUBBLICITÀ · 1963",
+     "titolo": "AVA, COME LAVA!",
+     "occhiello": "Il pulcino nero che non era nero: era solo sporco",
+     "anno": "1963",
+     "creatore": "Lo studio dei fratelli Nino e Toni Pagot, per il detersivo "
+                 "AVA della Mira Lanza. La paternità del personaggio è "
+                 "contesa: accanto ai Pagot vengono citati Ignazio Colnaghi "
+                 "e Carlo Peroni.",
+     "prima_apparizione": "Carosello, 1963. Il ciclo arriva a 290 episodi e "
+                          "va avanti fino al 1976.",
+     "origini": "Lo schema è sempre lo stesso: Calimero si sporca, tutti lo "
+                "respingono perché è nero, e alla fine qualcuno lo lava. "
+                "Allora arriva la frase che chiude ogni puntata: «Non è "
+                "nero, è solo sporco!», e subito dopo lo slogan del "
+                "prodotto, «Ava, come lava!».",
+     "storia": "Calimero sopravvive a Carosello, che chiude nel 1977, e "
+               "diventa una serie animata sua, riprodotta e rifatta per "
+               "decenni. Il guscio d'uovo in testa è una delle sagome più "
+               "riconoscibili del disegno italiano.",
+     "significato": "«Fare il Calimero» vuol dire lamentarsi di un torto "
+                    "esagerandolo, mettersi nella parte di quello a cui "
+                    "tocca sempre la peggio. È entrato nella lingua come "
+                    "diagnosi affettuosa del vittimismo — cioè quasi il "
+                    "contrario di quello che il personaggio raccontava.",
+     "chicca": "La frase che l'Italia ha imparato a memoria è una battuta "
+               "sul colore della pelle che si risolve dicendo che il nero "
+               "va lavato via. Nel 1963 nessuno ci vide niente; oggi è la "
+               "prima cosa che si nota, e il modo di dire è sopravvissuto "
+               "staccandosi completamente da lì.",
+     "dopo": "Il pulcino è ancora in circolazione, mentre il detersivo che "
+             "doveva vendere è un ricordo: il testimonial ha superato il "
+             "prodotto di mezzo secolo.",
+     "confidenza": "alta sulle date e sul ciclo, media sull'attribuzione "
+                   "del personaggio",
+     "fonti": ["Wikipedia IT, voce «Calimero»",
+               "Digital Historians UniSA, «Ava come Lava!, il mito di "
+               "Calimero» (18 mag 2017)"],
+     "hook": "Per tredici anni Carosello ha chiuso con un pulcino nero a cui "
+             "veniva spiegato che non era nero, era solo sporco. Poi lo "
+             "lavavano e lui diceva: «Ava, come lava!».",
+     "hashtags": "#calimero #carosello #memeteca #pubblicitaitaliana "
+                 "#anni60"},
 ]
 
 
