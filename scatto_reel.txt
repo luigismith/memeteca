@@ -23,6 +23,19 @@
 # Non fa danni tirarlo due volte sullo stesso numero: pubblica_reel.py
 # controlla stato.json e si ferma se quel reel risulta gia' pubblicato.
 #
+# ATTENZIONE, 10 settembre 2026: se il numero scritto qui sotto e' GIA'
+# quello che vuoi pubblicare, il sed non cambia niente, git non ha niente
+# da committare e il cordone non parte. Sembra che tu l'abbia tirato e
+# invece non e' successo nulla. Per questo in fondo al file c'e' un
+# registro: si aggiunge sempre una riga, cosi' il file cambia comunque.
+#
+#     sed -i 's/^[0-9]\{3\}$/NNN/' scatto_reel.txt
+#     printf '# %s tirato il cordone per la NNN\n' "$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> scatto_reel.txt
+#
+# E per verificare che sia uscito NON basta cercare '"num": "NNN"' in
+# stato.json: quella stringa c'e' gia' nello storico delle schede e
+# risponde di si' sempre. Si guarda dentro la lista `reel`.
+#
 # I video pronti e non ancora usciti si contano cosi':
 #
 #     ls assets/reel_*.mp4 | grep -o '[0-9]\{3\}' | sort > /tmp/a
