@@ -1470,6 +1470,149 @@ MEMI = [
              "lavavano e lui diceva: «Ava, come lava!».",
      "hashtags": "#calimero #carosello #memeteca #pubblicitaitaliana "
                  "#anni60"},
+
+    # ─────────────────────────────────────────────────────── scheda 043
+    # Nessun tag: Sandra Mondaini e Raimondo Vianello sono morti tutti e due
+    # nel 2010, a tre mesi di distanza, e non esiste un account ufficiale.
+    {"num": "043", "giorno": "Lunedì", "slot": 0,
+     "categoria": "TV · 1988",
+     "titolo": "CHE BARBA, CHE NOIA",
+     "occhiello": "Diciannove anni di puntate chiuse dicendo che non "
+                  "succedeva niente",
+     "anno": "1988",
+     "creatore": "Sandra Mondaini e Raimondo Vianello, sposati nella vita dal "
+                 "1962 e marito e moglie anche in scena, con i loro nomi "
+                 "veri. La finzione era che non ci fosse finzione.",
+     "prima_apparizione": "17 gennaio 1988, prima puntata di «Casa Vianello» "
+                          "sulle reti Mediaset.",
+     "origini": "Ogni episodio finiva allo stesso modo: i due a letto, la "
+                "buonanotte, e Sandra che sbuffava «Che noia, che barba, che "
+                "barba, che noia» tirando un calcio sotto le coperte. Non "
+                "era la battuta finale di una storia: era la constatazione "
+                "che non fosse successo niente, ripetuta per anni.",
+     "storia": "La sitcom va avanti dal 1988 al 2007, 16 stagioni e 343 "
+               "episodi: la più longeva della televisione italiana. La frase "
+               "esce dal programma e diventa il modo standard per dire che "
+               "una cosa è mortalmente noiosa, spesso da parte di chi quella "
+               "cosa la sta facendo lo stesso.",
+     "significato": "È il fastidio benestante: non la noia disperata, ma "
+                    "quella comoda di chi ha tutto e non ha niente da fare. "
+                    "Si dice del lavoro, delle cene di famiglia, delle "
+                    "riunioni — sempre con un pizzico di lamentela "
+                    "compiaciuta, che è poi il tono esatto di Sandra.",
+     "chicca": "La struttura è quella del gioco degli scacchi con se stessi: "
+               "una coppia che litiga per vent'anni senza che cambi mai "
+               "niente, e proprio la mancanza di sviluppo è il formato. La "
+               "battuta finale non è la morale della puntata, è la "
+               "recensione della puntata.",
+     "dopo": "Mondaini e Vianello sono morti nel 2010, a tre mesi di "
+             "distanza. La frase gli è sopravvissuta e la dicono anche "
+             "persone che la sitcom non l'hanno mai vista.",
+     "confidenza": "alta su date e numeri, alta sull'uso corrente",
+     "fonti": ["Wikipedia EN, voce «Casa Vianello»",
+               "Fremondoweb, «Accadde oggi: 17 gennaio 1988»"],
+     "hook": "Per diciannove anni una sitcom italiana ha chiuso ogni "
+             "puntata con la protagonista che diceva, a letto, che non era "
+             "successo niente. È diventato il modo in cui tutti diciamo "
+             "«che palle».",
+     "hashtags": "#casavianello #chebarbachenoia #memeteca #tvitaliana "
+                 "#anni80"},
+
+    # ─────────────────────────────────────────────────────── scheda 044
+    {"num": "044", "giorno": "Lunedì", "slot": 1,
+     "categoria": "INTERNET · 2012",
+     "titolo": "FAVIJ",
+     "occhiello": "Il primo italiano a scoprire che si poteva fare di "
+                  "mestiere",
+     "anno": "2012",
+     "tag": "@favij",
+     "creatore": "Lorenzo Ostuni, torinese, classe 1995. Apre il canale "
+                 "FavijTV il 9 dicembre 2012, quando in Italia «youtuber» "
+                 "non era ancora una parola che qualcuno mettesse sui "
+                 "documenti.",
+     "prima_apparizione": "9 dicembre 2012, canale FavijTV. Centomila "
+                          "iscritti nel 2013, un milione nel 2014: il primo "
+                          "italiano a superare quella soglia.",
+     "origini": "Il formato è il più povero che ci sia: uno che gioca ai "
+                "videogiochi e urla. La faccia in un riquadro, lo schermo "
+                "dietro, lo spavento come contenuto. Funziona perché non "
+                "somiglia alla televisione: non c'è studio, non c'è "
+                "autore, e si vede la cameretta.",
+     "storia": "Dopo il milione arrivano le cose che in Italia nessuno "
+               "aveva mai fatto partendo da lì: un'autobiografia per "
+               "Mondadori nel 2015, «Sotto le cuffie», un film nello stesso "
+               "anno, un secondo libro nel 2018, e i doppiaggi per la "
+               "Disney. Il canale tira dritto per oltre un decennio.",
+     "significato": "È lo spartiacque fra i video fatti per ridere e i "
+                    "video fatti per campare. Prima di lui l'internet "
+                    "italiano era un passatempo di gente con un lavoro "
+                    "vero; dopo di lui esiste una filiera — contratti, "
+                    "editori, agenzie — e una generazione che sa che quella "
+                    "strada c'è.",
+     "chicca": "Il salto è avvenuto senza che la televisione se ne "
+               "accorgesse: quando i giornali hanno cominciato a "
+               "chiedersi chi fosse, aveva già più pubblico di molti "
+               "programmi di cui scrivevano nella stessa pagina.",
+     "dopo": "Oltre sei milioni di iscritti e quattro miliardi di "
+             "visualizzazioni. La cameretta è diventata un'industria, e non "
+             "è più la sua: è quella di tutti quelli venuti dopo.",
+     "confidenza": "alta su date e numeri",
+     "fonti": ["Wikipedia EN, voce «Favij»",
+               "Mondadori Electa, scheda autore Lorenzo Ostuni"],
+     "hook": "Nel 2014 è diventato il primo italiano con un milione di "
+             "iscritti su YouTube. L'anno dopo aveva un'autobiografia "
+             "Mondadori e un film. Faceva video in cui urlava giocando ai "
+             "videogiochi.",
+     "hashtags": "#favij #youtubeitalia #memeteca #internetitaliano "
+                 "#creator"},
+
+    # ─────────────────────────────────────────────────────── scheda 045
+    # Nessun tag: il programma non c'è più dal 2001 e il volto non è
+    # l'autore del formato, che è americano. Se un giorno serve, il
+    # candidato da aprire e guardare è l'account di Iva Zanicchi.
+    {"num": "045", "giorno": "Lunedì", "slot": 2,
+     "categoria": "TV · 1983",
+     "titolo": "OK, IL PREZZO È GIUSTO",
+     "occhiello": "Diciassette anni di italiani che indovinavano quanto "
+                  "costava una lavatrice",
+     "anno": "1983",
+     "creatore": "Nessuno, in Italia: è l'adattamento dell'americano «The "
+                 "Price Is Right». Lo presenta prima Gigi Sabani, dal 21 "
+                 "dicembre 1983 al dicembre 1986; poi, dal 1987 al 2000, "
+                 "Iva Zanicchi, che ci resta tredici anni.",
+     "prima_apparizione": "21 dicembre 1983. Chiude il 13 aprile 2001, dopo "
+                          "3.466 puntate.",
+     "origini": "Il gioco è semplice fino all'assurdo: si indovina il "
+                "prezzo di oggetti comuni, e chi ci va più vicino senza "
+                "superarlo vince. Il momento culminante è la vetrina, con "
+                "una voce fuori campo che elenca i premi uno per uno, con "
+                "la solennità di un bollettino.",
+     "storia": "La formula del titolo si stacca dal programma e diventa una "
+               "frase fatta: si dice «ok, il prezzo è giusto» per chiudere "
+               "una trattativa, per accettare un compromesso, o "
+               "ironicamente quando il prezzo è tutto tranne che giusto. "
+               "Vent'anni dopo la chiusura si usa ancora.",
+     "significato": "È il tormentone del consumo anni Ottanta: la "
+                    "televisione che insegna quanto valgono le cose, e un "
+                    "paese che impara a stimare a occhio il prezzo di una "
+                    "cucina componibile. Oggi la frase serve a dire «va "
+                    "bene, ci sto» con un filo di ironia sopra.",
+     "chicca": "La voce che elencava i premi non si vedeva mai: era di "
+               "Raffaella Bragazzi, e per il pubblico era il programma "
+               "quanto la conduttrice. Un tormentone televisivo sostenuto "
+               "da una persona che nessuno avrebbe riconosciuto per strada.",
+     "dopo": "Con 3.466 puntate resta uno dei quiz più longevi della "
+             "televisione italiana, e il suo titolo è sopravvissuto al "
+             "programma di un quarto di secolo.",
+     "confidenza": "alta su date e numeri, media sulla vita online della "
+                   "frase",
+     "fonti": ["Wikipedia EN, voce «OK, il prezzo è giusto!»",
+               "cheTVfa.it, «una TV fa… Ok, il prezzo è giusto!»"],
+     "hook": "Per diciassette anni gli italiani hanno guardato altri "
+             "italiani indovinare quanto costava una lavatrice. Il titolo è "
+             "sopravvissuto al programma di venticinque anni.",
+     "hashtags": "#okilprezzoegiusto #ivazanicchi #memeteca #tvitaliana "
+                 "#anni80"},
 ]
 
 

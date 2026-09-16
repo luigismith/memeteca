@@ -30,6 +30,11 @@ from contenuti import MEMI
 # sessione non li ricerchi da capo: uno scarto documentato vale quanto una
 # scheda. Non tornano in CANDIDATI.
 SCARTATI = {
+    "«Vabbè, ciao» di Rocco Siffredi": "cercata: nessuna fonte documenta la "
+        "frase come meme o tormentone. Quello che salta fuori cercandola e' "
+        "la denuncia per molestie di una giornalista (2024), cioe' cronaca "
+        "giudiziaria su una persona viva: non e' materiale d'archivio e "
+        "schedarlo somiglierebbe a uno sfottio",
     "«Bella zio» / Verdone «Un sacco bello»": "l'appunto attribuiva la "
         "battuta a «Un sacco bello» (1980). Cercata: le fonti sul film "
         "(MYmovies, Davinotti, Bietti) elencano le battute celebri e questa "
@@ -92,7 +97,6 @@ CANDIDATI = {
     "Giacomo Trave / 'Bella zio'": "tormentone da verificare",
     "Il Signoraggio": "complottismo economico diventato tormentone da forum",
     "«Che vor dì?» / Er Faina II": "eventuale seconda scheda sul personaggio",
-    "iPantellas / Favij": "generazione YouTube 2013-2015",
     "«Sto ca**o» di Vasco Rossi a Sanremo": "da verificare",
     "«Sei un mito» / Alessandro Borghese": "verificare se è meme o solo tormentone TV",
     "Barbara d'Urso e il 'cuore'": "gestualità diventata meme",
@@ -129,9 +133,7 @@ CANDIDATI = {
     "«Chi vuol essere miliardario» e Gerry Scotti": "Meme Award 2023 al personaggio più memato",
     "«Sarabanda» e la Zorro": "verificare",
     "«Domenica In» e i tormentoni della TV di stato": "restringere a un caso documentato",
-    "«Ok il prezzo è giusto» / Iva Zanicchi": "verificare",
     "Il jingle Amaro Montenegro": "verificare",
-    "«Casa Vianello» / «Mammina cara»": "verificare la battuta ricorrente",
     "Sanremo: la standing ovation di Benigni 2020": "verificare se è meme",
 }
 
