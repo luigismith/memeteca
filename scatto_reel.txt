@@ -43,9 +43,10 @@
 #     comm -23 /tmp/a /tmp/b
 #
 # ─── il numero da pubblicare ───
-018
+009
 # 2026-09-10T15:11:24Z tirato il cordone per la 001
 # 2026-09-12T15:06:52Z tirato il cordone per la 005
 # 2026-09-15T15:07:44Z tirato il cordone per la 012
 # 2026-09-17T15:07:54Z tirato il cordone per la 004
 # 2026-09-19T15:07:04Z tirato il cordone per la 018
+# 2026-09-22T15:07:34Z tirato il cordone per la 009
