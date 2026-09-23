@@ -30,6 +30,12 @@ from contenuti import MEMI
 # sessione non li ricerchi da capo: uno scarto documentato vale quanto una
 # scheda. Non tornano in CANDIDATI.
 SCARTATI = {
+    "«Sarabanda» e la Zorro": "il programma e' documentato benissimo "
+        "(Italia 1, 8 settembre 1997 - 20 febbraio 2004, oltre 1700 "
+        "puntate), ma la scheda avrebbe bisogno di una frase o di un "
+        "formato preciso, e sulla «Zorro» non ho trovato niente che la "
+        "descriva. Una scheda su un programma intero non e' una scheda: "
+        "riprendibile se salta fuori la documentazione del gioco",
     "«Vabbè, ciao» di Rocco Siffredi": "cercata: nessuna fonte documenta la "
         "frase come meme o tormentone. Quello che salta fuori cercandola e' "
         "la denuncia per molestie di una giornalista (2024), cioe' cronaca "
@@ -110,7 +116,6 @@ CANDIDATI = {
     "I Ferragnez come format": "distinguere dal pandoro-gate",
     "Il meme di Sinner e il 'mai una gioia'": "verificare se esiste come meme",
     "«Poi però» / Mario Giordano": "toni da talk show diventati meme",
-    "La 'sciura' milanese": "archetipo, verificare la documentazione",
     "Rosa Chemical a Sanremo 2023": "verificare se esiste come meme e non solo cronaca",
     "Il 'nonno' di TikTok Italia": "da identificare e verificare",
 
@@ -121,14 +126,12 @@ CANDIDATI = {
     "«Bella zio» / Verdone «Un sacco bello»": "1980",
     "«Che c'ho la faccia da fesso?» / Verdone": "da verificare",
     "«Fantozzi subisce»": "la formula narrativa come meme",
-    "«L'anno che verrà»": "da verificare",
     "Ricky Memphis / Notte prima degli esami": "verificare",
     "«Che fai, mi cacci?» / Il Divo": "da verificare",
     "Boris: seconda scheda su «la qualità»": "il lessico della serie dà per più schede",
 
     # ── TV e pubblicità (le domeniche) ──────────────────────────────────────
     "«No Martini, no party»": "campagna anni 90",
-    "«Che mondo sarebbe senza Nutella»": "verificare la datazione",
     "«Ricco, mi fai impazzire» / Ferrero Rocher": "anni 80-90",
     "«Chi vuol essere miliardario» e Gerry Scotti": "Meme Award 2023 al personaggio più memato",
     "«Sarabanda» e la Zorro": "verificare",

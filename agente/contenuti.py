@@ -1613,6 +1613,146 @@ MEMI = [
              "sopravvissuto al programma di venticinque anni.",
      "hashtags": "#okilprezzoegiusto #ivazanicchi #memeteca #tvitaliana "
                  "#anni80"},
+
+    # ─────────────────────────────────────────────────────── scheda 046
+    # Nessun tag: Lucio Dalla è morto nel 2012 e da qui non ho potuto aprire
+    # e guardare nessun account per verificare che sia davvero ufficiale.
+    {"num": "046", "giorno": "Lunedì", "slot": 3,
+     "categoria": "MUSICA · 1979",
+     "titolo": "CARO AMICO TI SCRIVO",
+     "occhiello": "La canzone di Capodanno più allegra d'Italia parla degli "
+                  "anni di piombo",
+     "anno": "1979",
+     "creatore": "Lucio Dalla (1943-2012). La scrive nel 1978 ed esce nel "
+                 "febbraio 1979 sull'album «Lucio Dalla». Il titolo vero è "
+                 "«L'anno che verrà»: quello con cui la conoscono tutti è il "
+                 "primo verso.",
+     "prima_apparizione": "Album «Lucio Dalla», febbraio 1979.",
+     "origini": "È scritta come una lettera a un amico lontano, e l'anno "
+                "appena passato è il 1978: il delitto Moro, il terrorismo, "
+                "due papi morti in due mesi, le dimissioni del presidente "
+                "della Repubblica. «Si esce poco la sera compreso quando è "
+                "festa, e c'è chi ha messo dei sacchi di sabbia vicino alla "
+                "finestra.»",
+     "storia": "Il ritornello promette un anno in cui «sarà tre volte "
+               "Natale e festa tutto l'anno»: un'esagerazione talmente "
+               "sfacciata da essere quasi comica, messa lì apposta come "
+               "misura di quanto ci sarebbe voluto. Il paese l'ha presa "
+               "alla lettera e se l'è tenuta come augurio.",
+     "significato": "Ogni 31 dicembre l'Italia si scambia «caro amico ti "
+                    "scrivo» come se fosse un brindisi. La frase si è "
+                    "staccata dalla canzone, e la canzone dal 1978: resta "
+                    "il tono affettuoso e sparisce tutto il resto. È una "
+                    "citazione che funziona perché nessuno la finisce.",
+     "chicca": "Il verso dei sacchi di sabbia alla finestra non è una "
+               "metafora: è come si viveva in certe case in quegli anni. "
+               "Sta nella stessa canzone che a mezzanotte si canta "
+               "abbracciati con lo spumante in mano.",
+     "dopo": "È diventata la colonna sonora ufficiale del Capodanno "
+             "italiano, cantata ogni anno da gente che sul 1978 non "
+             "saprebbe dire niente.",
+     "confidenza": "alta su date e testo, alta sul contesto storico",
+     "fonti": ["Wikipedia IT, voce «L'anno che verrà (brano musicale)»",
+               "Rockit, «La storia di L'anno che verrà»"],
+     "hook": "Ogni Capodanno l'Italia canta «caro amico ti scrivo» come un "
+             "brindisi. È una lettera sul 1978: Moro, il terrorismo, e i "
+             "sacchi di sabbia alla finestra.",
+     "hashtags": "#luciodalla #lannocheverra #memeteca #musicaitaliana "
+                 "#capodanno"},
+
+    # ─────────────────────────────────────────────────────── scheda 047
+    # Il tag l'ho verificato per quello che si puo' verificare da qui: due
+    # fonti indipendenti (Wikipedia EN e Italy Segreta) indicano
+    # @sciuraglam — prima @sciuragram — come l'account che ha inventato il
+    # formato, e ne raccontano la nascita. Non ho potuto aprirlo e
+    # guardarlo: se un giorno risultasse diverso, questa e' la ragione per
+    # cui c'e' scritto.
+    {"num": "047", "giorno": "Martedì", "slot": 0,
+     "categoria": "INTERNET · 2016",
+     "titolo": "LA SCIURA",
+     "occhiello": "Da sfottò di quartiere a genere fotografico "
+                  "internazionale",
+     "anno": "2016",
+     "tag": "@sciuraglam",
+     "creatore": "Un account Instagram aperto nel dicembre 2016 da uno "
+                 "studente di odontoiatria appena arrivato a Milano dal "
+                 "Sud. Prima si chiamava @sciuragram, oggi @sciuraglam.",
+     "prima_apparizione": "Dicembre 2016: la foto di una signora dai "
+                          "capelli bianchi in pelliccia lunga davanti agli "
+                          "scaffali della Fondazione Feltrinelli, con la "
+                          "didascalia «Fur and Culture».",
+     "origini": "«Sciura» è il femminile di «sciur», cioè «signore» in "
+                "lombardo. Indica la milanese anziana e benestante del "
+                "centro, quella che va a teatro e fa la spesa vestita "
+                "meglio di chiunque altro per strada. Prima del 2016 era "
+                "una parola da bar, mezza affettuosa e mezza cattiva.",
+     "storia": "L'account arriva a oltre 400.000 follower e il formato si "
+               "replica ovunque: fotografi che appostano le signore in "
+               "centro, giornali stranieri che ci scrivono sopra, riviste "
+               "di moda che la trattano come una corrente. Una parola "
+               "dialettale diventa una categoria estetica esportabile.",
+     "significato": "È il caso più chiaro di un'etichetta che cambia segno "
+                    "strada facendo: nasce per prendere in giro un tipo "
+                    "umano e finisce per ammirarlo. Oggi «sciura» si usa "
+                    "come complimento, e lo si dice anche a chi milanese "
+                    "non è e anziana nemmeno.",
+     "chicca": "Il genere fotografico esiste perché qualcuno che a Milano "
+               "era appena arrivato ha notato una cosa che i milanesi "
+               "avevano sotto gli occhi da sempre. Serviva uno di fuori per "
+               "vederla.",
+     "dopo": "Le sciure sono finite sulle riviste di moda internazionali "
+             "come icone di stile. Il rispetto è arrivato dopo lo sfottò, "
+             "ed è arrivato da fuori.",
+     "confidenza": "alta sulla nascita dell'account, media sui numeri "
+                   "(cambiano)",
+     "fonti": ["Wikipedia EN, voce «Sciura»",
+               "Italy Segreta, «I Spy a Sciura»"],
+     "hook": "Nel dicembre 2016 uno studente arrivato a Milano da poco "
+             "fotografa una signora in pelliccia alla Feltrinelli e scrive "
+             "«Fur and Culture». Oggi è un genere fotografico.",
+     "hashtags": "#sciura #milano #memeteca #internetitaliano #stile"},
+
+    # ─────────────────────────────────────────────────────── scheda 048
+    {"num": "048", "giorno": "Martedì", "slot": 1,
+     "categoria": "TV & PUBBLICITÀ · 1995",
+     "titolo": "CHE MONDO SAREBBE",
+     "occhiello": "Una domanda retorica che l'Italia ha smesso di riferire "
+                  "alla Nutella",
+     "anno": "1995",
+     "tag": "@nutellaitalia",
+     "creatore": "Ferrero. Lo slogan «Che mondo sarebbe senza Nutella?» "
+                 "arriva nel 1995 e accompagna gli spot per quasi un "
+                 "decennio, fino ai primi anni Duemila.",
+     "prima_apparizione": "1995, campagna televisiva Nutella.",
+     "origini": "È un cambio di strategia: fino a lì la pubblicità "
+                "raccontava il prodotto — il pane, la colazione, i "
+                "bambini. Da qui in poi racconta l'idea che senza quel "
+                "prodotto mancherebbe qualcosa al mondo. Non vende una "
+                "crema, vende l'idea di non poterne fare a meno.",
+     "storia": "La formula si stacca dal barattolo e diventa uno stampo "
+               "buono per tutto: «che mondo sarebbe senza X» si usa per "
+               "qualunque cosa, dal caffè alle scuse dei colleghi, quasi "
+               "sempre in tono ironico e per esagerare l'importanza di "
+               "qualcosa di minuscolo.",
+     "significato": "È una struttura, non una citazione: funziona anche "
+                    "per chi non ricorda lo spot, perché la forma della "
+                    "frase porta con sé il tono da pubblicità. Dirla è "
+                    "sempre un modo per fare finta di essere solenni.",
+     "chicca": "Lo slogan ha avuto più vita della campagna che lo "
+               "conteneva: il modo di dire viene usato oggi da persone che "
+               "quegli spot non li hanno mai visti, e che spesso non "
+               "sanno nemmeno che la frase venga da una pubblicità.",
+     "dopo": "Ferrero l'ha ripresa nel 2017 per una nuova campagna. Nel "
+             "frattempo la frase era già di tutti.",
+     "confidenza": "alta sulla datazione dello slogan, media sui confini "
+                   "esatti della campagna",
+     "fonti": ["Brand Identikit, «Nutella: ma che mondo sarebbe»",
+               "Inside Marketing, «La comunicazione di Nutella»"],
+     "hook": "Nel 1995 la Nutella smise di raccontare il prodotto e chiese "
+             "che mondo sarebbe senza. Oggi «che mondo sarebbe senza X» si "
+             "dice per qualunque X, quasi sempre per scherzo.",
+     "hashtags": "#nutella #chemondosarebbe #memeteca #pubblicitaitaliana "
+                 "#anni90"},
 ]
 
 
