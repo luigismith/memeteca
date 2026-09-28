@@ -1753,6 +1753,62 @@ MEMI = [
              "dice per qualunque X, quasi sempre per scherzo.",
      "hashtags": "#nutella #chemondosarebbe #memeteca #pubblicitaitaliana "
                  "#anni90"},
+
+    # ─────────────────────────────────────────────────────── scheda 049
+    # Chiesta da Luigi il 28 settembre 2026. Il meme e' americano: la
+    # scheda sta in archivio perche' racconta la sua vita italiana, che e'
+    # documentata (Il Post ha sentito una ventina fra insegnanti e
+    # genitori), non perche' sia nato qui.
+    #
+    # Nessun tag: l'autore e' Skrilla, rapper di Philadelphia, e da qui non
+    # ho potuto aprire e guardare nessun account per verificare quale sia
+    # quello ufficiale. Candidato da controllare a mano: @skrilla.
+    {"num": "049", "giorno": "Martedì", "slot": 2,
+     "categoria": "INTERNET · 2025",
+     "titolo": "SIX-SEVEN",
+     "occhiello": "Due numeri che non vogliono dire niente, ed è tutto il "
+                  "loro senso",
+     "anno": "2025",
+     "creatore": "Skrilla, rapper di Philadelphia, con «Doot Doot (6 7)»: "
+                 "sui social a fine 2024, singolo il 7 febbraio 2025. Il "
+                 "gesto della bilancia lo porta in giro il tiktoker "
+                 "americano Taylen Kinney.",
+     "prima_apparizione": "In Italia dai primi di ottobre 2025, nelle "
+                          "scuole. A novembre il Post ne parla dopo aver "
+                          "sentito una ventina fra insegnanti e genitori di "
+                          "ragazzi dagli 8 ai 17 anni.",
+     "origini": "Negli Stati Uniti attacca dal basket: sei piedi e sette "
+                "pollici è un'altezza da NBA, e i numeri girano nei video "
+                "delle partite. Poi arriva il gesto — le mani aperte che "
+                "oscillano come i piatti di una bilancia — e da lì non "
+                "serve più sapere da dove viene.",
+     "storia": "Basta dire «sessantasette» davanti a un adolescente e parte "
+               "il coro. In Italia qualcuno lo traduce pure, «sei-sette». "
+               "Negli Stati Uniti certi insegnanti l'hanno vietato in "
+               "classe; Dictionary.com l'ha fatto parola dell'anno 2025, "
+               "notando che nel solo ottobre è comparso sei volte più che "
+               "in tutto il 2024.",
+     "significato": "Niente. Vale «così così», «forse questo forse quello», "
+                    "cioè niente — ed è il punto: è fatto per non poter "
+                    "essere spiegato. Un meme senza contenuto non si "
+                    "confuta, non si vieta e soprattutto non si capisce da "
+                    "fuori. Serve a separare chi è dentro da chi no.",
+     "chicca": "Per l'autore i due numeri un significato ce l'hanno: «6 7» "
+               "è la 67ª strada di Philadelphia, il quartiere da cui viene. "
+               "Il tormentone più vuoto del mondo nasce da un riferimento "
+               "preciso che nessuno di quelli che lo urlano conosce.",
+     "dopo": "Il 16 maggio 2026 un gruppo di ragazzi lo ha insegnato a papa "
+             "Leone XIV in Vaticano, e il video è finito su TikTok. Quando "
+             "lo fa il Papa, di solito è finita.",
+     "confidenza": "alta su date e diffusione, alta sull'origine della "
+                   "canzone",
+     "fonti": ["Il Post (18 nov 2025)",
+               "Dictionary.com, parola dell'anno 2025",
+               "Famiglia Cristiana e Tecnica della Scuola (mag 2026)"],
+     "hook": "Non vuol dire niente, e non è un difetto: è il progetto. Due "
+             "numeri, un gesto con le mani, e un muro fra chi ha meno di "
+             "vent'anni e tutti gli altri.",
+     "hashtags": "#sixseven #brainrot #memeteca #genalpha #memeitaliani"},
 ]
 
 
