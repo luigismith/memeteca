@@ -30,6 +30,14 @@ from contenuti import MEMI
 # sessione non li ricerchi da capo: uno scarto documentato vale quanto una
 # scheda. Non tornano in CANDIDATI.
 SCARTATI = {
+    "«Che fai, mi cacci?» / Il Divo": "cercata: nessuna fonte collega la "
+        "battuta al film di Sorrentino (2008) ne' a una frase vera di "
+        "Andreotti. Le raccolte di citazioni del film non la riportano",
+    "Il jingle Amaro Montenegro": "lo slogan «sapore vero» esiste ed e' "
+        "degli anni Ottanta, ma le fonti sono blog e archivi di spot che "
+        "si contraddicono sulla data (1980 o 1983) e non c'e' niente di "
+        "editoriale. Riprendibile se salta fuori una fonte che dati la "
+        "campagna",
     "«Sarabanda» e la Zorro": "il programma e' documentato benissimo "
         "(Italia 1, 8 settembre 1997 - 20 febbraio 2004, oltre 1700 "
         "puntate), ma la scheda avrebbe bisogno di una frase o di un "
@@ -111,7 +119,6 @@ CANDIDATI = {
     "Il pandoro-gate: gli sviluppi 2026": "eventuale aggiornamento della scheda 008",
     "«Non è normale che sia normale»": "da verificare",
     "Cateno De Luca": "sindaco-meme, verificare la documentazione",
-    "Er Pipa / neomelodici su TikTok": "da verificare",
     "«Vabbè, ciao» di Rocco Siffredi": "da verificare",
     "I Ferragnez come format": "distinguere dal pandoro-gate",
     "Il meme di Sinner e il 'mai una gioia'": "verificare se esiste come meme",

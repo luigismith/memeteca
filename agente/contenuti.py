@@ -1809,6 +1809,108 @@ MEMI = [
              "numeri, un gesto con le mani, e un muro fra chi ha meno di "
              "vent'anni e tutti gli altri.",
      "hashtags": "#sixseven #brainrot #memeteca #genalpha #memeitaliani"},
+
+    # ─────────────────────────────────────────────────────── scheda 050
+    # Nessun tag: la frase non ha un autore. La ricostruzione dell'origine
+    # (dai social alla curva romanista) la danno due fonti, ma nessuna la
+    # documenta con una data: per questo la confidenza dice «media», e la
+    # scheda scrive «la ricostruzione che gira», non «e' nata».
+    {"num": "050", "giorno": "Martedì", "slot": 3,
+     "categoria": "INTERNET · 2013",
+     "titolo": "MAI 'NA GIOIA",
+     "occhiello": "Il modo italiano di lamentarsi senza chiedere niente a "
+                  "nessuno",
+     "anno": "2013",
+     "creatore": "Nessuno, ed è la cosa interessante: è una delle poche "
+                 "frasi di questa raccolta senza un autore, un film o uno "
+                 "spot dietro. Comincia a girare sui social, in romanesco, "
+                 "e si italianizza da sola.",
+     "prima_apparizione": "L'estate 2013 è quella in cui diventa "
+                          "riconoscibile: il 10 agosto il Mattino di Padova "
+                          "la chiama «il nuovo tormentone» e la fotografa "
+                          "scritta a spray sui muri di un quartiere.",
+     "origini": "La ricostruzione che gira: nasce sui social per sfottere i "
+                "personaggi famosi, poi finisce su uno striscione nella "
+                "curva romanista durante un Roma-Catania. La forma "
+                "originale è romanesca, «mai 'na gioia»; la versione in "
+                "italiano arriva dopo, online.",
+     "storia": "Nel giro di un'estate è ovunque: magliette, manifesti, "
+               "gruppi Facebook, titoli di giornale, titoli di dischi, "
+               "nomi di festival, e soprattutto muri. A Padova il Mattino "
+               "la trova in via Tigli, davanti a un supermercato e sulle "
+               "sbarre del ponte del Bassanello: tre scritte in un "
+               "quartiere solo.",
+     "significato": "È la lamentela che non chiede aiuto. Non dice «aiutami» "
+                    "e non dice «che sfortuna»: constata che va male e si "
+                    "ferma lì, con una scrollata di spalle. Serve per le "
+                    "disgrazie piccole, mai per quelle vere — usarla per "
+                    "una cosa seria sarebbe fuori luogo, e tutti lo sanno.",
+     "chicca": "È il contrario esatto di uno slogan pubblicitario: nessuno "
+               "l'ha scritta per vendere niente, e proprio per questo è "
+               "finita su più magliette di tante frasi che erano state "
+               "pensate apposta.",
+     "dopo": "Più di dieci anni dopo si dice ancora, e si dice soprattutto "
+             "nella forma romanesca: l'apostrofo è sopravvissuto alla "
+             "traduzione.",
+     "confidenza": "alta sulla diffusione nel 2013, media sull'origine",
+     "fonti": ["Il Mattino di Padova (10 ago 2013)",
+               "SoloLibri, «Mai una gioia: perché si dice così»"],
+     # «sui muri di mezza Italia» era una mia esagerazione: le fonti
+     # documentano le scritte in un quartiere di Padova e la diffusione su
+     # magliette, manifesti e gruppi. Si scrive quello che la fonte dice.
+     "hook": "Nell'estate del 2013 la trovavi scritta a spray sui muri, "
+             "sulle magliette e sui manifesti. Nessuno l'ha inventata per "
+             "vendere qualcosa, ed è finita su più magliette di tanti "
+             "slogan veri.",
+     "hashtags": "#mainagioia #memeteca #internetitaliano #romanesco "
+                 "#memeitaliani"},
+
+    # ─────────────────────────────────────────────────────── scheda 051
+    {"num": "051", "giorno": "Mercoledì", "slot": 0,
+     "categoria": "INTERNET · 2021",
+     "titolo": "POVERO GABBIANO",
+     "occhiello": "Una canzone del 1988 tornata in classifica "
+                  "trentaquattro anni dopo",
+     "anno": "2021",
+     "tag": "@gianni_celeste_official",
+     "creatore": "Gianni Celeste, cantante neomelodico siciliano. Il brano "
+                 "è «Tu comm'a mme», del 1988: l'amore finito paragonato a "
+                 "un gabbiano che ha perso la compagna e non riesce più a "
+                 "volare.",
+     "prima_apparizione": "La canzone è del 1988. La seconda vita comincia "
+                          "nel 2021, quando il duo di influencer "
+                          "palermitani Duracell Plus 153 la rimette in giro "
+                          "in un video.",
+     "origini": "Dal video dei due la riprende la pagina Facebook «Mimmo "
+                "Modem», e da lì TikTok. Il verso che resta è il primo: "
+                "«povero gabbiano, hai perso la compagna». Funziona perché "
+                "è struggente sul serio e perché, staccato dal resto, può "
+                "stare sotto qualunque cosa.",
+     "storia": "All'inizio del 2022 il brano rientra fra le cinquanta "
+               "canzoni più ascoltate in Italia, trentaquattro anni dopo "
+               "l'uscita. L'audio finisce sia sotto i video comici sia "
+               "sotto quelli drammatici, e il gabbiano diventa una base "
+               "buona per tutto.",
+     "significato": "È il lutto in formato ironico: si usa per segnalare "
+                    "una perdita e insieme per non prenderla troppo sul "
+                    "serio. L'eccesso melodico fa da scudo — ci si può "
+                    "commuovere e fingere che si stava scherzando.",
+     "chicca": "Il neomelodico è un genere che la cultura ufficiale "
+               "italiana ha sempre tenuto fuori dalla porta. Ci è "
+               "rientrato per via di un meme, e con la canzone di un "
+               "siciliano dentro una tradizione napoletana.",
+     "dopo": "Celeste l'ha cantata in prima serata a «I Soliti Ignoti» "
+             "nell'aprile 2022. Una carriera lunga trent'anni rimessa in "
+             "circolo da due ragazzi di Palermo con un telefono.",
+     "confidenza": "alta sui fatti, media sulla catena esatta dei passaggi "
+                   "virali",
+     "fonti": ["greenMe, «Povero gabbiano: da dove viene il tormentone»",
+               "LiveUnict (2 mar 2022)"],
+     "hook": "Una canzone neomelodica del 1988 è rientrata fra le "
+             "cinquanta più ascoltate d'Italia nel 2022, perché due "
+             "ragazzi di Palermo l'avevano messa in un video.",
+     "hashtags": "#poverogabbiano #gianniceleste #memeteca #neomelodico "
+                 "#tiktokitalia"},
 ]
 
 
