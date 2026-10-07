@@ -1911,6 +1911,109 @@ MEMI = [
              "ragazzi di Palermo l'avevano messa in un video.",
      "hashtags": "#poverogabbiano #gianniceleste #memeteca #neomelodico "
                  "#tiktokitalia"},
+
+    # ─────────────────────────────────────────────────────── scheda 052
+    # Nessun tag: Venditti e' vivo e un account ufficiale quasi certamente
+    # esiste, ma da qui non ho potuto aprirlo e guardarlo. Quello che ho
+    # trovato con certezza e' la pagina Facebook
+    # «AntonelloVendittiUfficiale» e il profilo X @Venditti; su Instagram
+    # gira @antonellovenditti.official, da verificare a mano.
+    {"num": "052", "giorno": "Mercoledì", "slot": 1,
+     "categoria": "MUSICA · 1984",
+     "titolo": "NOTTE PRIMA DEGLI ESAMI",
+     "occhiello": "Una canzone che ogni anno, per una notte sola, torna "
+                  "obbligatoria",
+     "anno": "1984",
+     "creatore": "Antonello Venditti. La scrive in una casa di Trastevere "
+                 "trovata da Lucio Dalla, in un periodo difficile della sua "
+                 "vita, e guarda indietro alla propria maturità al liceo "
+                 "Giulio Cesare di Roma, a metà anni Sessanta.",
+     "prima_apparizione": "Marzo 1984, su un 45 giri doppio insieme a «Ci "
+                          "vorrebbe un amico». Poi nell'album «Cuore».",
+     "origini": "Non è una canzone sulla scuola: è una canzone su come ci "
+                "si ricorda la scuola vent'anni dopo. I «quattro ragazzi» "
+                "del primo verso sono Venditti, Giorgio Lo Cascio, "
+                "Francesco De Gregori ed Ernesto Bassignano, che "
+                "cantavano al Folkstudio.",
+     "storia": "Il meccanismo è diventato un calendario: ogni giugno, la "
+               "notte prima della maturità, centinaia di migliaia di "
+               "studenti la ascoltano e la postano insieme. Non è una "
+               "canzone che torna di moda — è una canzone che torna a "
+               "data fissa, come una ricorrenza.",
+     "significato": "È l'unico tormentone italiano con una scadenza "
+                    "annuale e un pubblico che si rinnova per forza: ogni "
+                    "anno arriva una leva nuova che non l'ha mai usata e "
+                    "una che non la userà mai più. Dirla fuori stagione "
+                    "non funziona, e questo la protegge dal consumo.",
+     "chicca": "La cantano ragazzi che hanno quarant'anni meno della "
+               "canzone, su un esame che nel frattempo ha cambiato nome e "
+               "regole più volte. Resiste la notte prima, non l'esame.",
+     "dopo": "Nel 2006 è diventata il titolo di un film, e il film ha "
+             "rilanciato la canzone: un caso in cui la citazione ha reso "
+             "più famoso l'originale invece di sostituirlo.",
+     "confidenza": "alta su date e autori, alta sull'uso di giugno",
+     "fonti": ["Wikipedia IT, «Ci vorrebbe un amico/Notte prima degli "
+               "esami»",
+               "Sky TG24 (17 giu 2025)"],
+     "hook": "Ogni giugno, per una notte, centinaia di migliaia di "
+             "studenti italiani ascoltano la stessa canzone del 1984. "
+             "L'esame nel frattempo ha cambiato nome più volte.",
+     "hashtags": "#notteprimadegliesami #venditti #memeteca #maturita "
+                 "#musicaitaliana"},
+
+    # ─────────────────────────────────────────────────────── scheda 053
+    # Nessun tag. Qui la regola «si tagga l'autore, mai il bersaglio» non
+    # si applica in modo netto, perche' Giordano e' tutte e due le cose: lo
+    # stile e' suo e lo rivendica, ma i meme li fanno gli altri. Nel dubbio
+    # non taggo, anche perche' da qui non ho potuto verificare nessun
+    # account: i candidati sarebbero il suo profilo e quello del programma.
+    {"num": "053", "giorno": "Mercoledì", "slot": 2,
+     "categoria": "TV · 2020",
+     "titolo": "LE URLA DI MARIO GIORDANO",
+     "occhiello": "Un giornalista che ha trasformato il proprio tono di "
+                  "voce in un formato",
+     "anno": "2020",
+     "creatore": "Mario Giordano, conduttore di «Fuori dal coro» su Rete 4. "
+                 "Lo stile è suo e lo rivendica: in trasmissione è comparso "
+                 "un cartello che diceva «dicono che urlo troppo, ma anche "
+                 "se sto zitto è la realtà che urla al posto mio».",
+     "prima_apparizione": "Dicembre 2020: Rolling Stone Italia gli dedica "
+                          "un pezzo intitolato «Fenomenologia delle urla di "
+                          "Mario Giordano».",
+     "origini": "Il repertorio è fatto di gesti più che di frasi: entra in "
+                "studio su un banco a rotelle, spacca una zucca di "
+                "Halloween con una mazza da baseball, e urla il cognome "
+                "del presidente dell'Inps allungandolo — «Triiidiiicooo» — "
+                "commentandone lo stipendio.",
+     "storia": "Il tono diventa citabile da solo, senza il contenuto: basta "
+               "allungare le vocali di una parola qualsiasi e si capisce "
+               "che si sta facendo Giordano. Lo imitano i comici in "
+               "televisione e lo imita chiunque in un messaggio vocale.",
+     "significato": "È il caso italiano più chiaro di un tono che si stacca "
+                    "da chi lo usa. Non serve condividere niente di quello "
+                    "che dice: il formato è l'enfasi, e l'enfasi si presta "
+                    "a qualunque argomento, compresa la lista della spesa.",
+     "chicca": "Lui lo sa e ci lavora sopra. Del monopattino con cui entra "
+               "in studio ha detto che «serve a farsi riconoscere»: "
+               "l'oggetto che lo rende parodiabile è scelto apposta per "
+               "quello.",
+     # Qui avevo scritto «le imitazioni televisive sono arrivate dopo i
+     # meme»: non ho una fonte che stabilisca l'ordine, e le parodie
+     # televisive di Giordano sono anche molto vecchie. Tolto.
+     "dopo": "In televisione lo imitano da anni — fra gli altri Ubaldo "
+             "Pantani e Fabio De Luigi — e le parodie convivono con i "
+             "meme senza che una cosa abbia spento l'altra.",
+     "confidenza": "alta sugli episodi citati, media sulla datazione "
+                   "dell'inizio del fenomeno",
+     "fonti": ["Rolling Stone Italia, «Fenomenologia delle urla di Mario "
+               "Giordano» (1 dic 2020)",
+               "Corriere dell'Umbria, sulle parodie",
+               "Fanpage, intervista sul monopattino"],
+     "hook": "Entra in studio su un banco a rotelle, spacca una zucca con "
+             "una mazza da baseball e allunga le vocali dei cognomi. Il "
+             "tono si cita da solo, senza il contenuto.",
+     "hashtags": "#mariogiordano #fuoridalcoro #memeteca #tvitaliana "
+                 "#memeitaliani"},
 ]
 
 

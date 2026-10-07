@@ -30,6 +30,18 @@ from contenuti import MEMI
 # sessione non li ricerchi da capo: uno scarto documentato vale quanto una
 # scheda. Non tornano in CANDIDATI.
 SCARTATI = {
+    "«Non è normale che sia normale»": "le fonti ci sono e sono solide: e' "
+        "lo slogan della campagna contro la violenza sulle donne lanciata "
+        "nel 2018 da Mara Carfagna. Proprio per questo non entra: non e' un "
+        "tormentone, e' una frase di una campagna sui femminicidi. "
+        "Schedarla in un archivio di tormentoni la sminuirebbe, e il "
+        "registro di MEMETECA non e' quello. Scarto editoriale, non di "
+        "documentazione",
+    "«No Martini, no party»": "la campagna Martini con George Clooney "
+        "esiste e lo spot e' del 2000, ma le uniche fonti sono YouTube, "
+        "Pinterest e blog: niente di editoriale che dati la campagna o "
+        "documenti la vita italiana della frase. Stesso motivo del jingle "
+        "Amaro Montenegro. Riprendibile con una fonte seria",
     "«Che fai, mi cacci?» / Il Divo": "cercata: nessuna fonte collega la "
         "battuta al film di Sorrentino (2008) ne' a una frase vera di "
         "Andreotti. Le raccolte di citazioni del film non la riportano",
@@ -122,7 +134,6 @@ CANDIDATI = {
     "«Vabbè, ciao» di Rocco Siffredi": "da verificare",
     "I Ferragnez come format": "distinguere dal pandoro-gate",
     "Il meme di Sinner e il 'mai una gioia'": "verificare se esiste come meme",
-    "«Poi però» / Mario Giordano": "toni da talk show diventati meme",
     "Rosa Chemical a Sanremo 2023": "verificare se esiste come meme e non solo cronaca",
     "Il 'nonno' di TikTok Italia": "da identificare e verificare",
 
@@ -133,7 +144,6 @@ CANDIDATI = {
     "«Bella zio» / Verdone «Un sacco bello»": "1980",
     "«Che c'ho la faccia da fesso?» / Verdone": "da verificare",
     "«Fantozzi subisce»": "la formula narrativa come meme",
-    "Ricky Memphis / Notte prima degli esami": "verificare",
     "«Che fai, mi cacci?» / Il Divo": "da verificare",
     "Boris: seconda scheda su «la qualità»": "il lessico della serie dà per più schede",
 
