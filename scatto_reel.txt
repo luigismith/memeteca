@@ -43,7 +43,7 @@
 #     comm -23 /tmp/a /tmp/b
 #
 # ─── il numero da pubblicare ───
-016
+032
 # 2026-09-10T15:11:24Z tirato il cordone per la 001
 # 2026-09-12T15:06:52Z tirato il cordone per la 005
 # 2026-09-15T15:07:44Z tirato il cordone per la 012
@@ -57,3 +57,4 @@
 # 2026-10-03T15:02:29Z tirato il cordone per la 023
 # 2026-10-06T15:04:02Z tirato il cordone per la 008
 # 2026-10-08T15:04:11Z tirato il cordone per la 016
+# 2026-10-10T15:04:11Z tirato il cordone per la 032
