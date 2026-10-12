@@ -213,10 +213,23 @@ def _interlinea(titolo):
     return "line-height:1.02;" if set(titolo) & VOCALI_ACCENTATE else ""
 
 
+# 12 ottobre 2026: la scheda 054 (STICAZZI) non ha un anno — una parola del
+# dialetto non si data — e nel campo avevo messo un trattino. In copertina
+# l'anno-fantasma e' un numero gigante dietro il testo: un trattino solo,
+# ingrandito a quel corpo, diventa una barra grigia che sembra una macchia
+# di stampa. L'ho visto guardando la tavola, non rileggendo il codice.
+#
+# REGOLA: i campi che finiscono dentro una decorazione grafica non accettano
+# segnaposto. O c'e' il dato, o non si disegna niente.
+def _anno_visibile(m):
+    anno = (m.get("anno") or "").strip()
+    return anno if any(c.isdigit() for c in anno) else ""
+
+
 def slide_copertina(m):
     return f"""<div class="slide">
   <div class="grana"></div><div class="vignetta"></div>
-  <div class="anno-fantasma">{_e(m['anno'])}</div>
+  <div class="anno-fantasma">{_e(_anno_visibile(m))}</div>
   <div class="testata z"><span class="marchio">{BRAND['nome']}</span>
     <span class="num">Scheda n. {m['num']}</span></div>
   <div class="z" style="margin-top:56px;"><span class="chip">{_e(m['categoria'])}</span></div>
@@ -259,7 +272,7 @@ def slide_scheda(m):
       style="height:150px;flex:none;margin-bottom:22px;">{_e(m['titolo'])}</h2>
   <div class="z" style="flex:1;display:flex;flex-direction:column;
        justify-content:space-between;padding-bottom:22px;">{blocchi}</div>
-  <div class="pie z"><span><b>{BRAND['handle']}</b></span><span>{_e(m['anno'])}</span></div>
+  <div class="pie z"><span><b>{BRAND['handle']}</b></span><span>{_e(_anno_visibile(m))}</span></div>
 </div>"""
 
 

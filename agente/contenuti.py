@@ -2014,6 +2014,106 @@ MEMI = [
              "tono si cita da solo, senza il contenuto.",
      "hashtags": "#mariogiordano #fuoridalcoro #memeteca #tvitaliana "
                  "#memeitaliani"},
+
+    # ─────────────────────────────────────────────────────── scheda 054
+    # Nessun tag: una parola non ha un autore.
+    #
+    # Ho controllato se Treccani la registri e la pagina di ricerca non mi
+    # ha restituito niente di leggibile: NON vuol dire che la voce non
+    # esista, vuol dire che da qui non l'ho vista. Per questo la scheda non
+    # dice niente sui dizionari.
+    {"num": "054", "giorno": "Mercoledì", "slot": 3,
+     "categoria": "LINGUA · romanesco",
+     "titolo": "STICAZZI",
+     "occhiello": "Attraversando l'Italia ha cambiato significato, e adesso "
+                  "ne ha due opposti",
+     "anno": "—",
+     "creatore": "Il romanesco. È la contrazione di «questi cazzi», e si "
+                 "scrive anche «'sti cazzi»: l'apostrofo è il pezzo che "
+                 "resta di «questi».",
+     "prima_apparizione": "Nel dialetto di Roma, dove significa una cosa "
+                          "sola: non me ne importa niente.",
+     "origini": "L'uso romano serve a sminuire. «Sono stato alle Canarie» → "
+                "«E sticazzi». Non è un insulto e non è nemmeno "
+                "scortesia: è un modo di dire che la cosa non merita la "
+                "reazione che ti aspettavi.",
+     "storia": "Uscita da Roma, la parola si è girata al contrario. Al Nord "
+               "«sticazzi» esprime ammirazione: «Ho attraversato la Manica "
+               "a nuoto» → «Sticazzi, sei bravissimo!». Stesso suono, "
+               "stesso contesto, significato opposto.",
+     "significato": "È un'enantiosemia, cioè una parola che vuol dire una "
+                    "cosa e il suo contrario. Chi la usa in un modo trova "
+                    "sbagliato l'altro, e a Roma la versione ammirata "
+                    "suona come un errore — ma è semplicemente quello che "
+                    "succede a una parola quando esce dal suo quartiere.",
+     "chicca": "Non ci si accorge del malinteso mentre avviene: romano e "
+               "milanese si capiscono male senza sospettarlo, perché il "
+               "tono della risposta sembra congruo in tutti e due i casi. "
+               "L'ammirazione e il disinteresse, detti così, si somigliano.",
+     "dopo": "È una delle poche parole italiane che si possono usare per "
+             "dire «wow» e per dire «e chi se ne frega» a seconda di dove "
+             "ci si trova, senza cambiare una lettera.",
+     "confidenza": "alta sui due usi, media sull'etimologia",
+     "fonti": ["Una parola al giorno, voce «sticazzi»",
+               "Fanpage, «Come sbagliamo a usare le parolacce»"],
+     "hook": "A Roma vuol dire «non me ne importa». Al Nord vuol dire "
+             "«caspita, bravissimo». Stessa parola, significato opposto, e "
+             "nessuno dei due se ne accorge mentre parla.",
+     "hashtags": "#sticazzi #romanesco #memeteca #linguaitaliana "
+                 "#paroleitaliane"},
+
+    # ─────────────────────────────────────────────────────── scheda 055
+    # Nessun tag, e stavolta non e' una rinuncia: il punto della scheda e'
+    # che questo meme non ha un autore. Taggare una delle pagine che
+    # producono le immagini sarebbe indicare un bersaglio, non una fonte.
+    {"num": "055", "giorno": "Giovedì", "slot": 0,
+     "categoria": "INTERNET · 2016",
+     "titolo": "BUONGIORNISSIMO, KAFFÈ",
+     "occhiello": "L'unico meme italiano che chi lo fa non sa di fare",
+     "anno": "2016",
+     "creatore": "Nessuno e tutti. Le immagini — tazzine fumanti, cuccioli, "
+                 "tramonti, glitter — escono da pagine Facebook con nomi "
+                 "come «Le ali del sorriso» e «Non mollare mai», e da "
+                 "generatori gratuiti fatti apposta.",
+     "prima_apparizione": "Nel novembre 2016 Bianca Terracciano ci scrive "
+                          "sopra un saggio su doppiozero: a quel punto il "
+                          "fenomeno è già abbastanza grande da meritare "
+                          "un'analisi.",
+     "origini": "Lo schema è fisso: un'immagine zuccherosa, una citazione "
+                "motivazionale, e la chiusura «buongiorno, caffè». Le "
+                "vocali si allungano, i punti esclamativi si moltiplicano "
+                "e ogni tanto scappa un «1» perché il dito scivola sul "
+                "tasto accanto.",
+     "storia": "Arriva su WhatsApp e diventa un rito: ogni mattina, "
+               "puntuale, una generazione saluta un'altra generazione che "
+               "non risponde. I figli lo usano come battuta, i genitori "
+               "continuano a mandarlo. Nessuna delle due parti sta "
+               "scherzando con l'altra.",
+     "significato": "È l'unico meme italiano che non esiste per chi lo "
+                    "produce: chi manda il buongiornissimo manda un "
+                    "augurio, chi lo riceve riconosce un formato. Il "
+                    "divertimento sta tutto da una parte sola, e la cosa "
+                    "più onesta da dire è che dall'altra c'è qualcuno che "
+                    "ti sta pensando ogni mattina.",
+     "chicca": "Il «1» in mezzo ai punti esclamativi non è una scelta "
+               "stilistica: è il tasto accanto, premuto per sbaglio tenendo "
+               "giù il maiuscolo. Un refuso diventato parte del formato, e "
+               "oggi viene riprodotto apposta da chi lo imita.",
+     # «dieci anni dopo» era arrotondato per eccesso (novembre 2016 →
+     # ottobre 2026 fa nove anni e undici mesi) e «il piu' longevo» era un
+     # superlativo senza fonte. Terza volta che ci casco sulle date tonde.
+     "dopo": "Da allora non è mai passato di moda, e continua senza avere "
+             "un autore da intervistare: non c'è nessuno a cui chiedere "
+             "com'è nato.",
+     "confidenza": "alta sul fenomeno, nessuna fonte stabilisce una data "
+                   "di nascita o un primo autore",
+     "fonti": ["doppiozero, Bianca Terracciano (21 nov 2016)",
+               "Kulturjam, «Il rito del buongiornissimo»"],
+     "hook": "Ogni mattina una generazione ne saluta un'altra con tazzine "
+             "e glitter. Chi lo manda non sta facendo un meme: sta dando "
+             "il buongiorno.",
+     "hashtags": "#buongiornissimo #memeteca #internetitaliano #whatsapp "
+                 "#memeitaliani"},
 ]
 
 

@@ -116,7 +116,20 @@ SCARTATI = {
 
 
 # Chiavi: nome di lavoro → appunto di partenza (da verificare, non da citare)
+# 12 ottobre 2026: la lista si sta svuotando. Delle voci rimaste, molte
+# sono «da verificare» e cadono alla prima ricerca, e le schede 054 e 055
+# (STICAZZI, BUONGIORNISSIMO KAFFE') le ho prese da fuori, cercando casi
+# documentati che non fossero gia' in archivio. Non e' una violazione della
+# regola: la regola dice di non SCEGLIERE leggendo CANDIDATI a occhio, per
+# non riscrivere schede gia' pubblicate — il controllo contro i doppioni
+# resta prossimo_candidato() piu' _controlla_doppioni(). Aggiungere voci
+# nuove alla lista, con le fonti gia' trovate, e' il modo di tenerla viva.
 CANDIDATI = {
+    "«Mi scappa la pipì, papà» / Pippo Franco": "1979, gia' verificato su "
+        "Wikipedia IT: singolo del 1979, musica di Bruno Tibaldi, ottavo "
+        "in classifica il 27 gennaio 1979, primo dal 10 febbraio, quindici "
+        "settimane in Top Ten, quindicesimo singolo piu' venduto "
+        "dell'anno. Manca solo una seconda fonte indipendente",
     # ── internet italiano, era forum e primo Facebook ───────────────────────
     "Er Trenta": "presunto meme universitario romano — verificare se esiste davvero",
     "Ciao sono Filippo Champagne": "personaggio del web anni 2000 — da verificare",
