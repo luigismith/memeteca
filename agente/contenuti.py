@@ -2114,6 +2114,169 @@ MEMI = [
              "il buongiorno.",
      "hashtags": "#buongiornissimo #memeteca #internetitaliano #whatsapp "
                  "#memeitaliani"},
+    # 16 ottobre 2026: il tag di questa scheda e' vuoto perche' non ho potuto
+    # verificarlo. Instagram risponde 302 verso il login a qualunque richiesta
+    # non autenticata e Chromium, dietro il proxy di sessione, non arriva alla
+    # pagina. Nessuna fonte giornalistica nomina il profilo ufficiale di Pippo
+    # Franco: un handle plausibile non e' un handle verificato, quindi il campo
+    # resta None. REGOLA: gli handle non si indovinano, si aprono — e se non si
+    # possono aprire, si lasciano vuoti.
+    {"num": "056", "giorno": "Giovedì", "slot": 1,
+     "categoria": "MUSICA · 1979",
+     "titolo": "MI SCAPPA LA PIPÌ, PAPÀ",
+     "occhiello": "Il tormentone che tutti hanno cantato prima di saper leggere",
+     "anno": "1979",
+     "tag": None,
+     "creatore": "Pippo Franco, volto del cabaret romano e poi del Bagaglino. "
+                 "La canzone è sua: un pezzo per bambini scritto da un comico "
+                 "per adulti, portato in televisione con la faccia di chi sa "
+                 "benissimo cosa sta facendo.",
+     "prima_apparizione": "Sanremo 1979: la canta fuori gara al Festival, "
+                          "presentato da Mike Bongiorno con Anna Maria "
+                          "Rizzoli. Le prime due serate vanno solo in radio, "
+                          "la terza anche in televisione.",
+     "origini": "Lo schema è elementare: un bambino, un padre, un bisogno che "
+                "non aspetta. Il testo non fa metafore e non ha una morale: "
+                "dice quello che dice, con la rima più ovvia possibile, e la "
+                "ripete fino a restare in testa.",
+     # Le fonti non concordano sul picco settimanale: Hit Parade Italia da' il
+     # brano quinto, Wikipedia IT primo dal 10 febbraio. Sul ventesimo posto
+     # annuale concordano, quindi la scheda dice solo quello. REGOLA: quando
+     # due fonti litigano su un numero, si pubblica il numero su cui vanno
+     # d'accordo, non la media e non quello piu' bello.
+     "storia": "Esce nel 1979 e vende: nella classifica annuale dei singoli "
+               "di quell'anno compare al ventesimo posto. Sul picco "
+               "settimanale le fonti non vanno d'accordo — c'è chi lo dà "
+               "primo e chi quinto — ma che sia stato uno dei dischi più "
+               "venduti dell'anno lo dicono tutte.",
+     "significato": "È il primo tormentone che un italiano impara, e lo "
+                    "impara prima di saper leggere. Da adulti la frase cambia "
+                    "mestiere: serve a dire «non posso aspettare» con la "
+                    "faccia di chi sta scherzando, ed è una delle poche "
+                    "battute che funzionano in ufficio e all'asilo con lo "
+                    "stesso effetto.",
+     "chicca": "Il Festival del 1979 andò quasi tutto in radio: le prime due "
+               "serate non furono trasmesse in televisione, solo la terza. Una "
+               "canzone per bambini, quindi, molti italiani l'hanno prima "
+               "sentita e soltanto dopo vista.",
+     "dopo": "La frase è sopravvissuta alla canzone: si dice senza citarla e "
+             "senza sapere che è una citazione. Chi la usa oggi non ha in "
+             "mente Pippo Franco, ha in mente soltanto l'urgenza.",
+     "confidenza": "alta su anno, Sanremo e successo commerciale; le fonti "
+                   "non concordano sul picco in classifica, quindi la scheda "
+                   "non ne dà nessuno",
+     "fonti": ["TV Sorrisi e Canzoni, archivio Festival di Sanremo 1979",
+               "Hit Parade Italia, Top Annuali 1979",
+               "Wikipedia IT, «Mi scappa la pipì papà»"],
+     # «la canzone piu' cantata dai bambini italiani» era un superlativo che
+     # nessuna fonte sostiene: l'ho scritto nel gancio e l'ho visto guardando
+     # la tavola, non rileggendo il codice. Sostituito con il dato che una
+     # fonte dice davvero (ventesima nella classifica annuale 1979).
+     "hook": "Nel 1979 una canzone per bambini arrivò a Sanremo fuori gara e "
+             "finì tra i venti singoli più venduti dell'anno. La dicono "
+             "ancora adulti che non sanno di citare un disco.",
+     "hashtags": "#pippofranco #memeteca #sanremo1979 #musicaitaliana "
+                 "#anni70"},
+
+    # Il tag di questa scheda, @milaneseimbruttito, l'ho confermato da Forbes
+    # Italia (Small Giants 2021) e non aprendo il profilo: Instagram, il 16
+    # ottobre 2026, rimanda al login chiunque non sia autenticato. Il primo
+    # handle che avevo scritto era @ilmilaneseimbruttito, con l'articolo, come
+    # il nome della pagina. Era sbagliato: il profilo Instagram non ha
+    # l'articolo. REGOLA: il nome del progetto non e' il nome dell'account.
+    {"num": "057", "giorno": "Giovedì", "slot": 2,
+     "categoria": "INTERNET · 2013",
+     "titolo": "IL MILANESE IMBRUTTITO",
+     "occhiello": "Tre fondatori, nessuno dei tre di Milano",
+     "anno": "2013",
+     "tag": "@milaneseimbruttito",
+     "creatore": "Tommaso Pozza, Marco De Crescenzio e Federico Marisio, che "
+                 "aprono la pagina nel 2013. Dal 2016 il personaggio ha una "
+                 "faccia: quella di Germano Lanzoni, attore, che lo "
+                 "interpreta ma non l'ha inventato.",
+     "prima_apparizione": "Una pagina Facebook del 2013, nata guardando "
+                          "Milano e i milanesi. In un mese tocca centomila "
+                          "seguaci: il pubblico c'era prima dei video, prima "
+                          "dell'attore e prima del marchio.",
+     "origini": "Il meccanismo è la caricatura di un tipo preciso: l'uomo che "
+                "parla di fatturato al telefono, chiama tutti «ragazzi», "
+                "considera il tempo libero un costo e il verbo «fatturare» un "
+                "modo di salutare. Il materiale lo fornisce la città.",
+     "storia": "Dai post si passa alle interviste per strada, poi ai video "
+               "prodotti dal collettivo Il Terzo Segreto di Satira, poi al "
+               "cinema: «Mollo tutto e apro un chiringuito» nel 2021 e "
+               "«Ricomincio da Taaac» nel 2024. Nel 2019 il fatturato della "
+               "società ha superato il milione di euro.",
+     "significato": "Funziona perché non è un'accusa ma uno specchio: i "
+                    "milanesi lo condividono per riconoscersi, non per "
+                    "difendersi. «Taaac» non significa niente e si capisce "
+                    "benissimo. È una città che ha accettato come "
+                    "autoritratto la propria parodia, e l'ha anche comprata "
+                    "al cinema.",
+     "chicca": "I tre fondatori non sono milanesi: vengono da Taranto, Padova "
+               "e Varese. La caricatura della milanesità l'hanno disegnata "
+               "tre persone arrivate a Milano da fuori.",
+     "dopo": "Il marchio continua: social, cinema, licenze. Il personaggio è "
+             "rimasto fermo a fatturare mentre intorno cambiava tutto, che è "
+             "anche il motivo per cui regge.",
+     "confidenza": "alta su anno, fondatori, attore e film; il fatturato è "
+                   "quello dichiarato a Forbes nel 2021",
+     "fonti": ["Forbes Italia, Small Giants 2021",
+               "Linkiesta, intervista a Germano Lanzoni (nov 2018) e "
+               "«I founders» (set 2019)",
+               "Sky TG24, «Ricomincio da Taaac» (26 set 2024)"],
+     "hook": "Nel 2013 tre ragazzi di Taranto, Padova e Varese aprono una "
+             "pagina su Milano. In un mese centomila seguaci. Il personaggio "
+             "avrà una faccia solo tre anni dopo.",
+     "hashtags": "#milaneseimbruttito #memeteca #milano #taaac "
+                 "#internetitaliano"},
+
+    {"num": "058", "giorno": "Giovedì", "slot": 3,
+     "categoria": "LINGUA · 1861",
+     "titolo": "PIOVE, GOVERNO LADRO",
+     "occhiello": "Centosessantacinque anni di colpa data a qualcun altro",
+     "anno": "1861",
+     "tag": None,
+     "creatore": "Casimiro Teja, caricaturista, disegnatore del «Pasquino» "
+                 "dal 1856 e poi suo direttore fino alla morte, nel 1897.",
+     "prima_apparizione": "Il «Pasquino», settimanale satirico torinese, nel "
+                          "1861. La vignetta mostra tre dimostranti stretti "
+                          "sotto un solo ombrello; la didascalia che Teja ci "
+                          "mette sotto è «Governo ladro, piove!».",
+     "origini": "I mazziniani avevano organizzato una dimostrazione a Torino. "
+                "Piovve, e la dimostrazione non si fece. Teja ne trasse la "
+                "vignetta: non prendeva in giro il governo, prendeva in giro "
+                "chi dava la colpa al governo anche della pioggia.",
+     "storia": "La battuta piacque più del disegno: diventò il motto del "
+               "giornale e poi un modo di dire. Il Grande Dizionario della "
+               "Lingua Italiana la registra in Gramsci — «L'avevo detto io! "
+               "Piove, governo ladro!» — e da lì in poi non ha più avuto "
+               "bisogno di spiegazioni.",
+     "significato": "Si usa per sbeffeggiare l'abitudine di attribuire al "
+                    "governo qualunque cosa vada storta, pioggia compresa. "
+                    "Non è una frase che accusa il potere: accusa noi. E si "
+                    "dice sempre con un sorriso, perché chi la pronuncia sa "
+                    "di averlo fatto almeno una volta sul serio.",
+     "chicca": "La didascalia originale era al contrario: «Governo ladro, "
+               "piove!». La forma che diciamo oggi mette prima la pioggia e "
+               "poi la colpa, che è esattamente l'ordine in cui funziona il "
+               "pensiero.",
+     "dopo": "Le origini alternative che girano — la tassa sul sale in "
+             "Toscana, i contadini del Lombardo-Veneto — non hanno riscontri "
+             "documentati. L'unica attestazione che regge resta la vignetta "
+             "del 1861.",
+     "confidenza": "alta su anno, giornale, autore e didascalia; le origini "
+                   "popolari alternative non sono documentate",
+     "fonti": ["Treccani, Lingua italiana, «Domande e risposte»: origine di "
+               "«piove, governo ladro»",
+               "Wikipedia IT, «Piove, governo ladro!» (con G. Pittano, Frase "
+               "fatta capo ha, Zanichelli 1992)",
+               "Atlante di Torino, monografia sul «Pasquino» di Casimiro Teja"],
+     "hook": "Nel 1861 piovve su un corteo mazziniano a Torino e un "
+             "disegnatore ci mise sotto quattro parole. Centosessantacinque "
+             "anni dopo le usiamo ancora, al contrario.",
+     "hashtags": "#piovegovernoladro #memeteca #modididire #storiaitaliana "
+                 "#lingua"},
 ]
 
 

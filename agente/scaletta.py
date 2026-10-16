@@ -30,6 +30,13 @@ from contenuti import MEMI
 # sessione non li ricerchi da capo: uno scarto documentato vale quanto una
 # scheda. Non tornano in CANDIDATI.
 SCARTATI = {
+    "Barbara d'Urso e il 'cuore'": "stessa cosa di «Barbara d'Urso e il "
+        "«col cuore»», gia' in questa lista: la voce era entrata due volte in "
+        "CANDIDATI con due titoli diversi, e prossimo_candidato() non la "
+        "filtrava perche' confronta le stringhe. Scartata il 16 ottobre 2026 "
+        "per lo stesso motivo della prima volta: solo fonti di gossip. "
+        "REGOLA: uno scarto vale per il fatto, non per il titolo con cui lo "
+        "si e' scritto",
     "«Non è normale che sia normale»": "le fonti ci sono e sono solide: e' "
         "lo slogan della campagna contro la violenza sulle donne lanciata "
         "nel 2018 da Mara Carfagna. Proprio per questo non entra: non e' un "
@@ -125,11 +132,11 @@ SCARTATI = {
 # resta prossimo_candidato() piu' _controlla_doppioni(). Aggiungere voci
 # nuove alla lista, con le fonti gia' trovate, e' il modo di tenerla viva.
 CANDIDATI = {
-    "«Mi scappa la pipì, papà» / Pippo Franco": "1979, gia' verificato su "
-        "Wikipedia IT: singolo del 1979, musica di Bruno Tibaldi, ottavo "
-        "in classifica il 27 gennaio 1979, primo dal 10 febbraio, quindici "
-        "settimane in Top Ten, quindicesimo singolo piu' venduto "
-        "dell'anno. Manca solo una seconda fonte indipendente",
+    # ── trovate il 16 ottobre 2026 cercando fuori lista, con le fonti ──────
+    "«Mamma mia dammi cento lire»": "canto popolare sull'emigrazione, "
+        "diventato formula ironica — verificare le attestazioni filologiche",
+    "«Non ce la posso fare» / Er Brasiliano": "verificare se esiste una "
+        "documentazione oltre ai video",
     # ── internet italiano, era forum e primo Facebook ───────────────────────
     "Er Trenta": "presunto meme universitario romano — verificare se esiste davvero",
     "Ciao sono Filippo Champagne": "personaggio del web anni 2000 — da verificare",
@@ -138,7 +145,6 @@ CANDIDATI = {
     "«Che vor dì?» / Er Faina II": "eventuale seconda scheda sul personaggio",
     "«Sto ca**o» di Vasco Rossi a Sanremo": "da verificare",
     "«Sei un mito» / Alessandro Borghese": "verificare se è meme o solo tormentone TV",
-    "Barbara d'Urso e il 'cuore'": "gestualità diventata meme",
 
     # ── internet italiano recente ───────────────────────────────────────────
     "Il pandoro-gate: gli sviluppi 2026": "eventuale aggiornamento della scheda 008",
