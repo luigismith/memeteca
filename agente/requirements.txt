@@ -1,3 +1,13 @@
 requests>=2.31
 # serve solo per rigenerare le slide (grafica.py), non per pubblicare:
 playwright>=1.45
+
+# 23 ottobre 2026. In un container cloud appena riciclato playwright e pillow
+# non ci sono piu': le tavole non si generano e le prove non si guardano.
+# Il reinstallo va fatto con l'interprete giusto, perche' qui ce ne sono due e
+# `pip3` punta al 3.13 mentre `python3` e' il 3.11:
+#     /usr/local/bin/python3 -m pip install --break-system-packages playwright pillow
+# Se PIL da' «cannot import name _imaging», e' la copia di sistema che vince
+# sull'import: --force-reinstall di pillow la rimette a posto.
+# Il browser NON va scaricato: Chromium e' gia' in /opt/pw-browsers/chromium e
+# si passa a launch(executable_path=...).

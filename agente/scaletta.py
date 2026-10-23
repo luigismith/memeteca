@@ -30,6 +30,24 @@ from contenuti import MEMI
 # sessione non li ricerchi da capo: uno scarto documentato vale quanto una
 # scheda. Non tornano in CANDIDATI.
 SCARTATI = {
+    "«Non ce la posso fare» / Er Brasiliano": "cercata il 23 ottobre 2026: "
+        "nessuna fonte documenta la frase come meme, ne' da dove venga. "
+        "Quello che le fonti documentano di Massimiliano Minnocci sono le "
+        "minacce a una giornalista in diretta televisiva nel 2019 e una "
+        "vicenda giudiziaria del 2025. Scartata due volte: non c'e' il "
+        "fatto, e il personaggio non e' noto per una battuta",
+    "«Sto ca**o» di Vasco Rossi a Sanremo": "cercata il 23 ottobre 2026: "
+        "nessuna fonte riporta una frase del genere a Sanremo, ne' nel 1982 "
+        "ne' nel 1983. Cercando pero' e' venuta fuori la cosa vera — la "
+        "leggenda dell'ultimo posto, nata dall'elenco in ordine alfabetico "
+        "del 1982 — ed e' diventata la scheda 060. REGOLA: un appunto "
+        "sbagliato puo' comunque indicare il punto giusto dove scavare",
+    "Il Tapiro d'oro": "cercato il 23 ottobre 2026 come candidato di "
+        "riserva, mai entrato in CANDIDATI. Scartato: tutte le fonti sulla "
+        "nascita del premio sono l'archivio di Striscia la notizia e i siti "
+        "che lo ricopiano, e su quando Staffelli abbia preso il posto del "
+        "Gabibbo quell'archivio e Wikipedia non vanno d'accordo. Una fonte "
+        "sola, per quanto autorevole, e' la fonte interessata",
     "Barbara d'Urso e il 'cuore'": "stessa cosa di «Barbara d'Urso e il "
         "«col cuore»», gia' in questa lista: la voce era entrata due volte in "
         "CANDIDATI con due titoli diversi, e prossimo_candidato() non la "
@@ -133,17 +151,12 @@ SCARTATI = {
 # nuove alla lista, con le fonti gia' trovate, e' il modo di tenerla viva.
 CANDIDATI = {
     # ── trovate il 16 ottobre 2026 cercando fuori lista, con le fonti ──────
-    "«Mamma mia dammi cento lire»": "canto popolare sull'emigrazione, "
-        "diventato formula ironica — verificare le attestazioni filologiche",
-    "«Non ce la posso fare» / Er Brasiliano": "verificare se esiste una "
-        "documentazione oltre ai video",
     # ── internet italiano, era forum e primo Facebook ───────────────────────
     "Er Trenta": "presunto meme universitario romano — verificare se esiste davvero",
     "Ciao sono Filippo Champagne": "personaggio del web anni 2000 — da verificare",
     "Giacomo Trave / 'Bella zio'": "tormentone da verificare",
     "Il Signoraggio": "complottismo economico diventato tormentone da forum",
     "«Che vor dì?» / Er Faina II": "eventuale seconda scheda sul personaggio",
-    "«Sto ca**o» di Vasco Rossi a Sanremo": "da verificare",
     "«Sei un mito» / Alessandro Borghese": "verificare se è meme o solo tormentone TV",
 
     # ── internet italiano recente ───────────────────────────────────────────

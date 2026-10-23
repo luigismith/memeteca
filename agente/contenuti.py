@@ -2277,6 +2277,149 @@ MEMI = [
              "anni dopo le usiamo ancora, al contrario.",
      "hashtags": "#piovegovernoladro #memeteca #modididire #storiaitaliana "
                  "#lingua"},
+    {"num": "059", "giorno": "Venerdì", "slot": 1,
+     "categoria": "MUSICA · fine Ottocento",
+     "titolo": "MAMMA MIA DAMMI CENTO LIRE",
+     "occhiello": "Tutti sanno come comincia, quasi nessuno come finisce",
+     "anno": "fine Ottocento",
+     "tag": None,
+     "creatore": "Nessuno: è un canto anonimo di area piemontese, della "
+                 "seconda metà dell'Ottocento. E non è nato sull'emigrazione: "
+                 "è l'adattamento di una ballata più antica, «La maledizione "
+                 "della madre».",
+     "prima_apparizione": "Nella ballata di partenza la madre si oppone alle "
+                          "nozze della figlia con il re di Francia; la figlia "
+                          "disobbedisce e muore attraversando a cavallo un "
+                          "corso d'acqua. Cambia il viaggio, non la struttura.",
+     "origini": "La figlia chiede cento lire per andare in America. La madre "
+                "glieli dà, ma le dice di non partire. I fratelli la "
+                "convincono lo stesso. Durante la traversata la nave affonda "
+                "e lei muore in mare: «le parole della mamma l'eran la "
+                "verità».",
+     "storia": "Ha attraversato un secolo di interpreti: Gipo Farassino, il "
+               "Quartetto Cetra, Gigliola Cinquetti, Le Mondine, Stefano "
+               "Bollani, Arisa, Max Pezzali. Pierangelo Bertoli e Davide Van "
+               "De Sfroos ne hanno ripreso i versi dentro canzoni proprie.",
+     "significato": "È una canzone contro la partenza, non a favore: la madre "
+                    "ha ragione e la figlia muore. Di tutto il testo "
+                    "sopravvive il primo verso, che si cita per chiedere dei "
+                    "soldi con l'aria di scherzare. Il naufragio, nella "
+                    "citazione, non entra mai.",
+     "chicca": "L'America del canto non è quella che immaginiamo. I contadini "
+               "del Nord partivano soprattutto per l'America del Sud — il "
+               "Brasile e, più di tutti, l'Argentina — e la nave che affonda "
+               "nel testo non era diretta a New York.",
+     "dopo": "Resta nel repertorio dei cori e delle feste, dove si canta "
+             "senza pensarci: si attacca il primo verso e ci si ferma molto "
+             "prima della fine.",
+     "confidenza": "alta su origine, ballata di partenza e destinazione "
+                   "dell'emigrazione; sulla datazione le fonti dicono "
+                   "«seconda metà dell'Ottocento», nessuna dà un anno",
+     "fonti": ["Wikipedia IT, «Mamma mia dammi cento lire» (con Treccani e "
+               "canzoneitaliana.it)",
+               "Antiwar Songs, scheda del canto (con l'inchiesta "
+               "parlamentare del 1890 sull'emigrazione)"],
+     "hook": "Tutti sanno come comincia. Quasi nessuno sa che finisce con un "
+             "naufragio, e che la madre, nel testo, aveva ragione.",
+     "hashtags": "#mammamiadammicentolire #memeteca #canzonepopolare "
+                 "#emigrazione #storiaitaliana"},
+
+    {"num": "060", "giorno": "Venerdì", "slot": 2,
+     "categoria": "MUSICA · 1982",
+     "titolo": "VASCO ULTIMO A SANREMO",
+     "occhiello": "La classifica che nessuno ha mai pubblicato",
+     "anno": "1982",
+     "tag": None,
+     "creatore": "Nessuno in particolare: la leggenda è nata da come furono "
+                 "comunicati i risultati. Vasco Rossi, nel 1982, era un "
+                 "emergente in gara con «Vado al massimo».",
+     "prima_apparizione": "Sanremo 1982. Vennero resi noti soltanto i primi "
+                          "classificati; gli altri finirono in un elenco "
+                          "senza posizioni, e «Vado al massimo» era in fondo. "
+                          "Da quell'elenco è nato «è arrivato ultimo».",
+     "origini": "L'elenco non era una classifica, ma sembrava una classifica. "
+                "È il tipo di errore che non ha bisogno di malafede per "
+                "diffondersi: basta una pagina letta in fretta e "
+                "quarant'anni di persone che la ripetono.",
+     "storia": "L'anno dopo Vasco torna con «Vita spericolata» e si "
+               "classifica venticinquesimo su ventisei: penultimo, perché "
+               "l'ultimo fu Pupo. E abbandona il palco prima della fine "
+               "dell'esibizione, lasciando l'Ariston ad ascoltare la sua voce "
+               "registrata.",
+     "significato": "La leggenda è sopravvissuta al fatto perché è una storia "
+                    "migliore: il genio incompreso bocciato dalla giuria si "
+                    "racconta meglio di un venticinquesimo posto. Che fosse "
+                    "penultimo e non ultimo non cambia niente al mito, e "
+                    "infatti il mito non si è mai corretto.",
+     "chicca": "Il gesto che tutti ricordano — l'uscita dal palco — è del "
+               "1983, l'anno di «Vita spericolata». Il presunto ultimo posto "
+               "è del 1982, l'anno di «Vado al massimo». Sono due Festival "
+               "diversi, e vengono raccontati quasi sempre insieme.",
+     "dopo": "Delle due edizioni è rimasta in circolazione soprattutto la "
+             "parte sbagliata: un posto in classifica che non è mai stato "
+             "assegnato.",
+     "confidenza": "alta sul meccanismo del 1982 e sul piazzamento del 1983; "
+                   "nessuna fonte pubblica una classifica completa del 1982",
+     "fonti": ["Rockol, «No, Vasco non è mai arrivato ultimo a Sanremo»",
+               "Radio 105, «Vasco Rossi e il rapporto con Sanremo: il mito "
+               "dell'ultimo posto»",
+               "Wikipedia IT, «Festival di Sanremo 1982»: numera solo i "
+               "primi sei posti"],
+     "hook": "Il fatto più ripetuto su Vasco a Sanremo non è un fatto: quella "
+             "classifica, oltre i primi posti, non è mai stata pubblicata.",
+     "hashtags": "#vascorossi #memeteca #sanremo #vitaspericolata "
+                 "#musicaitaliana"},
+
+    # Tag vuoto per lo stesso motivo della scheda 056: Instagram non si apre
+    # senza autenticazione e nessuna fonte giornalistica nomina il profilo
+    # ufficiale. Qui c'e' un motivo in piu' per non tirare a indovinare: di
+    # account intestati a un politico ne esistono molti, e sbagliarne uno
+    # vorrebbe dire taggare un impostore.
+    {"num": "061", "giorno": "Venerdì", "slot": 3,
+     "categoria": "POLITICA · 2020",
+     "titolo": "I CARABINIERI COL LANCIAFIAMME",
+     "occhiello": "La minaccia finita sulle bomboniere di laurea",
+     "anno": "2020",
+     "tag": None,
+     "creatore": "Vincenzo De Luca, presidente della Regione Campania, nelle "
+                 "dirette Facebook del primo lockdown. Non un comico e non un "
+                 "autore: un amministratore che parlava ai cittadini dal "
+                 "proprio ufficio.",
+     "prima_apparizione": "Marzo 2020. Nella diretta parla delle feste di "
+                          "laurea che qualcuno vorrebbe organizzare e "
+                          "annuncia che manderà i carabinieri con il "
+                          "lanciafiamme. Le agenzie la rilanciano subito.",
+     "origini": "Il meccanismo è il tono: la minaccia è spropositata, la "
+                "faccia è seria, il contesto è ufficiale. Non c'è nessuna "
+                "strizzata d'occhio, e proprio per questo la frase funziona.",
+     "storia": "Diventa in pochi giorni il tormentone del lockdown: "
+               "montaggi, magliette, adesivi. A maggio Il Fatto Quotidiano "
+               "fotografa delle bomboniere di laurea con sopra De Luca e il "
+               "lanciafiamme. A luglio, ad Avellino, lui spiega che era una "
+               "metafora.",
+     "significato": "Funziona perché nessuno l'ha scritta: è uscita così, in "
+                    "diretta, davanti a un paese chiuso in casa che aveva "
+                    "bisogno di ridere proprio di quella clausura. La frase è "
+                    "rimasta anche dopo che la paura era passata.",
+     "chicca": "Le feste di laurea contro cui era rivolta la minaccia hanno "
+               "finito per adottarla: due mesi dopo la bomboniera con il "
+               "lanciafiamme era un oggetto reale, fotografato dai giornali.",
+     "dopo": "De Luca ha continuato con le dirette e con le frasi, ma il "
+             "lanciafiamme è rimasto quella che si cita per prima.",
+     # Le fonti danno due giorni diversi per la diretta (20 e 23 marzo 2020):
+     # la scheda dice «marzo», come la regola della 056.
+     "confidenza": "alta sulla frase, sul contesto e sulle bomboniere; le "
+                   "fonti non concordano sul giorno esatto della diretta, "
+                   "quindi la scheda dice solo «marzo 2020»",
+     "fonti": ["Agenzia Dire, 20 marzo 2020",
+               "Il Fatto Quotidiano, «Vincenzo De Luca con il lanciafiamme "
+               "diventa una bomboniera di laurea» (2 maggio 2020)",
+               "NapoliToday, «Il lanciafiamme era una metafora» (luglio 2020)"],
+     "hook": "Marzo 2020, diretta Facebook: minaccia di mandare i carabinieri "
+             "col lanciafiamme alle feste di laurea. Due mesi dopo era "
+             "stampato sulle bomboniere.",
+     "hashtags": "#lanciafiamme #memeteca #lockdown #campania "
+                 "#politicaitaliana"},
 ]
 
 
