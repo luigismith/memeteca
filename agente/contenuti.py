@@ -2420,6 +2420,149 @@ MEMI = [
              "stampato sulle bomboniere.",
      "hashtags": "#lanciafiamme #memeteca #lockdown #campania "
                  "#politicaitaliana"},
+    # I tag di queste tre schede sono vuoti per il motivo gia' scritto sopra
+    # la scheda 056: Instagram non si apre senza autenticazione e nessuna
+    # fonte giornalistica nomina i profili ufficiali.
+    {"num": "062", "giorno": "Domenica", "slot": 0,
+     "categoria": "TV · 1989",
+     "titolo": "BLOB",
+     "occhiello": "Il remix prima di internet, tutte le sere alle otto",
+     "anno": "1989",
+     "tag": None,
+     "creatore": "Enrico Ghezzi e Marco Giusti, che venivano da «Schegge», la "
+                 "striscia notturna di Rai 3. Sull'idea di partenza loro due e "
+                 "Angelo Guglielmi, allora direttore della rete, non hanno mai "
+                 "raccontato la stessa versione.",
+     "prima_apparizione": "17 aprile 1989, Rai 3, dieci minuti alle otto di "
+                          "sera. Il titolo viene da «The Blob», il film di "
+                          "fantascienza del 1958 che in Italia si chiamava "
+                          "«Fluido mortale».",
+     "origini": "Il meccanismo è il montaggio e basta: si prendono le immagini "
+                "che la televisione ha già trasmesso quel giorno e si "
+                "rimettono in fila in un ordine diverso. Nessun commento, "
+                "nessuna voce fuori campo che spieghi. L'accostamento fa "
+                "tutto.",
+     "storia": "Diventa il modo in cui l'Italia guarda la propria "
+               "televisione: una cosa detta in diretta la mattina torna la "
+               "sera accanto a un'altra che la smentisce, e il montaggio dice "
+               "quello che nessuno ha scritto.",
+     "significato": "È la prima volta che il materiale della televisione "
+                    "viene trattato come materia prima e non come prodotto "
+                    "finito. Ritagliare, accostare, far dire a qualcuno il "
+                    "contrario di quello che intendeva: è esattamente il "
+                    "meme, vent'anni prima che ci fosse un posto dove farlo "
+                    "circolare.",
+     "chicca": "Sulla paternità dell'idea non c'è una versione condivisa: "
+               "Guglielmi la attribuisce a un suggerimento del figlio, Ghezzi "
+               "la descrive come la conseguenza naturale di «Schegge», Giusti "
+               "dice di averla pensata come uno spazio per sbeffeggiare la "
+               "peggior televisione della settimana.",
+     "dopo": "È ancora in onda, nella stessa fascia e con lo stesso "
+             "meccanismo: una delle poche cose della televisione italiana che "
+             "non ha avuto bisogno di cambiare.",
+     "confidenza": "alta su data, rete, titolo e formato; sulla paternità "
+                   "dell'idea le fonti riportano tre versioni diverse, e la "
+                   "scheda le riporta tutte e tre",
+     "fonti": ["Rolling Stone Italia, «Blob, l'ultimo baluardo della tv "
+               "satirica»",
+               "TPI, intervista a Enrico Ghezzi per i trent'anni (apr 2019)",
+               "Movieplayer, «Blob: i 30 anni dello storico programma di "
+               "Rai 3»"],
+     "hook": "Dal 1989 Rai 3 rimonta ogni sera le immagini del giorno in un "
+             "ordine diverso. Il meme italiano esisteva già: andava in onda "
+             "alle otto.",
+     "hashtags": "#blob #memeteca #rai3 #televisione #anni80"},
+
+    {"num": "063", "giorno": "Domenica", "slot": 1,
+     "categoria": "TV · 1985",
+     "titolo": "QUELLI DELLA NOTTE",
+     "occhiello": "Trentatré puntate, e mezza Italia che ripete le stesse frasi",
+     "anno": "1985",
+     "tag": None,
+     "creatore": "Renzo Arbore, che lo ideò e lo condusse. In scena, fra gli "
+                 "altri, Nino Frassica nei panni di frate Antonino da "
+                 "Scasazza, Riccardo Pazzaglia e Andy Luotto.",
+     "prima_apparizione": "29 aprile 1985 su Rai 2, in seconda serata. "
+                          "Finisce il 14 giugno dello stesso anno dopo "
+                          "trentatré puntate: meno di due mesi in tutto.",
+     "origini": "È la parodia di un talk show serio: gli ospiti si siedono a "
+                "discutere di massimi sistemi e non arrivano mai da nessuna "
+                "parte. La formula sta nel fatto che nessuno recita la parte "
+                "del comico — recitano tutti la parte del saggio.",
+     "storia": "Parte con ottocentomila spettatori e arriva a tre milioni, "
+               "con uno share del 51%. Le due sigle, «Ma la notte no» e «Il "
+               "materasso», diventano tormentoni per conto loro, e con loro "
+               "le battute: il «brodo primordiale» di Pazzaglia, il «non "
+               "capisco ma mi adeguo» di Ferrini.",
+     "significato": "È il momento in cui una frase smette di appartenere a "
+                    "chi l'ha detta. Non si cita la puntata, si cita la "
+                    "formula, e la si usa per fatti propri: è la differenza "
+                    "fra una battuta e un tormentone, e qui succede in "
+                    "diretta su scala nazionale.",
+     "chicca": "Andy Luotto interpretava lo sceicco Harmand. Dopo la protesta "
+               "dell'Associazione Musulmani Italiani e alcune minacce lasciò "
+               "il programma dopo poche puntate: nel 1985, in seconda serata "
+               "su Rai 2.",
+     "dopo": "Roberto D'Agostino lo ha definito «il primo programma "
+             "orizzontale»: tutti in scena nello stesso momento, nessuno al "
+             "centro. Quarant'anni dopo si cita ancora senza citarlo.",
+     "confidenza": "alta su date, ascolti e cast; le battute entrate nell'uso "
+                   "sono attribuite con le stesse parole da più fonti",
+     "fonti": ["Tgcom24, «35 anni fa debuttava Quelli della notte» (2020)",
+               "L'Espresso, «Quelli della notte, 40 anni fa nasceva la "
+               "televisione del futuro» (2025)",
+               "Wikipedia EN, «Quelli della notte»"],
+     "hook": "Durò meno di due mesi nel 1985. Le frasi che ha lasciato in "
+             "giro si usano ancora, e quasi nessuno sa più da dove vengono.",
+     "hashtags": "#quellidellanotte #memeteca #renzoarbore #televisione "
+                 "#anni80"},
+
+    {"num": "064", "giorno": "Domenica", "slot": 2,
+     "categoria": "TV · 1990",
+     "titolo": "MAI DIRE GOL",
+     "occhiello": "Tre voci fuori campo e il calcio che smette di prendersi sul serio",
+     "anno": "1990",
+     "tag": None,
+     "creatore": "La Gialappa's Band: Giorgio Gherarducci, Marco Santin e "
+                 "Carlo Taranto. Tre voci che non si vedono mai, e che "
+                 "commentano materiale girato da altri.",
+     "prima_apparizione": "18 novembre 1990 su Italia 1, alle dieci di sera, "
+                          "subito dopo «Pressing». All'inizio sono soltanto "
+                          "immagini di partite e interviste, con il commento "
+                          "della Gialappa's sopra.",
+     "origini": "Il meccanismo è quello dei meme: il materiale esiste già — "
+                "una dichiarazione a bordocampo, un'inquadratura storta — e "
+                "tutto il lavoro sta nel momento in cui lo si ferma e in "
+                "quello che ci si dice sopra.",
+     "storia": "Va avanti fino al 25 febbraio 2001 e diventa una fabbrica di "
+               "comici: ci passano Aldo, Giovanni e Giacomo, Antonio "
+               "Albanese, Maurizio Crozza, Daniele Luttazzi, Paolo Hendel. Le "
+               "sigle le cantano Elio e le Storie Tese. La formula si allarga "
+               "a «Mai dire TV», «Mai dire Banzai», «Mai dire Grande "
+               "Fratello».",
+     "significato": "Ha insegnato a un paese intero a guardare la televisione "
+                    "con una voce sopra. Il commento fuori campo che smonta "
+                    "quello che vedi è diventato il modo normale di stare "
+                    "davanti a uno schermo: oggi lo fanno tutti sui social, e "
+                    "lì nessuno lo chiama più comicità.",
+     "chicca": "Non si sono mai fatti vedere. Per anni il volto della "
+               "Gialappa's è stato un'assenza: li si riconosceva dalla voce, "
+               "come una radio accesa sopra la televisione.",
+     "dopo": "Il marchio «Mai dire» è sopravvissuto al calcio da cui era "
+             "nato, e la Gialappa's continua a lavorare così: il materiale "
+             "lo fornisce qualcun altro.",
+     "confidenza": "alta su date, rete, formazione e comici lanciati; sui "
+                   "tormentoni delle prime edizioni le fonti si "
+                   "contraddicono, quindi la scheda non ne cita nessuno",
+     "fonti": ["Sky TG24, «30 anni fa la prima puntata di Mai Dire Gol» "
+               "(17 nov 2020)",
+               "Il Fatto Quotidiano, «Mai dire gol, 30 anni fa la prima "
+               "puntata» (18 nov 2020)",
+               "Wikipedia EN, «Mai dire Gol»"],
+     "hook": "Dal 1990 tre voci che non si vedevano commentavano immagini "
+             "girate da altri. Da lì sono usciti Aldo, Giovanni e Giacomo, "
+             "Albanese, Crozza.",
+     "hashtags": "#maidiregol #memeteca #gialappasband #televisione #anni90"},
 ]
 
 

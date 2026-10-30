@@ -150,6 +150,19 @@ SCARTATI = {
 # resta prossimo_candidato() piu' _controlla_doppioni(). Aggiungere voci
 # nuove alla lista, con le fonti gia' trovate, e' il modo di tenerla viva.
 CANDIDATI = {
+    # ── 30 ottobre 2026. Le schede 062, 063 e 064 (BLOB, QUELLI DELLA NOTTE,
+    # MAI DIRE GOL) le ho prese di nuovo da fuori lista, e non a caso: la
+    # categoria TV era rimasta con una sola scheda in coda, e coda() la
+    # domenica pesca li'. Quando una categoria si svuota non basta scrivere
+    # schede, bisogna scriverne di quella categoria. Queste tre lasciano
+    # aperta la stessa vena — la televisione italiana che faceva i meme prima
+    # che si chiamassero cosi' — e qui sotto ci sono le prossime.
+    "«Non capisco ma mi adeguo» / Ferrini": "la battuta ha una scheda madre "
+        "(063) ma una vita propria: verificare se regge da sola",
+    "Striscia la notizia e il Gabibbo in politica": "la 027 copre il "
+        "personaggio, non gli usi politici — verificare che esistano fonti",
+    "«Drive In» (1983)": "Antonio Ricci, Italia 1: la fabbrica di tormentoni "
+        "prima di Mai dire gol — verificare date e personaggi su due fonti",
     # ── trovate il 16 ottobre 2026 cercando fuori lista, con le fonti ──────
     # ── internet italiano, era forum e primo Facebook ───────────────────────
     "Er Trenta": "presunto meme universitario romano — verificare se esiste davvero",
